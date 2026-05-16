@@ -1,0 +1,45 @@
+# General
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / editor
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Node / JS
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment
+.env
+.env.*
+*.local
+*.env
+
+# Logs
+*.log
+error_log
+php_errorlog
+
+# Docker / local overrides
+docker-compose.override.yml
+docker-compose.*.local.yml
+
+# WordPress generated files
+# wordpress/wp-content/uploads/
+wordpress/wp-content/cache/
+# wordpress/wp-content/upgrade/
+wordpress/wp-content/backups/
+wordpress/wp-content/backup-db/
+wordpress/wp-content/debug.log
+wordpress/wp-content/*.sql
+wordpress/wp-content/*.sql.gz
+wordpress/wp-content/advanced-cache.php
+wordpress/wp-content/object-cache.php
+wordpress/wp-content/db.php

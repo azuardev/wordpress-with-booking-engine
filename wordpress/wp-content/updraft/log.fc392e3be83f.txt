@@ -1,0 +1,1768 @@
+0000.001 (0) Opened log file at time: Sun, 10 May 2026 17:03:53 +0000 on https://germless-fantastic-subscript.ngrok-free.dev
+0000.005 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.26.4 WP: 6.9.4 PHP: 8.3.30 (apache2handler, Linux d233a502badc 6.10.14-linuxkit #1 SMP PREEMPT_DYNAMIC Tue Apr 15 16:05:22 UTC 2025 x86_64) MySQL: 12.0.2-MariaDB-ubu2404 (max packet size=33554432) WPLANG: en_US Server: Apache/2.4.66 (Debian) safe_mode: 0 max_execution_time: 900 memory_limit: 2048M (used: 6M | 8M) multisite: N openssl: OpenSSL 3.5.5 27 Jan 2026 mcrypt: N LANG: C WP Proxy: disabled ZipArchive::addFile: Y
+0000.006 (0) Free space on disk containing Updraft's temporary directory: 92681.9 MB
+0000.028 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB: 1 (schedule: daily)
+0000.037 (0) Requesting semaphore lock (fd) (apparently not via scheduler)
+0000.040 (0) Semaphore (fd, wp_options) was stuck, set lock time to 2026-05-10 17:03:53
+0000.043 (0) Semaphore (fd, wp_options) reset to 1
+0000.046 (0) Set semaphore last lock (fd) time to 2026-05-10 17:03:53
+0000.048 (0) Semaphore lock (fd) complete
+0000.056 (0) Backup run: resumption=0, nonce=fc392e3be83f, file_nonce=fc392e3be83f begun at=1778432633 (0s ago), job type=backup
+0000.059 (0) Scheduling a resumption (1) after 600 seconds (1778433233) in case this run gets aborted
+0000.088 (0) Checking if we have a zip executable available
+0000.092 (0) Creation of backups of directories: beginning
+0000.100 (0) Beginning creation of dump of plugins (split every: 25 MB)
+0009.727 (0) Total entities for the zip file: 4790 directories, 19125 files (0 skipped as non-modified), 281.8 MB
+0009.744 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0012.583 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 100 files added (on-disk size: 926.3 KB)
+0012.607 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 200 files added (on-disk size: 926.3 KB)
+0012.629 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 300 files added (on-disk size: 926.3 KB)
+0012.652 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 400 files added (on-disk size: 926.3 KB)
+0012.675 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 500 files added (on-disk size: 926.3 KB)
+0012.698 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 600 files added (on-disk size: 926.3 KB)
+0012.720 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 700 files added (on-disk size: 926.3 KB)
+0012.742 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 800 files added (on-disk size: 926.3 KB)
+0012.764 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 900 files added (on-disk size: 926.3 KB)
+0012.787 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 1000 files added (on-disk size: 926.3 KB)
+0012.790 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (9.5 MB, 19125 files batched, 1001 (1002) added so far); re-opening (prior size: 926.3 KB)
+0015.153 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 1100 files added (on-disk size: 3800.2 KB)
+0015.181 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 1200 files added (on-disk size: 3800.2 KB)
+0015.210 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 1300 files added (on-disk size: 3800.2 KB)
+0015.240 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 1400 files added (on-disk size: 3800.2 KB)
+0015.269 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 1500 files added (on-disk size: 3800.2 KB)
+0015.297 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 1600 files added (on-disk size: 3800.2 KB)
+0015.334 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 1700 files added (on-disk size: 3800.2 KB)
+0015.363 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 1800 files added (on-disk size: 3800.2 KB)
+0015.391 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 1900 files added (on-disk size: 3800.2 KB)
+0015.421 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 2000 files added (on-disk size: 3800.2 KB)
+0015.423 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (9.6 MB, 19125 files batched, 1001 (2003) added so far); re-opening (prior size: 3800.2 KB)
+0017.729 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 2100 files added (on-disk size: 7801.4 KB)
+0017.751 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 2200 files added (on-disk size: 7801.4 KB)
+0017.773 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 2300 files added (on-disk size: 7801.4 KB)
+0017.796 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 2400 files added (on-disk size: 7801.4 KB)
+0017.819 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 2500 files added (on-disk size: 7801.4 KB)
+0017.842 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 2600 files added (on-disk size: 7801.4 KB)
+0017.875 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 2700 files added (on-disk size: 7801.4 KB)
+0017.902 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 2800 files added (on-disk size: 7801.4 KB)
+0017.926 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 2900 files added (on-disk size: 7801.4 KB)
+0017.952 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 3000 files added (on-disk size: 7801.4 KB)
+0017.956 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (9.5 MB, 19125 files batched, 1001 (3004) added so far); re-opening (prior size: 7801.4 KB)
+0020.658 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 3100 files added (on-disk size: 13420.4 KB)
+0020.680 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 3200 files added (on-disk size: 13420.4 KB)
+0020.703 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 3300 files added (on-disk size: 13420.4 KB)
+0020.724 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 3400 files added (on-disk size: 13420.4 KB)
+0020.746 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 3500 files added (on-disk size: 13420.4 KB)
+0020.791 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 3600 files added (on-disk size: 13420.4 KB)
+0020.823 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 3700 files added (on-disk size: 13420.4 KB)
+0020.849 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 3800 files added (on-disk size: 13420.4 KB)
+0020.873 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 3900 files added (on-disk size: 13420.4 KB)
+0020.896 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 4000 files added (on-disk size: 13420.4 KB)
+0020.899 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (9.7 MB, 19125 files batched, 1001 (4005) added so far); re-opening (prior size: 13420.4 KB)
+0023.978 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 4100 files added (on-disk size: 16185.2 KB)
+0024.001 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 4200 files added (on-disk size: 16185.2 KB)
+0024.025 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 4300 files added (on-disk size: 16185.2 KB)
+0024.048 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 4400 files added (on-disk size: 16185.2 KB)
+0024.070 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 4500 files added (on-disk size: 16185.2 KB)
+0024.093 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 4600 files added (on-disk size: 16185.2 KB)
+0024.116 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 4700 files added (on-disk size: 16185.2 KB)
+0024.139 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 4800 files added (on-disk size: 16185.2 KB)
+0024.160 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 4900 files added (on-disk size: 16185.2 KB)
+0024.183 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 5000 files added (on-disk size: 16185.2 KB)
+0024.186 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (8.8 MB, 19125 files batched, 1001 (5006) added so far); re-opening (prior size: 16185.2 KB)
+0026.809 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 5100 files added (on-disk size: 18909.4 KB)
+0026.832 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 5200 files added (on-disk size: 18909.4 KB)
+0026.862 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 5300 files added (on-disk size: 18909.4 KB)
+0026.884 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 5400 files added (on-disk size: 18909.4 KB)
+0026.906 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 5500 files added (on-disk size: 18909.4 KB)
+0026.929 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 5600 files added (on-disk size: 18909.4 KB)
+0026.951 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 5700 files added (on-disk size: 18909.4 KB)
+0026.973 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 5800 files added (on-disk size: 18909.4 KB)
+0026.997 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 5900 files added (on-disk size: 18909.4 KB)
+0027.019 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 6000 files added (on-disk size: 18909.4 KB)
+0027.022 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (6.6 MB, 19125 files batched, 1001 (6007) added so far); re-opening (prior size: 18909.4 KB)
+0029.605 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 6100 files added (on-disk size: 20845.8 KB)
+0029.629 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 6200 files added (on-disk size: 20845.8 KB)
+0029.653 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 6300 files added (on-disk size: 20845.8 KB)
+0029.675 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 6400 files added (on-disk size: 20845.8 KB)
+0029.698 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 6500 files added (on-disk size: 20845.8 KB)
+0029.720 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 6600 files added (on-disk size: 20845.8 KB)
+0029.743 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 6700 files added (on-disk size: 20845.8 KB)
+0029.768 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 6800 files added (on-disk size: 20845.8 KB)
+0029.789 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 6900 files added (on-disk size: 20845.8 KB)
+0029.812 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.tmp: 7000 files added (on-disk size: 20845.8 KB)
+0029.833 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (13.6 MB, 19125 files batched, 1001 (7008) added so far); re-opening (prior size: 20845.8 KB)
+0032.971 (0) Zip size is at/near split limit (28.1 MB / 25 MB) - bumping index (from: 0)
+0033.315 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.list-temp.tmp)
+0034.736 (0) Successfully created zip file manifest (size: 624211)
+0034.741 (0) Created plugins zip (0) - 28794.3 KB in 32.9 s (876.2 KB/s) (checksums: sha1: ac92b6b8b60ec5305de4f67e7d81b618d011adb0, sha256: 2f4cd535415b3027a0b8129aa33d7f4f8062a296565ac38bb94adf1b7d1b76f3)
+0034.761 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0034.765 (0) No remote despatch: user chose no remote backup service
+0034.769 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip
+0034.777 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip.list.tmp)
+0034.781 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0034.829 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 7100 files added (on-disk size: 0 KB)
+0034.859 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 7200 files added (on-disk size: 0 KB)
+0034.881 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 7300 files added (on-disk size: 0 KB)
+0034.904 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 7400 files added (on-disk size: 0 KB)
+0034.928 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 7500 files added (on-disk size: 0 KB)
+0034.950 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 7600 files added (on-disk size: 0 KB)
+0034.973 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 7700 files added (on-disk size: 0 KB)
+0034.996 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 7800 files added (on-disk size: 0 KB)
+0035.019 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 7900 files added (on-disk size: 0 KB)
+0035.042 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 8000 files added (on-disk size: 0 KB)
+0035.045 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (4.6 MB, 19125 files batched, 1001 (8009) added so far); re-opening (prior size: 0 KB)
+0036.454 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 8100 files added (on-disk size: 1216.7 KB)
+0036.481 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 8200 files added (on-disk size: 1216.7 KB)
+0036.508 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 8300 files added (on-disk size: 1216.7 KB)
+0036.535 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 8400 files added (on-disk size: 1216.7 KB)
+0036.560 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 8500 files added (on-disk size: 1216.7 KB)
+0036.584 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 8600 files added (on-disk size: 1216.7 KB)
+0036.607 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 8700 files added (on-disk size: 1216.7 KB)
+0036.630 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 8800 files added (on-disk size: 1216.7 KB)
+0036.653 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 8900 files added (on-disk size: 1216.7 KB)
+0036.676 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 9000 files added (on-disk size: 1216.7 KB)
+0036.680 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (12.6 MB, 19125 files batched, 1001 (9010) added so far); re-opening (prior size: 1216.7 KB)
+0038.994 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 9100 files added (on-disk size: 2900.6 KB)
+0039.018 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 9200 files added (on-disk size: 2900.6 KB)
+0039.041 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 9300 files added (on-disk size: 2900.6 KB)
+0039.065 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 9400 files added (on-disk size: 2900.6 KB)
+0039.088 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 9500 files added (on-disk size: 2900.6 KB)
+0039.111 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 9600 files added (on-disk size: 2900.6 KB)
+0039.134 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 9700 files added (on-disk size: 2900.6 KB)
+0039.157 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 9800 files added (on-disk size: 2900.6 KB)
+0039.181 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 9900 files added (on-disk size: 2900.6 KB)
+0039.205 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 10000 files added (on-disk size: 2900.6 KB)
+0039.209 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (19.3 MB, 19125 files batched, 1001 (10011) added so far); re-opening (prior size: 2900.6 KB)
+0042.036 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 10100 files added (on-disk size: 5198.2 KB)
+0042.062 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 10200 files added (on-disk size: 5198.2 KB)
+0042.088 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 10300 files added (on-disk size: 5198.2 KB)
+0042.110 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 10400 files added (on-disk size: 5198.2 KB)
+0042.132 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 10500 files added (on-disk size: 5198.2 KB)
+0042.154 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 10600 files added (on-disk size: 5198.2 KB)
+0042.177 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 10700 files added (on-disk size: 5198.2 KB)
+0042.199 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 10800 files added (on-disk size: 5198.2 KB)
+0042.219 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 10900 files added (on-disk size: 5198.2 KB)
+0042.240 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 11000 files added (on-disk size: 5198.2 KB)
+0042.245 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (16.2 MB, 19125 files batched, 1001 (11012) added so far); re-opening (prior size: 5198.2 KB)
+0045.238 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 11100 files added (on-disk size: 9453.3 KB)
+0045.263 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 11200 files added (on-disk size: 9453.3 KB)
+0045.289 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 11300 files added (on-disk size: 9453.3 KB)
+0045.316 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 11400 files added (on-disk size: 9453.3 KB)
+0045.349 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 11500 files added (on-disk size: 9453.3 KB)
+0045.376 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 11600 files added (on-disk size: 9453.3 KB)
+0045.409 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 11700 files added (on-disk size: 9453.3 KB)
+0045.456 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 11800 files added (on-disk size: 9453.3 KB)
+0045.488 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 11900 files added (on-disk size: 9453.3 KB)
+0045.513 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 12000 files added (on-disk size: 9453.3 KB)
+0045.517 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (8.9 MB, 19125 files batched, 1001 (12013) added so far); re-opening (prior size: 9453.3 KB)
+0047.986 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 12100 files added (on-disk size: 13591 KB)
+0048.020 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 12200 files added (on-disk size: 13591 KB)
+0048.045 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 12300 files added (on-disk size: 13591 KB)
+0048.073 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 12400 files added (on-disk size: 13591 KB)
+0048.096 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 12500 files added (on-disk size: 13591 KB)
+0048.118 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 12600 files added (on-disk size: 13591 KB)
+0048.140 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 12700 files added (on-disk size: 13591 KB)
+0048.162 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 12800 files added (on-disk size: 13591 KB)
+0048.184 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.tmp: 12900 files added (on-disk size: 13591 KB)
+0048.189 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): possibly approaching split limit (23.7 MB, 902 (12915) files added so far); last ratio: 0.4546; re-opening (prior size: 13591 KB)
+0051.567 (0) Zip size is at/near split limit (19.4 MB / 25 MB) - bumping index (from: 1)
+0051.798 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.list-temp.tmp)
+0052.694 (0) Successfully created zip file manifest (size: 562963)
+0052.700 (0) Created plugins zip (1) - 19865.8 KB in 16.8 s (1180.6 KB/s) (checksums: sha1: d2bead96bda81d468b0bad7f26ffd6f80e8b48a6, sha256: 3362483d26f8078f54b66c0758b6b9c6db2a8039df44e3c838143b05c84cfc2a)
+0052.724 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0052.726 (0) No remote despatch: user chose no remote backup service
+0052.728 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip
+0052.731 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip.list.tmp)
+0052.735 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0052.774 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 13000 files added (on-disk size: 0 KB)
+0052.832 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 13100 files added (on-disk size: 0 KB)
+0052.874 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 13200 files added (on-disk size: 0 KB)
+0052.907 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (26.4 MB, 19125 files batched, 360 (13275) added so far); re-opening (prior size: 0 KB)
+0055.186 (0) A useful amount of data was added after this amount of zip processing: 3.7 s (normalised: 3.5 s, rate: 7258.9 KB/s)
+0055.188 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=3.7183320522308, normalised_time=3.5267085355283, max_time=55.187016963959, data points known=1, max_bytes=26214400)
+0055.200 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 13300 files added (on-disk size: 6285.2 KB)
+0055.230 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 13400 files added (on-disk size: 6285.2 KB)
+0055.255 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 13500 files added (on-disk size: 6285.2 KB)
+0055.281 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 13600 files added (on-disk size: 6285.2 KB)
+0055.307 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 13700 files added (on-disk size: 6285.2 KB)
+0055.333 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 13800 files added (on-disk size: 6285.2 KB)
+0055.364 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 13900 files added (on-disk size: 6285.2 KB)
+0055.402 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 14000 files added (on-disk size: 6285.2 KB)
+0055.455 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 14100 files added (on-disk size: 6285.2 KB)
+0055.510 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 14200 files added (on-disk size: 6285.2 KB)
+0055.548 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (18.5 MB, 19125 files batched, 1001 (14276) added so far); re-opening (prior size: 6285.2 KB)
+0059.152 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 14300 files added (on-disk size: 13351.7 KB)
+0059.191 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 14400 files added (on-disk size: 13351.7 KB)
+0059.236 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 14500 files added (on-disk size: 13351.7 KB)
+0059.289 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 14600 files added (on-disk size: 13351.7 KB)
+0059.339 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 14700 files added (on-disk size: 13351.7 KB)
+0059.376 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 14800 files added (on-disk size: 13351.7 KB)
+0059.402 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 14900 files added (on-disk size: 13351.7 KB)
+0059.429 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 15000 files added (on-disk size: 13351.7 KB)
+0059.453 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 15100 files added (on-disk size: 13351.7 KB)
+0059.476 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 15200 files added (on-disk size: 13351.7 KB)
+0059.497 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (25 MB, 19125 files batched, 1000 (15276) added so far); re-opening (prior size: 13351.7 KB)
+0063.614 (0) A useful amount of data was added after this amount of zip processing: 5.1 s (normalised: 5.1 s, rate: 4982.5 KB/s)
+0063.616 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=5.1462059020996, normalised_time=5.1379610645241, max_time=63.615175962448, data points known=1, max_bytes=26214400)
+0063.635 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 15300 files added (on-disk size: 20593.7 KB)
+0063.660 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 15400 files added (on-disk size: 20593.7 KB)
+0063.685 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 15500 files added (on-disk size: 20593.7 KB)
+0063.708 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 15600 files added (on-disk size: 20593.7 KB)
+0063.730 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 15700 files added (on-disk size: 20593.7 KB)
+0063.752 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 15800 files added (on-disk size: 20593.7 KB)
+0063.774 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 15900 files added (on-disk size: 20593.7 KB)
+0063.796 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 16000 files added (on-disk size: 20593.7 KB)
+0063.818 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 16100 files added (on-disk size: 20593.7 KB)
+0063.840 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 16200 files added (on-disk size: 20593.7 KB)
+0063.857 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (8.7 MB, 19125 files batched, 1001 (16277) added so far); re-opening (prior size: 20593.7 KB)
+0066.878 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.tmp: 16300 files added (on-disk size: 23141.8 KB)
+0066.889 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): possibly approaching split limit (7.8 MB, 61 (16338) files added so far); last ratio: 0.2849; re-opening (prior size: 23141.8 KB)
+0068.649 (0) Zip size is at/near split limit (24.6 MB / 25 MB) - bumping index (from: 2)
+0068.981 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.list-temp.tmp)
+0069.637 (0) Successfully created zip file manifest (size: 296895)
+0069.641 (0) Created plugins zip (2) - 25198.7 KB in 15.9 s (1579.9 KB/s) (checksums: sha1: bee65df6faa26e949d3cd8e86b68d8ad6239a711, sha256: a62285d0bf59d11ee721b155f8349c396cd409bd255b68f415442f9ad1390a3e)
+0069.656 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0069.658 (0) No remote despatch: user chose no remote backup service
+0069.660 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip
+0069.663 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip.list.tmp)
+0069.666 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0069.687 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 16400 files added (on-disk size: 0 KB)
+0069.712 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 16500 files added (on-disk size: 0 KB)
+0069.736 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 16600 files added (on-disk size: 0 KB)
+0069.764 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 16700 files added (on-disk size: 0 KB)
+0069.789 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 16800 files added (on-disk size: 0 KB)
+0069.819 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 16900 files added (on-disk size: 0 KB)
+0069.842 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 17000 files added (on-disk size: 0 KB)
+0069.868 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 17100 files added (on-disk size: 0 KB)
+0069.896 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 17200 files added (on-disk size: 0 KB)
+0069.922 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 17300 files added (on-disk size: 0 KB)
+0069.934 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (15.1 MB, 19125 files batched, 1001 (17339) added so far); re-opening (prior size: 0 KB)
+0072.233 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 17400 files added (on-disk size: 6434.6 KB)
+0072.262 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 17500 files added (on-disk size: 6434.6 KB)
+0072.285 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 17600 files added (on-disk size: 6434.6 KB)
+0072.306 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 17700 files added (on-disk size: 6434.6 KB)
+0072.328 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 17800 files added (on-disk size: 6434.6 KB)
+0072.353 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 17900 files added (on-disk size: 6434.6 KB)
+0072.380 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 18000 files added (on-disk size: 6434.6 KB)
+0072.426 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 18100 files added (on-disk size: 6434.6 KB)
+0072.458 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 18200 files added (on-disk size: 6434.6 KB)
+0072.497 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 18300 files added (on-disk size: 6434.6 KB)
+0072.513 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (17.2 MB, 19125 files batched, 1001 (18340) added so far); re-opening (prior size: 6434.6 KB)
+0076.001 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 18400 files added (on-disk size: 10318.7 KB)
+0076.071 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 18500 files added (on-disk size: 10318.7 KB)
+0076.179 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 18600 files added (on-disk size: 10318.7 KB)
+0076.216 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 18700 files added (on-disk size: 10318.7 KB)
+0076.251 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 18800 files added (on-disk size: 10318.7 KB)
+0076.289 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 18900 files added (on-disk size: 10318.7 KB)
+0076.329 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 19000 files added (on-disk size: 10318.7 KB)
+0076.365 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.tmp: 19100 files added (on-disk size: 10318.7 KB)
+0078.637 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.list-temp.tmp)
+0079.354 (0) Successfully created zip file manifest (size: 209894)
+0079.501 (0) Created plugins zip (3) - 13848.9 KB in 9.9 s (1404.9 KB/s) (sha1: fa8c14889b4504d968baca41a79924dabec3e1e0, sha256: c32d8c06dcf7d9b0c9606c99e418fc5e1420ac990e2c5757f03036841a7f3cf5)
+0079.504 (0) Deleting old temporary file: log.733a19dcd29f-browser.txt
+0079.524 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0079.525 (0) No remote despatch: user chose no remote backup service
+0079.528 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip
+0079.531 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip.list.tmp)
+0079.534 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0079.543 (0) Beginning creation of dump of themes (split every: 25 MB)
+0079.608 (0) Total entities for the zip file: 25 directories, 135 files (0 skipped as non-modified), 5.1 MB
+0079.634 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0080.132 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-themes.zip.list-temp.tmp)
+0080.160 (0) Successfully created zip file manifest (size: 9036)
+0080.221 (0) Created themes zip (0) - 5043.5 KB in 0.7 s (7550.1 KB/s) (sha1: 3824f4a407a24f8def8efa5117b9ae26a2dad265, sha256: 818512bd56a9d01628254b27db78edc0f167e9376cbb89d50df35bf917e8921f)
+0080.232 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0080.234 (0) No remote despatch: user chose no remote backup service
+0080.236 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-themes.zip
+0080.239 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-themes.zip.list.tmp)
+0080.241 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0080.251 (0) Exclusion option setting (uploads): 
+0080.253 (0) Looking for candidates to backup in: /var/www/html/wp-content/uploads
+0080.259 (0) finding files: WhatsApp-Image-2025-10-29-at-09.20.26-1-3-100x100.jpeg: adding to list (1)
+0080.260 (0) finding files: 07.PIANO-LOUNGE-ALL-DAY-DINING-1-100x100.jpg: adding to list (2)
+0080.262 (0) finding files: image-3-200x300.jpg: adding to list (3)
+0080.263 (0) finding files: Pool-Bar-1-300x142.jpg: adding to list (4)
+0080.264 (0) finding files: DSCF2552-1365x2048.jpg: adding to list (5)
+0080.266 (0) finding files: Executive-Suite-Twin-Bed-600x523.jpg: adding to list (6)
+0080.267 (0) finding files: ship-solid.png: adding to list (7)
+0080.269 (0) finding files: Doulos-Phos-Cabins-Deluxe-Plus-3-100x100.jpg: adding to list (8)
+0080.270 (0) finding files: WhatsApp-Image-2026-02-10-at-19.34.43-600x284.jpeg: adding to list (9)
+0080.272 (0) finding files: Doulos-Phos-Cabins-Deluxe-1-new-e1584304403110.jpg: adding to list (10)
+0080.273 (0) finding files: GYM-3-1-768x576.jpg: adding to list (11)
+0080.274 (0) finding files: img22-859x1536.jpg: adding to list (12)
+0080.276 (0) finding files: DSCF2552.jpg: adding to list (13)
+0080.277 (0) finding files: Balcony-view-1-100x100.jpg: adding to list (14)
+0080.279 (0) finding files: placeholder-4-1024x683.png: adding to list (15)
+0080.280 (0) finding files: pic-31-600x212.jpg: adding to list (16)
+0080.281 (0) finding files: Doulos-Phos-Header-History.jpg: adding to list (17)
+0080.283 (0) finding files: refrigator-284x284.png: adding to list (18)
+0080.284 (0) finding files: Doulos-Phos-Swimming-Pool-2-300x225.jpg: adding to list (19)
+0080.285 (0) finding files: Doulos-Phos-Piano-Lounge-9-300x225.jpg: adding to list (20)
+0080.287 (0) finding files: IMG_20260208_135649_167-300x300.webp: adding to list (21)
+0080.288 (0) finding files: WhatsApp-Image-2026-02-10-at-19.31.16-300x300.jpeg: adding to list (22)
+0080.290 (0) finding files: DSCF2566-600x400.jpg: adding to list (23)
+0080.291 (0) finding files: Image-Placeholder-2-300x225.jpg: adding to list (24)
+0080.292 (0) finding files: testimonials-4.jpg: adding to list (25)
+0080.294 (0) finding files: DSCF2540-scaled.jpg: adding to list (26)
+0080.295 (0) finding files: Doulos-Phos-Cabins-Exec-Suite-3-300x225.jpg: adding to list (27)
+0080.296 (0) finding files: WhatsApp-Image-2026-02-10-at-19.34.43-1-600x284.jpeg: adding to list (28)
+0080.297 (0) finding files: Doulos-Phos-Cabins-Toilet-new-600x450.jpg: adding to list (29)
+0080.299 (0) finding files: placeholder-13-300x200.png: adding to list (30)
+0080.300 (0) finding files: menu-logo-2-e1634022952481.png: adding to list (31)
+0080.302 (0) finding files: DSCF2589-284x189.jpg: adding to list (32)
+0080.304 (0) finding files: Doulos-Phos-Piano-Lounge-14.jpg: adding to list (33)
+0080.305 (0) finding files: Team-3-5-300x300.jpg: adding to list (34)
+0080.306 (0) finding files: image-2-1.jpg: adding to list (35)
+0080.308 (0) finding files: Doulos-Phos-Piano-Lounge-4-600x450.jpg: adding to list (36)
+0080.309 (0) finding files: 1-300x142.jpg: adding to list (37)
+0080.310 (0) finding files: Doulos-Phos-Piano-Lounge-1-300x300.jpg: adding to list (38)
+0080.312 (0) finding files: DSCF2591.jpg: adding to list (39)
+0080.313 (0) finding files: DSCF2611-300x200.jpg: adding to list (40)
+0080.314 (0) finding files: Salinan-Balcony-view-2-2048x1001.jpg: adding to list (41)
+0080.316 (0) finding files: 03.-Sketchbook-Pg-4-Social-Impact_page-0001-400x516.jpg: adding to list (42)
+0080.317 (0) finding files: Image-Placeholder-300x225.jpg: adding to list (43)
+0080.319 (0) finding files: placeholder-7-284x189.png: adding to list (44)
+0080.320 (0) finding files: WhatsApp-Image-2025-10-29-at-09.20.26-1-4-100x100.jpeg: adding to list (45)
+0080.321 (0) finding files: Doulos-Phos-Cabins-Master-Mariner-4-400x516.jpg: adding to list (46)
+0080.322 (0) finding files: image-12-300x300.jpg: adding to list (47)
+0080.324 (0) finding files: Doulos-Phos-Arisettafel-2-480x360.jpg: adding to list (48)
+0080.325 (0) finding files: IMG_20260208_135649_167-768x1365.webp: adding to list (49)
+0080.326 (0) finding files: gallery11-300x225.jpg: adding to list (50)
+0080.328 (0) finding files: 6-266x284.jpg: adding to list (51)
+0080.328 (0) finding files: IMG_20260208_141700_298-284x160.jpg: adding to list (52)
+0080.328 (0) finding files: DSCF2559-300x300.jpg: adding to list (53)
+0080.328 (0) finding files: IMG_20260208_143154_511-100x100.jpg: adding to list (54)
+0080.328 (0) finding files: Arisetafel-3-768x432.jpg: adding to list (55)
+0080.328 (0) finding files: old-typical-phone-284x284.png: adding to list (56)
+0080.329 (0) finding files: Concert-Deck2-600x284.jpeg: adding to list (57)
+0080.329 (0) finding files: Writing-Desk-at-Living-Room-1024x486.jpg: adding to list (58)
+0080.329 (0) finding files: Team-1-3-100x100.jpg: adding to list (59)
+0080.329 (0) finding files: WhatsApp-Image-2026-02-10-at-19.34.43-1536x728.jpeg: adding to list (60)
+0080.329 (0) finding files: Group-16-300x300.png: adding to list (61)
+0080.329 (0) finding files: placeholder-3-1024x683.png: adding to list (62)
+0080.330 (0) finding files: Doulos-Phos-Cabins-Deluxe-1-new-e1584304344570.jpg: adding to list (63)
+0080.330 (0) finding files: Doulos-Phos-Arisettafel-2-400x250.jpg: adding to list (64)
+0080.330 (0) finding files: img22.jpg: adding to list (65)
+0080.330 (0) finding files: Doulos-Phos-Arisettafel-5-1080x810.jpg: adding to list (66)
+0080.331 (0) finding files: Horseshoe-Pitching-215x284.jpeg: adding to list (67)
+0080.331 (0) finding files: Executive-Suite-Twin-Bed-1-247x284.jpg: adding to list (68)
+0080.331 (0) finding files: Living-Room-2.jpg: adding to list (69)
+0080.331 (0) finding files: project5.jpg: adding to list (70)
+0080.331 (0) finding files: Sofa-1024x485.jpg: adding to list (71)
+0080.331 (0) finding files: gallery1-300x225-1-284x213.jpg: adding to list (72)
+0080.332 (0) finding files: GYM-2-1.jpg: adding to list (73)
+0080.332 (0) finding files: placeholder-3.png: adding to list (74)
+0080.332 (0) finding files: 20260208_142800-100x100.png: adding to list (75)
+0080.332 (0) finding files: Doulos-Phos-Piano-Lounge-5-768x576.jpg: adding to list (76)
+0080.332 (0) finding files: 07.PIANO-LOUNGE-ALL-DAY-DINING-1-600x400.jpg: adding to list (77)
+0080.333 (0) finding files: Doulos-Phos-Mezzanine-1-284x213.jpg: adding to list (78)
+0080.333 (0) finding files: DSCF2545-1-768x512.jpg: adding to list (79)
+0080.333 (0) finding files: Doulos-Phos-Arisettafel-3-980x735.jpg: adding to list (80)
+0080.333 (0) finding files: Doulos-Phos-Header-History-510x382.jpg: adding to list (81)
+0080.333 (0) finding files: pexels-antonio-prado-5391353-scaled-1-1536x1536.jpg: adding to list (82)
+0080.333 (0) finding files: DSCF2527-768x512.jpg: adding to list (83)
+0080.334 (0) finding files: Deluxe-Plus-Double-300x300.jpeg: adding to list (84)
+0080.334 (0) finding files: GYM-1-1-284x213.jpg: adding to list (85)
+0080.334 (0) finding files: pic-6-2048x1050.jpg: adding to list (86)
+0080.334 (0) finding files: DSCF2599-683x1024.jpg: adding to list (87)
+0080.334 (0) finding files: DSCF2566-100x100.jpg: adding to list (88)
+0080.334 (0) finding files: Outdoor-Jacuzzi-600x285.jpg: adding to list (89)
+0080.335 (0) finding files: IMG_20260208_135649_167.webp: adding to list (90)
+0080.335 (0) finding files: 09D.-Amphitheatre-400x284.jpeg: adding to list (91)
+0080.338 (0) finding files: Doulos-Phos-Mezzanine-1-400x516.jpg: adding to list (92)
+0080.338 (0) finding files: DSCF2538-100x100.jpg: adding to list (93)
+0080.338 (0) finding files: DSCF3277-300x300.jpg: adding to list (94)
+0080.338 (0) finding files: 09D.-Amphitheatre-scaled-300x300.jpeg: adding to list (95)
+0080.338 (0) finding files: image-9.jpg: adding to list (96)
+0080.339 (0) finding files: DSCF2594-1536x1024.jpg: adding to list (97)
+0080.339 (0) finding files: WhatsApp-Image-2025-10-29-at-09.46.44-3-768x396.jpeg: adding to list (98)
+0080.339 (0) finding files: hero3-1-1-284x154.jpg: adding to list (99)
+0080.339 (0) finding files: Balcony-view-night-time-300x300.jpg: adding to list (100)
+0080.341 (0) finding files: Doulos-Phos-Piano-Lounge-5-400x284.jpg: adding to list (101)
+0080.341 (0) finding files: GYM-3-284x213.jpg: adding to list (102)
+0080.341 (0) finding files: WhatsApp-Image-2025-10-29-at-09.20.26-3-600x284.jpeg: adding to list (103)
+0080.341 (0) finding files: gallery12-1-1-600x450.jpg: adding to list (104)
+0080.342 (0) finding files: Deluxe-Plus-Double-Bed-1-scaled-100x100.jpg: adding to list (105)
+0080.342 (0) finding files: Doulos-Phos-Cabins-Deluxe-Plus-1-400x516.jpg: adding to list (106)
+0080.342 (0) finding files: Doulos-Phos-Cabins-22Deluxe-3-400x516.jpg: adding to list (107)
+0080.342 (0) finding files: DSCF2613-100x100.jpg: adding to list (108)
+0080.342 (0) finding files: Doulos-Phos-Arisettafel-6-1024x768.jpg: adding to list (109)
+0080.342 (0) finding files: content1.jpg: adding to list (110)
+0080.343 (0) finding files: gallery3-2-300x225-1-100x100.jpg: adding to list (111)
+0080.343 (0) finding files: Service-3-1-284x256.jpg: adding to list (112)
+0080.343 (0) finding files: DSCF2548-600x400.jpg: adding to list (113)
+0080.343 (0) finding files: 14B.-Concert-Deck-2880x1800.jpg: adding to list (114)
+0080.343 (0) finding files: DSCF2593-2048x1365.jpg: adding to list (115)
+0080.343 (0) finding files: DSCF2579-768x1152.jpg: adding to list (116)
+0080.344 (0) finding files: pic-2-1-189x284.jpg: adding to list (117)
+0080.344 (0) finding files: WhatsApp-Image-2026-03-03-at-20.39.54-600x445.jpeg: adding to list (118)
+0080.344 (0) finding files: placeholder-11-100x100.png: adding to list (119)
+0080.344 (0) finding files: Doulos-Phos-Cabins-Exec-Suite-5-150x150.jpg: adding to list (120)
+0080.344 (0) finding files: Spa-1-284x160.jpg: adding to list (121)
+0080.345 (0) finding files: Team-1-4.jpg: adding to list (122)
+0080.345 (0) finding files: image-8-100x100.jpg: adding to list (123)
+0080.345 (0) finding files: testimonial-2-100x100.jpg: adding to list (124)
+0080.345 (0) finding files: pic-31-100x100.jpg: adding to list (125)
+0080.345 (0) finding files: GYM-1-100x100.jpg: adding to list (126)
+0080.345 (0) finding files: join-doulosphos-510x382.jpg: adding to list (127)
+0080.346 (0) finding files: Bedroom-1.jpg: adding to list (128)
+0080.346 (0) finding files: 50-Nations-Banquet-Hall-for-Dinner-1024x576.jpeg: adding to list (129)
+0080.346 (0) finding files: DSCF2548-100x100.jpg: adding to list (130)
+0080.346 (0) finding files: Spa-2-1.jpg: adding to list (131)
+0080.346 (0) finding files: Deluxe-Plus-Double-Bed-1-1-300x163.jpg: adding to list (132)
+0080.346 (0) finding files: DSCF2545-1-2048x1365.jpg: adding to list (133)
+0080.347 (0) finding files: placeholder-4-300x300.png: adding to list (134)
+0080.347 (0) finding files: External-980x735.jpg: adding to list (135)
+0080.347 (0) finding files: placeholder-11-600x400.png: adding to list (136)
+0080.347 (0) finding files: GYM-1.jpg: adding to list (137)
+0080.347 (0) finding files: cropped-DP-Site-Identity.jpg: adding to list (138)
+0080.347 (0) finding files: content2-684x1024.jpg: adding to list (139)
+0080.347 (0) finding files: DSCF2564-300x200.jpg: adding to list (140)
+0080.348 (0) finding files: DSCF3626-300x200.jpg: adding to list (141)
+0080.348 (0) finding files: Doulos-Phos-Header-Home-Desktop-400x284.jpg: adding to list (142)
+0080.348 (0) finding files: DSCF2583-1536x1024.jpg: adding to list (143)
+0080.348 (0) finding files: clock-solid-284x284.png: adding to list (144)
+0080.348 (0) finding files: Gala-Dinner-at-Concert-Deck-300x142.jpeg: adding to list (145)
+0080.349 (0) finding files: Doulos-Phos-Cabins-Deluxe-2a-400x516.jpg: adding to list (146)
+0080.349 (0) finding files: testimonials-2-100x100.jpg: adding to list (147)
+0080.349 (0) finding files: Doulos-Phos-Cabins-Master-Mariner-6-100x100.jpg: adding to list (148)
+0080.349 (0) finding files: 8-768x364.jpg: adding to list (149)
+0080.349 (0) finding files: 15A.-Captains-Table.-400x284.jpeg: adding to list (150)
+0080.349 (0) finding files: wifi.png: adding to list (151)
+0080.350 (0) finding files: Salinan-Balcony-view-2-scaled-300x300.jpg: adding to list (152)
+0080.350 (0) finding files: pic-5-300x300.jpg: adding to list (153)
+0080.350 (0) finding files: DSCF2615-189x284.jpg: adding to list (154)
+0080.350 (0) finding files: image-4-1-100x100.jpg: adding to list (155)
+0080.350 (0) finding files: DP-Website-Pics-Cabins-Header-Edited-768x216.jpg: adding to list (156)
+0080.350 (0) finding files: 50-Nations-Banquet-Hall.jpeg: adding to list (157)
+0080.350 (0) finding files: 5-scaled.jpg: adding to list (158)
+0080.351 (0) finding files: Balcony-view-night-time-160x284.jpg: adding to list (159)
+0080.351 (0) finding files: pic-3-223x284.jpg: adding to list (160)
+0080.351 (0) finding files: h3-1536x653.jpg: adding to list (161)
+0080.351 (0) finding files: pic-11-284x97.jpg: adding to list (162)
+0080.351 (0) finding files: Doulos-Phos-Piano-Lounge-7-1080x810.jpg: adding to list (163)
+0080.352 (0) finding files: WhatsApp-Image-2025-10-29-at-09.46.44-2-300x155.jpeg: adding to list (164)
+0080.352 (0) finding files: img19-861x1536.jpg: adding to list (165)
+0080.352 (0) finding files: Captains-Table-3-100x100.jpeg: adding to list (166)
+0080.352 (0) finding files: Team-1-4-266x284.jpg: adding to list (167)
+0080.352 (0) finding files: 07.PIANO-LOUNGE-ALL-DAY-DINING-2-768x512.jpg: adding to list (168)
+0080.353 (0) finding files: clock-100x100.png: adding to list (169)
+0080.353 (0) finding files: WhatsApp-Image-2026-03-03-at-20.40.12-600x359.jpeg: adding to list (170)
+0080.353 (0) finding files: Doulos-Phos-Cabins-Family-Suite-2-400x284.jpg: adding to list (171)
+0080.353 (0) finding files: 1-100x100.jpg: adding to list (172)
+0080.353 (0) finding files: 02A.-Sketchbook-Pg-2-History_page-0001-400x284.jpg: adding to list (173)
+0080.353 (0) finding files: Bintan-Resorts-Ferry-1080x520.jpg: adding to list (174)
+0080.354 (0) finding files: Amphiteater-2-1-1024x768.jpeg: adding to list (175)
+0080.354 (0) finding files: project6-300x300.jpg: adding to list (176)
+0080.354 (0) finding files: WhatsApp-Image-2025-10-29-at-09.20.26-1-2-284x135.jpeg: adding to list (177)
+0080.354 (0) finding files: WhatsApp-Image-2026-02-10-at-19.31.16-1-100x100.jpeg: adding to list (178)
+0080.354 (0) finding files: gallery10-300x225-1-100x100.jpg: adding to list (179)
+0080.354 (0) finding files: pic-4-600x176.jpg: adding to list (180)
+0080.355 (0) finding files: Gala-Dinner-at-Concert-Deck-1024x485.jpeg: adding to list (181)
+0080.355 (0) finding files: Beach-Club-236x284.jpg: adding to list (182)
+0080.355 (0) finding files: Doulos-Phos-Header-FB-300x300.jpg: adding to list (183)
+0080.355 (0) finding files: cropped-DP-Site-Identity-400x284.jpg: adding to list (184)
+0080.355 (0) finding files: home-2-1-300x200.jpg: adding to list (185)
+0080.355 (0) finding files: Pool-Bar-1-100x100.jpg: adding to list (186)
+0080.355 (0) finding files: pic-8-1024x410.jpg: adding to list (187)
+0080.356 (0) finding files: 07G.-focsle-3-480x861.jpg: adding to list (188)
+0080.356 (0) finding files: IMG_20260208_143154_511-1024x666.jpg: adding to list (189)
+0080.356 (0) finding files: Doulos-Phos-Cabins-Master-Mariner-5-150x150.jpg: adding to list (190)
+0080.356 (0) finding files: DSCF2571-200x300.jpg: adding to list (191)
+0080.356 (0) finding files: ocean-100x100.png: adding to list (192)
+0080.356 (0) finding files: WhatsApp-Image-2025-10-29-at-09.20.26-1-4-1536x728.jpeg: adding to list (193)
+0080.356 (0) finding files: Deluxe-Plus-Twin-Bed-300x160.jpeg: adding to list (194)
+0080.357 (0) finding files: IMG_20260208_143154_511-300x195.jpg: adding to list (195)
+0080.357 (0) finding files: Club-Lounge-2-600x450.jpeg: adding to list (196)
+0080.357 (0) finding files: Team-1-5.jpg: adding to list (197)
+0080.357 (0) finding files: Pool-Bar.jpg: adding to list (198)
+0080.357 (0) finding files: Doulos-Phos-Cabins-Master-Mariner-7-980x735.jpg: adding to list (199)
+0080.357 (0) finding files: gallery15-300x225-1-284x213.jpg: adding to list (200)
+0080.359 (0) finding files: DSCF3296-300x300.jpg: adding to list (201)
+0080.359 (0) finding files: pic-18-768x586.jpg: adding to list (202)
+0080.359 (0) finding files: content4-2-768x768.jpg: adding to list (203)
+0080.359 (0) finding files: Executive-Suite-Twin-Bed-261x300.jpg: adding to list (204)
+0080.359 (0) finding files: Doulos-Phos-Header-History-300x84.jpg: adding to list (205)
+0080.359 (0) finding files: Captains-Table-1-300x200.jpeg: adding to list (206)
+0080.360 (0) finding files: Button-Piano-Lounge-Bar-Menu-510x382.jpg: adding to list (207)
+0080.360 (0) finding files: DSCF2603-768x1152.jpg: adding to list (208)
+0080.360 (0) finding files: img19-600x1070.jpg: adding to list (209)
+0080.360 (0) finding files: DSCF2574-683x1024.jpg: adding to list (210)
+0080.360 (0) finding files: agent-2-284x284.jpg: adding to list (211)
+0080.360 (0) finding files: network-hub-300x300.png: adding to list (212)
+0080.360 (0) finding files: Amphiteater-3-1-284x213.jpeg: adding to list (213)
+0080.361 (0) finding files: Doulos-Phos-Aerial-view-300x300.jpg: adding to list (214)
+0080.361 (0) finding files: WhatsApp-Image-2026-02-10-at-19.31.16-2-600x332.jpeg: adding to list (215)
+0080.361 (0) finding files: pic-18-284x217.jpg: adding to list (216)
+0080.361 (0) finding files: 14B.-Concert-Deck-scaled-100x100.jpg: adding to list (217)
+0080.361 (0) finding files: pic-6-1536x788.jpg: adding to list (218)
+0080.361 (0) finding files: Doulos-Phos-Cabins-Master-Mariner-6-480x360.jpg: adding to list (219)
+0080.361 (0) finding files: closet_148249-300x300.png: adding to list (220)
+0080.362 (0) finding files: DSCF2552-189x284.jpg: adding to list (221)
+0080.362 (0) finding files: 06C.-Deck-Chair-with-Mocktail-Book-scaled.jpg: adding to list (222)
+0080.362 (0) finding files: Outdoor-Jacuzzi-300x300.jpg: adding to list (223)
+0080.362 (0) finding files: image-8.jpg: adding to list (224)
+0080.362 (0) finding files: WhatsApp-Image-2026-02-10-at-19.31.22-600x284.jpeg: adding to list (225)
+0080.363 (0) finding files: 2016_0802_02015000-300x300.jpg: adding to list (226)
+0080.363 (0) finding files: image-1-1-600x787.jpg: adding to list (227)
+0080.363 (0) finding files: Mudflat-Eco-Walk-600x284.jpeg: adding to list (228)
+0080.363 (0) finding files: DSCF3627-768x512.jpg: adding to list (229)
+0080.363 (0) finding files: DSCF2565-768x512.jpg: adding to list (230)
+0080.363 (0) finding files: Doulos-Phos-Cabins-Master-Mariner-6-400x250.jpg: adding to list (231)
+0080.363 (0) finding files: Sunken-Seating-100x100.jpeg: adding to list (232)
+0080.363 (0) finding files: content2-190x284.jpg: adding to list (233)
+0080.364 (0) finding files: Doulos-Phos-Header-Contact-980x276.jpg: adding to list (234)
+0080.364 (0) finding files: Doulos-Phos-Cabins-Deluxe-Plus-3-480x360.jpg: adding to list (235)
+0080.365 (0) finding files: Deluxe-Plus-Twin-Bed-284x152.jpeg: adding to list (236)
+0080.365 (0) finding files: DoulosPhosOnLand-n1-150x150.png: adding to list (237)
+0080.365 (0) finding files: Doulos-Phos-Mezzanine-2-980x735.jpg: adding to list (238)
+0080.365 (0) finding files: pic-8-100x100.jpg: adding to list (239)
+0080.366 (0) finding files: h3-300x128.jpg: adding to list (240)
+0080.366 (0) finding files: image1-4-2-600x245.png: adding to list (241)
+0080.366 (0) finding files: img22-300x300.jpg: adding to list (242)
+0080.366 (0) finding files: 14B.-Concert-Deck-1280x607.jpg: adding to list (243)
+0080.366 (0) finding files: GYM-1-768x575.jpg: adding to list (244)
+0080.366 (0) finding files: Infinity-Pool-600x245.jpg: adding to list (245)
+0080.366 (0) finding files: mirror-300x300.png: adding to list (246)
+0080.367 (0) finding files: Doulos-Phos-Cabins-Deluxe-Plus-3-400x250.jpg: adding to list (247)
+0080.367 (0) finding files: DSCF2548-1024x683.jpg: adding to list (248)
+0080.367 (0) finding files: gallery1-2-300x225-1-284x213.jpg: adding to list (249)
+0080.367 (0) finding files: placeholder-2.png: adding to list (250)
+0080.367 (0) finding files: Doulos-Phos-Header-Inheritage-480x135.jpg: adding to list (251)
+0080.367 (0) finding files: Doulos-Phos-Cabins-Deluxe-Plus-2-980x735.jpg: adding to list (252)
+0080.368 (0) finding files: project4.jpg: adding to list (253)
+0080.368 (0) finding files: DSCF2556-300x200.jpg: adding to list (254)
+0080.368 (0) finding files: placeholder-9-100x100.png: adding to list (255)
+0080.368 (0) finding files: Doulos-Phos-Cabins-Master-Mariner-3-300x225.jpg: adding to list (256)
+0080.368 (0) finding files: icons-5-300x300.png: adding to list (257)
+0080.368 (0) finding files: WhatsApp-Image-2026-02-10-at-19.31.16-1-1536x851.jpeg: adding to list (258)
+0080.368 (0) finding files: Doulos-Phos-Piano-Lounge-10-1080x810.jpg: adding to list (259)
+0080.369 (0) finding files: Balcony-view-2-2048x1001.jpg: adding to list (260)
+0080.369 (0) finding files: DSCF2572-600x900.jpg: adding to list (261)
+0080.369 (0) finding files: content2-768x1150.jpg: adding to list (262)
+0080.369 (0) finding files: Doulos-Phos-Cabins-Deluxe-1-600x450.jpg: adding to list (263)
+0080.369 (0) finding files: Executive-Suite-Twin-Bed-1.jpg: adding to list (264)
+0080.369 (0) finding files: Doulos-Phos-Cabins-Master-Mariner-8-1080x675.jpg: adding to list (265)
+0080.369 (0) finding files: DSCF2587-100x100.jpg: adding to list (266)
+0080.370 (0) finding files: balcony.png: adding to list (267)
+0080.370 (0) finding files: DSCF2545-300x300.jpg: adding to list (268)
+0080.370 (0) finding files: Doulos-Phos-Cabins-Family-Suite-3-600x450.jpg: adding to list (269)
+0080.370 (0) finding files: placeholder-12-768x512.png: adding to list (270)
+0080.370 (0) finding files: Pool-Bar-1-2048x971.jpg: adding to list (271)
+0080.370 (0) finding files: Concert-Deck-4-1536x727.jpeg: adding to list (272)
+0080.371 (0) finding files: External.jpg: adding to list (273)
+0080.371 (0) finding files: Doulos-Phos-Header-Contact-1080x304.jpg: adding to list (274)
+0080.371 (0) finding files: DSCF2584.jpg: adding to list (275)
+0080.371 (0) finding files: placeholder-9-600x400.png: adding to list (276)
+0080.371 (0) finding files: image-5-300x300.jpg: adding to list (277)
+0080.371 (0) finding files: Doulos-Phos-Cabins-Exec-Suite-4-400x516.jpg: adding to list (278)
+0080.371 (0) finding files: pexels-cottonbro-4505451-scaled-1-300x200.jpg: adding to list (279)
+0080.371 (0) finding files: DSCF2590.jpg: adding to list (280)
+0080.372 (0) finding files: WhatsApp-Image-2026-02-10-at-19.31.16-2-284x157.jpeg: adding to list (281)
+0080.372 (0) finding files: Doulos-Phos-Arisettafel-2-100x100.jpg: adding to list (282)
+0080.372 (0) finding files: 06C.-Deck-Chair-with-Mocktail-Book-1080x675.jpg: adding to list (283)
+0080.372 (0) finding files: Doulos-Phos-Piano-Lounge-15.jpg: adding to list (284)
+0080.372 (0) finding files: DSCF2587-600x400.jpg: adding to list (285)
+0080.372 (0) finding files: DSCF2595-284x189.jpg: adding to list (286)
+0080.372 (0) finding files: DSCF2597-2048x1365.jpg: adding to list (287)
+0080.373 (0) finding files: WhatsApp-Image-2025-10-29-at-09.46.05-768x364.jpeg: adding to list (288)
+0080.373 (0) finding files: Deluxe-Plus-Double-Bed-1-2-1024x558.jpg: adding to list (289)
+0080.373 (0) finding files: DSCF2568-284x189.jpg: adding to list (290)
+0080.373 (0) finding files: DSCF2590-1536x1024.jpg: adding to list (291)
+0080.373 (0) finding files: pic-7-1-600x87.jpg: adding to list (292)
+0080.373 (0) finding files: Doulos-Phos-Cabins-Family-Suite-2-768x576.jpg: adding to list (293)
+0080.373 (0) finding files: DSCF2552-1024x1536.jpg: adding to list (294)
+0080.373 (0) finding files: IMG_20260208_135500_266-768x1365.webp: adding to list (295)
+0080.374 (0) finding files: toiletries_7696002-300x300.png: adding to list (296)
+0080.374 (0) finding files: pic-3-2-300x48.jpg: adding to list (297)
+0080.374 (0) finding files: pic-42-768x512.jpg: adding to list (298)
+0080.374 (0) finding files: pic-4-1-300x300.jpg: adding to list (299)
+0080.374 (0) finding files: Doulos-Phos-Piano-Lounge-4-1024x768.jpg: adding to list (300)
+0080.376 (0) finding files: Doulos-Phos-Header-Home-Mobile-480x620.jpg: adding to list (301)
+0080.376 (0) finding files: Doulos-Phos-Piano-Lounge-13-300x300.jpg: adding to list (302)
+0080.376 (0) finding files: Doulos-Phos-Piano-Lounge-12-510x382.jpg: adding to list (303)
+0080.376 (0) finding files: Doulos-Phos-Club-Lounge-4-1024x768.jpg: adding to list (304)
+0080.376 (0) finding files: Team-5-100x100.jpg: adding to list (305)
+0080.376 (0) finding files: Service-2-100x100.jpg: adding to list (306)
+0080.376 (0) finding files: DSCF2594-scaled.jpg: adding to list (307)
+0080.377 (0) finding files: home-1-1536x1024.jpg: adding to list (308)
+0080.377 (0) finding files: WhatsApp-Image-2025-10-29-at-09.46.44-2-284x147.jpeg: adding to list (309)
+0080.377 (0) finding files: DSCF2579.jpg: adding to list (310)
+0080.377 (0) finding files: 5-600x284.jpg: adding to list (311)
+0080.377 (0) finding files: doulos-phos-the-ship-hotel-tour_6376-768x454.jpg: adding to list (312)
+0080.377 (0) finding files: Doulos-Phos-Cabins-Deluxe-2-400x516.jpg: adding to list (313)
+0080.378 (0) finding files: ooooooooooooooooooooooooooooooooooo-284x284.png: adding to list (314)
+0080.378 (0) finding files: WhatsApp-Image-2025-10-29-at-09.21.16-300x300.jpeg: adding to list (315)
+0080.378 (0) finding files: Salinan-Booth-Seat-300x142.jpg: adding to list (316)
+0080.378 (0) finding files: Button-Piano-Lounge-Bar-Menu-480x210.jpg: adding to list (317)
+0080.378 (0) finding files: WhatsApp-Image-2026-03-03-at-20.40.12-300x180.jpeg: adding to list (318)
+0080.378 (0) finding files: project2-100x100.jpg: adding to list (319)
+0080.378 (0) finding files: img28-861x1536.jpg: adding to list (320)
+0080.379 (0) finding files: 07G.-focsle-3-571x1024.jpg: adding to list (321)
+0080.379 (0) finding files: DSCF2545.jpg: adding to list (322)
+0080.379 (0) finding files: yellow-sk8-218x300.jpg: adding to list (323)
+0080.379 (0) finding files: DSCF2551.jpg: adding to list (324)
+0080.379 (0) finding files: Project-4.jpg: adding to list (325)
+0080.379 (0) finding files: 14A.-50-Nations-Banquet-Hall-2880x1636.jpg: adding to list (326)
+0080.380 (0) finding files: 5-300x300.jpg: adding to list (327)
+0080.380 (0) finding files: Pic-21-300x90.jpg: adding to list (328)
+0080.380 (0) finding files: h3-300x300.jpg: adding to list (329)
+0080.380 (0) finding files: project3-768x532.jpg: adding to list (330)
+0080.380 (0) finding files: DSCF2605-768x512.jpg: adding to list (331)
+0080.380 (0) finding files: Concert-Deck.jpg: adding to list (332)
+0080.380 (0) finding files: 07C.-Engine-Room-Propeller-Shaft-1.jpg: adding to list (333)
+0080.381 (0) finding files: Teacher-1-284x284.jpg: adding to list (334)
+0080.381 (0) finding files: Group-16-1-1024x602.png: adding to list (335)
+0080.381 (0) finding files: WhatsApp-Image-2025-10-29-at-09.46.44-2-1536x793.jpeg: adding to list (336)
+0080.381 (0) finding files: pic-9-1-300x177.jpg: adding to list (337)
+0080.381 (0) finding files: 8-scaled.jpg: adding to list (338)
+0080.381 (0) finding files: image-1-1-768x1007.jpg: adding to list (339)
+0080.382 (0) finding files: Doulos-Phos-Swimming-Pool-2-510x382.jpg: adding to list (340)
+0080.382 (0) finding files: Doulos-Phos-Piano-Lounge-9-510x382.jpg: adding to list (341)
+0080.382 (0) finding files: 14B.-Concert-Deck-980x464.jpg: adding to list (342)
+0080.382 (0) finding files: Doulos-Phos-Piano-Lounge-8-300x300.jpg: adding to list (343)
+0080.382 (0) finding files: Doulos-Phos-Swimming-Pool-3-300x300.jpg: adding to list (344)
+0080.382 (0) finding files: Team-1-5-284x284.jpg: adding to list (345)
+0080.383 (0) finding files: Doulos-Phos-Piano-Lounge-15-400x516.jpg: adding to list (346)
+0080.383 (0) finding files: WhatsApp-Image-2026-03-03-at-20.39.56-600x446.jpeg: adding to list (347)
+0080.383 (0) finding files: 8-300x142.jpg: adding to list (348)
+0080.383 (0) finding files: image1-4-2-300x300.png: adding to list (349)
+0080.383 (0) finding files: Living-Room-1.jpg: adding to list (350)
+0080.383 (0) finding files: Deluxe-Plus-Twin-Bed-1-100x100.jpeg: adding to list (351)
+0080.383 (0) finding files: project6.jpg: adding to list (352)
+0080.384 (0) finding files: img28-600x1070.jpg: adding to list (353)
+0080.384 (0) finding files: 09D.-Amphitheatre-1536x727.jpeg: adding to list (354)
+0080.384 (0) finding files: Infinity-Pool-300x300.jpg: adding to list (355)
+0080.384 (0) finding files: Doulos-Phos-Cabins-Master-Mariner-7-1080x810.jpg: adding to list (356)
+0080.384 (0) finding files: DP-Website-Pics-Cabins-Header-Edited-510x382.jpg: adding to list (357)
+0080.384 (0) finding files: Image-Placeholder-510x382.jpg: adding to list (358)
+0080.384 (0) finding files: Sunken-Seating1-736x1024.jpeg: adding to list (359)
+0080.385 (0) finding files: Balcony-Suite-Double-Bed-scaled.jpg: adding to list (360)
+0080.385 (0) finding files: DSCF2613-1024x1536.jpg: adding to list (361)
+0080.385 (0) finding files: External-600x450.jpg: adding to list (362)
+0080.385 (0) finding files: Image-Placeholder-3-300x300.jpg: adding to list (363)
+0080.385 (0) finding files: pic-6-768x394.jpg: adding to list (364)
+0080.385 (0) finding files: Doulos-Phos-Arisettafel-2-400x284.jpg: adding to list (365)
+0080.385 (0) finding files: Doulos-Phos-Cabins-Exec-Suite-2-300x300.jpg: adding to list (366)
+0080.386 (0) finding files: Doulos-Phos-Cabins-Exec-Suite-3-510x382.jpg: adding to list (367)
+0080.386 (0) finding files: Image-Placeholder-2-510x382.jpg: adding to list (368)
+0080.386 (0) finding files: Executive-Suite-Twin-Bed-1-768x882.jpg: adding to list (369)
+0080.386 (0) finding files: 14A.-50-Nations-Banquet-Hall-scaled-600x261.jpg: adding to list (370)
+0080.387 (0) finding files: DSCF3277.jpg: adding to list (371)
+0080.387 (0) finding files: DSCF3627-scaled.jpg: adding to list (372)
+0080.387 (0) finding files: DSCF2599-200x300.jpg: adding to list (373)
+0080.387 (0) finding files: Doulos-Phos-Piano-Lounge-4-980x735.jpg: adding to list (374)
+0080.388 (0) finding files: Doulos-Phos-Cabins-Exec-Suite-2-1080x675.jpg: adding to list (375)
+0080.388 (0) finding files: gallery9-300x225-1-284x213.jpg: adding to list (376)
+0080.388 (0) finding files: Doulos-Phos-Arisettafel-2-768x576.jpg: adding to list (377)
+0080.388 (0) finding files: 1-768x364.jpg: adding to list (378)
+0080.388 (0) finding files: Deluxe-Plus-Double-Bed-1-300x163.jpg: adding to list (379)
+0080.389 (0) finding files: DSCF2600-1365x2048.jpg: adding to list (380)
+0080.390 (0) finding files: pic-4-1024x300.jpg: adding to list (381)
+0080.390 (0) finding files: Deluxe-Plus-Double-Bed-300x149.jpg: adding to list (382)
+0080.391 (0) finding files: Doulos-Phos-Cabins-Toilet-new-980x735.jpg: adding to list (383)
+0080.391 (0) finding files: DSCF2531-600x400.jpg: adding to list (384)
+0080.391 (0) finding files: Service-2-1-300x300.jpg: adding to list (385)
+0080.391 (0) finding files: DSCF2590-300x200.jpg: adding to list (386)
+0080.391 (0) finding files: 2-284x135.jpg: adding to list (387)
+0080.391 (0) finding files: icons-1-100x100.png: adding to list (388)
+0080.392 (0) finding files: Doulos-Phos-Piano-Lounge-15-284x213.jpg: adding to list (389)
+0080.392 (0) finding files: DSCF2537-189x284.jpg: adding to list (390)
+0080.392 (0) finding files: WhatsApp-Image-2026-03-03-at-20.39.54-100x100.jpeg: adding to list (391)
+0080.392 (0) finding files: Doulos-Phos-Cabins-Master-Mariner-4-1024x768.jpg: adding to list (392)
+0080.392 (0) finding files: content2.jpg: adding to list (393)
+0080.392 (0) finding files: Doulos-Phos-Piano-Lounge-5-480x360.jpg: adding to list (394)
+0080.393 (0) finding files: Amphiteater-2-1-600x450.jpeg: adding to list (395)
+0080.393 (0) finding files: placeholder-18-600x400.png: adding to list (396)
+0080.393 (0) finding files: IMG_20260208_141912_900-600x338.jpg: adding to list (397)
+0080.393 (0) finding files: WhatsApp-Image-2025-10-29-at-09.20.26-1-300x300.jpeg: adding to list (398)
+0080.393 (0) finding files: 02A.-Sketchbook-Pg-2-History_page-0001-100x100.jpg: adding to list (399)
+0080.393 (0) finding files: Pool-Bar-1-768x364.jpg: adding to list (400)
+0080.395 (0) finding files: DSCF2541-100x100.jpg: adding to list (401)
+0080.395 (0) finding files: Doulos-Phos-Cabins-Family-Suite-2-100x100.jpg: adding to list (402)
+0080.395 (0) finding files: img19-300x300.jpg: adding to list (403)
+0080.395 (0) finding files: DSCF2549-2048x1365.jpg: adding to list (404)
+0080.395 (0) finding files: WhatsApp-Image-2026-03-03-at-20.40.12-1024x613.jpeg: adding to list (405)
+0080.396 (0) finding files: pexels-alena-shekhovtcova-6995704-scaled-1-100x100.jpg: adding to list (406)
+0080.396 (0) finding files: Doulos-Phos-Piano-Lounge-5-400x250.jpg: adding to list (407)
+0080.396 (0) finding files: DSCF2608-284x189.jpg: adding to list (408)
+0080.396 (0) finding files: IMG_20260208_135649_167-576x1024.webp: adding to list (409)
+0080.396 (0) finding files: DSCF2583-300x300.jpg: adding to list (410)
+0080.396 (0) finding files: home-2-1.jpg: adding to list (411)
+0080.396 (0) finding files: image-1-100x100.jpg: adding to list (412)
+0080.397 (0) finding files: Doulos-Phos-Header-Home-Desktop-400x250.jpg: adding to list (413)
+0080.397 (0) finding files: pexels-thuanny-gantuss-6218839-scaled-1-600x860.jpg: adding to list (414)
+0080.397 (0) finding files: Doulos-Phos-Header-History-768x216.jpg: adding to list (415)
+0080.397 (0) finding files: placeholder-18-100x100.png: adding to list (416)
+0080.397 (0) finding files: DSCF2581-1024x683.jpg: adding to list (417)
+0080.397 (0) finding files: Deluxe-Plus-Double-Bed-scaled.jpg: adding to list (418)
+0080.397 (0) finding files: home-1-1-284x189.jpg: adding to list (419)
+0080.398 (0) finding files: Mudflat-Eco-Walk-1024x485.jpeg: adding to list (420)
+0080.398 (0) finding files: placeholder-3-768x512.png: adding to list (421)
+0080.398 (0) finding files: DSCF2541-600x400.jpg: adding to list (422)
+0080.398 (0) finding files: pic-3-236x300.jpg: adding to list (423)
+0080.398 (0) finding files: h3-768x327.jpg: adding to list (424)
+0080.398 (0) finding files: Concert-Deck-1024x743.jpg: adding to list (425)
+0080.399 (0) finding files: Doulos-Phos-Arisettafel-6-300x300.jpg: adding to list (426)
+0080.399 (0) finding files: GYM-2.jpg: adding to list (427)
+0080.399 (0) finding files: DSCF2613-scaled.jpg: adding to list (428)
+0080.399 (0) finding files: Doulos-Phos-Arisettafel-3-600x450.jpg: adding to list (429)
+0080.399 (0) finding files: safe-box_5455498-100x100.png: adding to list (430)
+0080.399 (0) finding files: hair-dryer-100x100.png: adding to list (431)
+0080.400 (0) finding files: Doulos-Phos-Header-Social-Impact-980x276.jpg: adding to list (432)
+0080.400 (0) finding files: Doulos-Phos-Piano-Lounge-8-1080x675.jpg: adding to list (433)
+0080.400 (0) finding files: Doulos-Phos-Cabins-Master-Mariner-3-1024x768.jpg: adding to list (434)
+0080.400 (0) finding files: WhatsApp-Image-2026-02-10-at-19.31.22-1024x484.jpeg: adding to list (435)
+0080.400 (0) finding files: 07C.-Engine-Room-Propeller-Shaft-1-scaled-100x100.jpg: adding to list (436)
+0080.400 (0) finding files: testimonials-4-284x284.jpg: adding to list (437)
+0080.400 (0) finding files: ihcard-logo-dark2-1-150x150.png: adding to list (438)
+0080.400 (0) finding files: pexels-dmitriy-ganin-7772716-scaled-1-791x1024.jpg: adding to list (439)
+0080.401 (0) finding files: Salinan-Balcony-view-2-scaled-600x293.jpg: adding to list (440)
+0080.401 (0) finding files: pic-4-1-600x319.jpg: adding to list (441)
+0080.401 (0) finding files: Team-3-5.jpg: adding to list (442)
+0080.401 (0) finding files: DP-Website-Pics-Cabins-Header-Edited-1080x540.jpg: adding to list (443)
+0080.401 (0) finding files: WhatsApp-Image-2026-02-10-at-19.31.16-1-768x425.jpeg: adding to list (444)
+0080.401 (0) finding files: 14A.-50-Nations-Banquet-Hall-1536x669.jpg: adding to list (445)
+0080.402 (0) finding files: Team-1-300x300.jpg: adding to list (446)
+0080.402 (0) finding files: DSCF2531-100x100.jpg: adding to list (447)
+0080.402 (0) finding files: Doulos-Phos-Cabins-Toilet-400x516.jpg: adding to list (448)
+0080.402 (0) finding files: Outdoor-Dining-Night-Time-300x300.jpeg: adding to list (449)
+0080.402 (0) finding files: DSCF2559-1536x1024.jpg: adding to list (450)
+0080.402 (0) finding files: Family-Balcony-Suite-1024x501.jpg: adding to list (451)
+0080.403 (0) finding files: DSCF2617-1365x2048.jpg: adding to list (452)
+0080.403 (0) finding files: pic-11-1024x351.jpg: adding to list (453)
+0080.403 (0) finding files: WhatsApp-Image-2025-10-29-at-09.46.44-1.jpeg: adding to list (454)
+0080.403 (0) finding files: Doulos-Phos-Cabins-Family-Suite-3-980x735.jpg: adding to list (455)
+0080.403 (0) finding files: cropped-DP-Site-Identity-400x250.jpg: adding to list (456)
+0080.403 (0) finding files: Team-3-4.jpg: adding to list (457)
+0080.403 (0) finding files: doulos-phos-the-ship-hotel-tour_6376-300x300.jpg: adding to list (458)
+0080.403 (0) finding files: Doulos-Phos-Cabins-Deluxe-1-980x735.jpg: adding to list (459)
+0080.404 (0) finding files: 1-1-300x300.jpg: adding to list (460)
+0080.404 (0) finding files: 03.-Sketchbook-Pg-4-Social-Impact_page-0001-768x543.jpg: adding to list (461)
+0080.404 (0) finding files: Concert-Deck2-1536x728.jpeg: adding to list (462)
+0080.404 (0) finding files: WhatsApp-Image-2026-03-03-at-20.39.54-284x211.jpeg: adding to list (463)
+0080.404 (0) finding files: Doulos-Phos-Header-Home-Desktop-2048x910.jpg: adding to list (464)
+0080.404 (0) finding files: Amphiteater-3-2048x1536.jpeg: adding to list (465)
+0080.404 (0) finding files: Doulos-Phos-Header-Inheritage-300x300.jpg: adding to list (466)
+0080.405 (0) finding files: Doulos-Phos-Cabins-Deluxe-Plus-2-600x450.jpg: adding to list (467)
+0080.405 (0) finding files: DSCF2564-1536x1024.jpg: adding to list (468)
+0080.405 (0) finding files: mt-sample-background-600x400.jpg: adding to list (469)
+0080.405 (0) finding files: DSCF2617-1024x1536.jpg: adding to list (470)
+0080.405 (0) finding files: IMG_20260208_135500_266-576x1024.webp: adding to list (471)
+0080.406 (0) finding files: Teacher-3-300x300.jpg: adding to list (472)
+0080.406 (0) finding files: GYM-3.jpg: adding to list (473)
+0080.406 (0) finding files: DSCF2606-100x100.jpg: adding to list (474)
+0080.406 (0) finding files: Doulos-Phos-Cabins-Family-Suite-2-480x360.jpg: adding to list (475)
+0080.406 (0) finding files: Amphitheatre-1-1-600x291.jpeg: adding to list (476)
+0080.406 (0) finding files: 07C.-Engine-Room-Propeller-Shaft-1-400x516.jpg: adding to list (477)
+0080.407 (0) finding files: Amphitheatre-1-1-300x300.jpeg: adding to list (478)
+0080.407 (0) finding files: WhatsApp-Image-2025-10-29-at-09.46.44-1-1024x529.jpeg: adding to list (479)
+0080.407 (0) finding files: Doulos-Phos-Cabins-Family-Suite-2-400x250.jpg: adding to list (480)
+0080.407 (0) finding files: DSCF2591-768x512.jpg: adding to list (481)
+0080.407 (0) finding files: Doulos-Phos-Mezzanine-2-600x450.jpg: adding to list (482)
+0080.407 (0) finding files: woocommerce-placeholder-300x300.webp: adding to list (483)
+0080.407 (0) finding files: 02A.-Sketchbook-Pg-2-History_page-0001-400x250.jpg: adding to list (484)
+0080.407 (0) finding files: Team-3-1-100x100.jpg: adding to list (485)
+0080.408 (0) finding files: pexels-dmitriy-ganin-7772716-scaled-1-768x994.jpg: adding to list (486)
+0080.408 (0) finding files: Arisetafel-2-600x338.jpg: adding to list (487)
+0080.408 (0) finding files: Doulos-Phos-Piano-Lounge-5-100x100.jpg: adding to list (488)
+0080.408 (0) finding files: Deluxe-Plus-Double-Bed-2-2048x1014.jpg: adding to list (489)
+0080.408 (0) finding files: Spa-1-768x432.jpg: adding to list (490)
+0080.408 (0) finding files: Deluxe-Plus-Twin-Bed-300x300.jpeg: adding to list (491)
+0080.409 (0) finding files: Pool-Bar-1-1024x485.jpg: adding to list (492)
+0080.409 (0) finding files: Doulos-Phos-Header-Home-Desktop-100x100.jpg: adding to list (493)
+0080.409 (0) finding files: Family-Balcony-Suite-scaled.jpg: adding to list (494)
+0080.409 (0) finding files: DSCF2606-600x400.jpg: adding to list (495)
+0080.409 (0) finding files: cover-1-600x102.jpg: adding to list (496)
+0080.409 (0) finding files: img22-768x1373.jpg: adding to list (497)
+0080.410 (0) finding files: placeholder-2-300x200.png: adding to list (498)
+0080.410 (0) finding files: Doulos-Phos-Cabins-Deluxe-Plus-3-768x576.jpg: adding to list (499)
+0080.410 (0) finding files: GYM-3-1-100x100.jpg: adding to list (500)
+0080.418 (0) finding files: Doulos-Phos-Header-Home-Desktop-510x382.jpg: adding to list (1001, 500 log lines skipped)
+0080.425 (0) finding files: Button-Piano-Lounge-Bar-Menu-2-300x300.jpg: adding to list (1502, 500 log lines skipped)
+0080.434 (0) finding files: Doulos-Phos-Arisettafel-1-768x576.jpg: adding to list (2003, 500 log lines skipped)
+0080.443 (0) finding files: 05-1.png: adding to list (2504, 500 log lines skipped)
+0080.451 (0) finding files: pic-18-600x458.jpg: adding to list (3005, 500 log lines skipped)
+0080.459 (0) finding files: pexels-jess-vide-7502407.jpg: adding to list (3506, 500 log lines skipped)
+0080.466 (0) finding files: Doulos-Phos-Cabins-Master-Mariner-7.jpg: adding to list (4007, 500 log lines skipped)
+0080.473 (0) finding files: Doulos-Phos-Header-Facilities-1080x540.jpg: adding to list (4508, 500 log lines skipped)
+0080.478 (0) finding files: Doulos-Phos-Cabins-Master-Mariner-8-768x576.jpg: adding to list (4908, last; 400 log lines skipped)
+0080.479 (0) Beginning creation of dump of uploads (split every: 25 MB)
+0082.367 (0) Total entities for the zip file: 14 directories, 4964 files (0 skipped as non-modified), 795.9 MB
+0082.392 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads.zip.tmp: 100 files added (on-disk size: 0 KB)
+0082.401 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (25.3 MB, 4964 files batched, 137 (137) added so far); re-opening (prior size: 0 KB)
+0083.937 (0) A useful amount of data was added after this amount of zip processing: 3.5 s (normalised: 3.4 s, rate: 7479 KB/s)
+0083.939 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=3.4693760871887, normalised_time=3.4229302414473, max_time=83.938086032867, data points known=1, max_bytes=26214400)
+0083.943 (0) Zip size is at/near split limit (25.4 MB / 25 MB) - bumping index (from: 0)
+0084.487 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads.zip.list-temp.tmp)
+0084.513 (0) Successfully created zip file manifest (size: 6695)
+0084.517 (0) Created uploads zip (0) - 25969 KB in 3.5 s (7507.2 KB/s) (checksums: sha1: a70a2db56c86bf048b5c8f2620fea9a1b3272516, sha256: f12f74bc3a5e094ee14c4b051df287c966e3e9b29125726f1a63b53ac5729592)
+0084.530 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0084.532 (0) No remote despatch: user chose no remote backup service
+0084.534 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads.zip
+0084.536 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads.zip.list.tmp)
+0084.539 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0084.557 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads2.zip.tmp: 200 files added (on-disk size: 0 KB)
+0084.582 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads2.zip.tmp: 300 files added (on-disk size: 0 KB)
+0084.591 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (31.1 MB, 4964 files batched, 195 (332) added so far); re-opening (prior size: 0 KB)
+0086.697 (0) A useful amount of data was added after this amount of zip processing: 3.2 s (normalised: 2.6 s, rate: 9859.3 KB/s)
+0086.699 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=3.2292420864105, normalised_time=2.5965443803517, max_time=86.697769880295, data points known=1, max_bytes=26214400)
+0086.702 (0) Zip size is at/near split limit (31.1 MB / 25 MB) - bumping index (from: 1)
+0087.076 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads2.zip.list-temp.tmp)
+0087.116 (0) Successfully created zip file manifest (size: 9519)
+0087.120 (0) Created uploads zip (1) - 31866.4 KB in 2.2 s (14588.5 KB/s) (checksums: sha1: a2f9eaf0cb54f12f73a736f85a9b4cbf24742005, sha256: dd969fb5c50492f7d60a9efbd2f028c9fd9d07cbe93d35a2128122ce5e66a691)
+0087.133 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0087.134 (0) No remote despatch: user chose no remote backup service
+0087.136 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads2.zip
+0087.139 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads2.zip.list.tmp)
+0087.142 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0087.167 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads3.zip.tmp: 400 files added (on-disk size: 0 KB)
+0087.191 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads3.zip.tmp: 500 files added (on-disk size: 0 KB)
+0087.206 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (25.3 MB, 4964 files batched, 232 (564) added so far); re-opening (prior size: 0 KB)
+0088.869 (0) A useful amount of data was added after this amount of zip processing: 2.4 s (normalised: 2.4 s, rate: 10787.5 KB/s)
+0088.871 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=2.4012830257416, normalised_time=2.3731181801525, max_time=88.869693040848, data points known=1, max_bytes=26214400)
+0088.874 (0) Zip size is at/near split limit (25.3 MB / 25 MB) - bumping index (from: 2)
+0089.143 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads3.zip.list-temp.tmp)
+0089.181 (0) Successfully created zip file manifest (size: 11798)
+0089.185 (0) Created uploads zip (2) - 25938.6 KB in 1.8 s (14784.3 KB/s) (checksums: sha1: 4c8b69d408164c750f386130eacc3eab7376f19c, sha256: b77ca124528e8d6d8ac763f7510356f5e20c77483297f781421e596d561dfcb4)
+0089.197 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0089.199 (0) No remote despatch: user chose no remote backup service
+0089.201 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads3.zip
+0089.204 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads3.zip.list.tmp)
+0089.206 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0089.222 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads4.zip.tmp: 600 files added (on-disk size: 0 KB)
+0089.242 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (31.8 MB, 4964 files batched, 114 (678) added so far); re-opening (prior size: 0 KB)
+0091.304 (0) A useful amount of data was added after this amount of zip processing: 2.8 s (normalised: 2.2 s, rate: 11489.8 KB/s)
+0091.305 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=2.8353970050812, normalised_time=2.2280598107258, max_time=91.303962945938, data points known=1, max_bytes=26214400)
+0091.308 (0) Zip size is at/near split limit (31.8 MB / 25 MB) - bumping index (from: 3)
+0091.667 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads4.zip.list-temp.tmp)
+0091.695 (0) Successfully created zip file manifest (size: 5623)
+0091.700 (0) Created uploads zip (3) - 32581.7 KB in 2.1 s (15341.2 KB/s) (checksums: sha1: 57625f8982e4cbe24e802a7e4d372281f4a1f403, sha256: 0fd723253e8ff4a3ce67e527bdaaf4c98b53fae77f5257fbb7fee8cce81bdba0)
+0091.719 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0091.721 (0) No remote despatch: user chose no remote backup service
+0091.724 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads4.zip
+0091.728 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads4.zip.list.tmp)
+0091.731 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0091.747 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads5.zip.tmp: 700 files added (on-disk size: 0 KB)
+0091.777 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads5.zip.tmp: 800 files added (on-disk size: 0 KB)
+0091.799 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (28 MB, 4964 files batched, 199 (877) added so far); re-opening (prior size: 0 KB)
+0093.513 (0) A useful amount of data was added after this amount of zip processing: 3 s (normalised: 2.7 s, rate: 9414.5 KB/s)
+0093.515 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=3.045147895813, normalised_time=2.719212688354, max_time=93.513612031937, data points known=1, max_bytes=26214400)
+0093.519 (0) Zip size is at/near split limit (28 MB / 25 MB) - bumping index (from: 4)
+0093.866 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads5.zip.list-temp.tmp)
+0093.915 (0) Successfully created zip file manifest (size: 9742)
+0093.921 (0) Created uploads zip (4) - 28697.6 KB in 1.8 s (15784.4 KB/s) (checksums: sha1: 36371d6036c7b6827199bdef65d8c5708e853ed8, sha256: 6224a8f3d3912950b5c2d5a529571b19820077a732a65e9dd8d153c61517c49b)
+0093.942 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0093.944 (0) No remote despatch: user chose no remote backup service
+0093.949 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads5.zip
+0093.955 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads5.zip.list.tmp)
+0093.960 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0093.978 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads6.zip.tmp: 900 files added (on-disk size: 0 KB)
+0094.034 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (25.3 MB, 4964 files batched, 109 (986) added so far); re-opening (prior size: 0 KB)
+0095.751 (0) A useful amount of data was added after this amount of zip processing: 2.3 s (normalised: 2.3 s, rate: 11346.3 KB/s)
+0095.753 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=2.2830700874329, normalised_time=2.2562426918668, max_time=95.751497030258, data points known=1, max_bytes=26214400)
+0095.756 (0) Zip size is at/near split limit (25.3 MB / 25 MB) - bumping index (from: 5)
+0096.046 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads6.zip.list-temp.tmp)
+0096.066 (0) Successfully created zip file manifest (size: 5519)
+0096.070 (0) Created uploads zip (5) - 25911.1 KB in 1.8 s (14132 KB/s) (checksums: sha1: c382da12d34314071ab636acb0343e4cd91179de, sha256: 30cd4a1dc5c9d427d77c2cfbd1e8ca0a558a763a7bfd9dc5b7b33613318f124e)
+0096.082 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0096.084 (0) No remote despatch: user chose no remote backup service
+0096.086 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads6.zip
+0096.088 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads6.zip.list.tmp)
+0096.091 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0096.098 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads7.zip.tmp: 1000 files added (on-disk size: 0 KB)
+0096.121 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads7.zip.tmp: 1100 files added (on-disk size: 0 KB)
+0096.139 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (26 MB, 4964 files batched, 194 (1180) added so far); re-opening (prior size: 0 KB)
+0097.818 (0) A useful amount of data was added after this amount of zip processing: 2.3 s (normalised: 2.3 s, rate: 11315.3 KB/s)
+0097.819 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=2.3497259616852, normalised_time=2.2624180159515, max_time=97.818274021149, data points known=1, max_bytes=26214400)
+0097.823 (0) Zip size is at/near split limit (26 MB / 25 MB) - bumping index (from: 6)
+0098.141 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads7.zip.list-temp.tmp)
+0098.200 (0) Successfully created zip file manifest (size: 10019)
+0098.206 (0) Created uploads zip (6) - 26617.2 KB in 1.8 s (15184.8 KB/s) (checksums: sha1: 77116582ffd50ba6d1d8b5af27269eeef31d3acc, sha256: 6b68819f3964814c257dce56fe86ef97048b81a2a910cbaa8b927a5909490ac2)
+0098.222 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0098.225 (0) No remote despatch: user chose no remote backup service
+0098.227 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads7.zip
+0098.231 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads7.zip.list.tmp)
+0098.234 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0098.252 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads8.zip.tmp: 1200 files added (on-disk size: 0 KB)
+0098.296 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads8.zip.tmp: 1300 files added (on-disk size: 0 KB)
+0098.303 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (25.1 MB, 4964 files batched, 126 (1306) added so far); re-opening (prior size: 0 KB)
+0099.680 (0) A useful amount of data was added after this amount of zip processing: 2.2 s (normalised: 2.2 s, rate: 11609.7 KB/s)
+0099.682 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=2.2123539447784, normalised_time=2.2050561899214, max_time=99.681043863297, data points known=1, max_bytes=26214400)
+0099.686 (0) Zip size is at/near split limit (25.1 MB / 25 MB) - bumping index (from: 7)
+0100.092 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads8.zip.list-temp.tmp)
+0100.118 (0) Successfully created zip file manifest (size: 6132)
+0100.123 (0) Created uploads zip (7) - 25703.1 KB in 1.5 s (17346.9 KB/s) (checksums: sha1: e78d0015f6aafb21b08db734201c049c871c97ff, sha256: 2402bb9a7efe0e9580d4148ffb897fe385d0e7aa577b529dcb18aa12c6747097)
+0100.137 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0100.139 (0) No remote despatch: user chose no remote backup service
+0100.141 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads8.zip
+0100.145 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads8.zip.list.tmp)
+0100.148 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0100.182 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads9.zip.tmp: 1400 files added (on-disk size: 0 KB)
+0100.208 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads9.zip.tmp: 1500 files added (on-disk size: 0 KB)
+0100.228 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (28.1 MB, 4964 files batched, 276 (1582) added so far); re-opening (prior size: 0 KB)
+0102.259 (0) A useful amount of data was added after this amount of zip processing: 2.8 s (normalised: 2.5 s, rate: 10296.7 KB/s)
+0102.261 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=2.7908000946045, normalised_time=2.4862452896387, max_time=102.25957608223, data points known=1, max_bytes=26214400)
+0102.264 (0) Zip size is at/near split limit (28.1 MB / 25 MB) - bumping index (from: 8)
+0102.561 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads9.zip.list-temp.tmp)
+0102.608 (0) Successfully created zip file manifest (size: 13890)
+0102.613 (0) Created uploads zip (8) - 28777 KB in 2.1 s (13438.2 KB/s) (checksums: sha1: 4d94b2e4ce0101851e5b85aed4a7e4e791c28f81, sha256: 277b880bf8edd299ec5c53e4a4daca81e9fe77519afc58a9a89a322c610dbbd1)
+0102.627 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0102.628 (0) No remote despatch: user chose no remote backup service
+0102.630 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads9.zip
+0102.633 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads9.zip.list.tmp)
+0102.636 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0102.645 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads10.zip.tmp: 1600 files added (on-disk size: 0 KB)
+0102.672 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads10.zip.tmp: 1700 files added (on-disk size: 0 KB)
+0102.695 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads10.zip.tmp: 1800 files added (on-disk size: 0 KB)
+0102.703 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (27.4 MB, 4964 files batched, 242 (1824) added so far); re-opening (prior size: 0 KB)
+0104.524 (0) A useful amount of data was added after this amount of zip processing: 3.1 s (normalised: 2.8 s, rate: 9164.6 KB/s)
+0104.526 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=3.0560419559479, normalised_time=2.7933609203634, max_time=104.52441096306, data points known=1, max_bytes=26214400)
+0104.529 (0) Zip size is at/near split limit (27.4 MB / 25 MB) - bumping index (from: 9)
+0104.825 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads10.zip.list-temp.tmp)
+0104.866 (0) Successfully created zip file manifest (size: 12357)
+0104.870 (0) Created uploads zip (9) - 28043.8 KB in 1.9 s (14637.2 KB/s) (checksums: sha1: aa2a0d5eea7d481dda8701844cfa63abe5b209e7, sha256: 2c2be431a0cff3faa8f02a06ee57f6820242b9b27b7f0967be572f3338cbf3fe)
+0104.883 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0104.885 (0) No remote despatch: user chose no remote backup service
+0104.887 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads10.zip
+0104.891 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads10.zip.list.tmp)
+0104.893 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0104.918 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads11.zip.tmp: 1900 files added (on-disk size: 0 KB)
+0104.941 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (26.3 MB, 4964 files batched, 167 (1991) added so far); re-opening (prior size: 0 KB)
+0106.169 (0) A useful amount of data was added after this amount of zip processing: 1.7 s (normalised: 1.6 s, rate: 15854.4 KB/s)
+0106.171 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=1.7009150981903, normalised_time=1.6146927802973, max_time=106.16960000992, data points known=1, max_bytes=26214400)
+0106.174 (0) Zip size is at/near split limit (26.4 MB / 25 MB) - bumping index (from: 10)
+0106.480 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads11.zip.list-temp.tmp)
+0106.515 (0) Successfully created zip file manifest (size: 8428)
+0106.520 (0) Created uploads zip (10) - 26991.8 KB in 1.3 s (20679.9 KB/s) (checksums: sha1: 531aa3a7666698b2dab85ea038c85ff62248eb70, sha256: fd56d4b22ca1d3bb197d8ec52624c79ae8a993b212bb2094cf2a06d81145acc0)
+0106.535 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0106.536 (0) No remote despatch: user chose no remote backup service
+0106.539 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads11.zip
+0106.542 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads11.zip.list.tmp)
+0106.545 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0106.555 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads12.zip.tmp: 2000 files added (on-disk size: 0 KB)
+0106.585 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads12.zip.tmp: 2100 files added (on-disk size: 0 KB)
+0106.604 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (27.9 MB, 4964 files batched, 182 (2173) added so far); re-opening (prior size: 0 KB)
+0108.081 (0) A useful amount of data was added after this amount of zip processing: 2.6 s (normalised: 2.3 s, rate: 10937 KB/s)
+0108.082 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=2.6126129627228, normalised_time=2.3406844727034, max_time=108.08123898506, data points known=1, max_bytes=26214400)
+0108.087 (0) Zip size is at/near split limit (27.9 MB / 25 MB) - bumping index (from: 11)
+0108.426 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads12.zip.list-temp.tmp)
+0108.463 (0) Successfully created zip file manifest (size: 8971)
+0108.468 (0) Created uploads zip (11) - 28600.8 KB in 1.6 s (18244.4 KB/s) (checksums: sha1: 05334b8cf5b4369e935f3a0ac96061040a22015d, sha256: fe7bf3672fcd3ab2996dfa7257202de82886d27e9a13f7e8708c364d9de3affd)
+0108.489 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0108.491 (0) No remote despatch: user chose no remote backup service
+0108.495 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads12.zip
+0108.500 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads12.zip.list.tmp)
+0108.504 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0108.522 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads13.zip.tmp: 2200 files added (on-disk size: 0 KB)
+0108.560 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads13.zip.tmp: 2300 files added (on-disk size: 0 KB)
+0108.602 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads13.zip.tmp: 2400 files added (on-disk size: 0 KB)
+0108.620 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (27.9 MB, 4964 files batched, 271 (2444) added so far); re-opening (prior size: 0 KB)
+0110.323 (0) A useful amount of data was added after this amount of zip processing: 2.9 s (normalised: 2.6 s, rate: 10018.7 KB/s)
+0110.325 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=2.8546419143677, normalised_time=2.5552102332529, max_time=110.32383394241, data points known=1, max_bytes=26214400)
+0110.329 (0) Zip size is at/near split limit (27.7 MB / 25 MB) - bumping index (from: 12)
+0110.665 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads13.zip.list-temp.tmp)
+0110.734 (0) Successfully created zip file manifest (size: 13427)
+0110.738 (0) Created uploads zip (12) - 28394.6 KB in 1.9 s (15256.4 KB/s) (checksums: sha1: 8985c6f687280bacf6a03f498917aac5635a0e1c, sha256: a54c5423b1a6cf2c378bdf20ed603a9f29dd38e0b57913d5db93300507719fb8)
+0110.755 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0110.757 (0) No remote despatch: user chose no remote backup service
+0110.760 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads13.zip
+0110.763 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads13.zip.list.tmp)
+0110.766 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0110.790 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads14.zip.tmp: 2500 files added (on-disk size: 0 KB)
+0110.817 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads14.zip.tmp: 2600 files added (on-disk size: 0 KB)
+0110.820 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (25.1 MB, 4964 files batched, 160 (2604) added so far); re-opening (prior size: 0 KB)
+0112.129 (0) A useful amount of data was added after this amount of zip processing: 2.7 s (normalised: 2.6 s, rate: 9665 KB/s)
+0112.130 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=2.6607959270477, normalised_time=2.6487214617386, max_time=112.12920498848, data points known=1, max_bytes=26214400)
+0112.134 (0) Zip size is at/near split limit (25.1 MB / 25 MB) - bumping index (from: 13)
+0112.394 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads14.zip.list-temp.tmp)
+0112.435 (0) Successfully created zip file manifest (size: 8021)
+0112.439 (0) Created uploads zip (13) - 25740.4 KB in 1.4 s (18443 KB/s) (checksums: sha1: 6b0f90cfaa86fd1a165267a4756081688bde82ac, sha256: 19a3ae94cbc71f3ea978e2c3454084746c9fca9243fc91baf98a9d860ab9a797)
+0112.457 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0112.458 (0) No remote despatch: user chose no remote backup service
+0112.461 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads14.zip
+0112.464 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads14.zip.list.tmp)
+0112.468 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0112.503 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads15.zip.tmp: 2700 files added (on-disk size: 0 KB)
+0112.519 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (25.4 MB, 4964 files batched, 151 (2755) added so far); re-opening (prior size: 0 KB)
+0113.964 (0) A useful amount of data was added after this amount of zip processing: 2.5 s (normalised: 2.5 s, rate: 10408.6 KB/s)
+0113.966 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=2.4959421157837, normalised_time=2.4595002415722, max_time=113.96439886093, data points known=1, max_bytes=26214400)
+0113.969 (0) Zip size is at/near split limit (25.4 MB / 25 MB) - bumping index (from: 14)
+0114.230 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads15.zip.list-temp.tmp)
+0114.255 (0) Successfully created zip file manifest (size: 7439)
+0114.259 (0) Created uploads zip (14) - 26001.5 KB in 1.5 s (17008.4 KB/s) (checksums: sha1: 6e11a1c5cb7e6fb737b35a84a336a232ffd1393f, sha256: f1dbd32c6fa5cd7fca79ecdf0154a764a103fec62eb56f0e9cd17cdfd714c00c)
+0114.273 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0114.274 (0) No remote despatch: user chose no remote backup service
+0114.276 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads15.zip
+0114.279 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads15.zip.list.tmp)
+0114.282 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0114.300 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads16.zip.tmp: 2800 files added (on-disk size: 0 KB)
+0114.326 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads16.zip.tmp: 2900 files added (on-disk size: 0 KB)
+0114.332 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (25.1 MB, 4964 files batched, 170 (2925) added so far); re-opening (prior size: 0 KB)
+0115.939 (0) A useful amount of data was added after this amount of zip processing: 2.5 s (normalised: 2.5 s, rate: 10416.5 KB/s)
+0115.941 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=2.4710209369659, normalised_time=2.4576448180367, max_time=115.93939900398, data points known=1, max_bytes=26214400)
+0115.944 (0) Zip size is at/near split limit (25.2 MB / 25 MB) - bumping index (from: 15)
+0116.269 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads16.zip.list-temp.tmp)
+0116.297 (0) Successfully created zip file manifest (size: 8434)
+0116.301 (0) Created uploads zip (15) - 25764.4 KB in 1.7 s (15278.7 KB/s) (checksums: sha1: ddc7319b87418331c49caa99a7a1b77ccd82ab60, sha256: 74fac1981a3957b4b117b073b82a35af985e6b4fe9f6383fc1349f365648fa7a)
+0116.316 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0116.317 (0) No remote despatch: user chose no remote backup service
+0116.319 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads16.zip
+0116.322 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads16.zip.list.tmp)
+0116.324 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0116.350 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads17.zip.tmp: 3000 files added (on-disk size: 0 KB)
+0116.372 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (26.9 MB, 4964 files batched, 164 (3089) added so far); re-opening (prior size: 0 KB)
+0117.955 (0) A useful amount of data was added after this amount of zip processing: 2.5 s (normalised: 2.3 s, rate: 11080 KB/s)
+0117.957 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=2.4865429401398, normalised_time=2.3104690090476, max_time=117.95603108406, data points known=1, max_bytes=26214400)
+0117.963 (0) Zip size is at/near split limit (26.9 MB / 25 MB) - bumping index (from: 16)
+0118.290 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads17.zip.list-temp.tmp)
+0118.320 (0) Successfully created zip file manifest (size: 8108)
+0118.324 (0) Created uploads zip (16) - 27575 KB in 1.7 s (16592.7 KB/s) (checksums: sha1: 2b6eb7cdc9085c11f12ba29671d90bc2e96b4454, sha256: ead6b814f5d9ce08fb67b4f25ca5bc052f7851ea5dc132449f01e4e74d4f64e4)
+0118.340 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0118.341 (0) No remote despatch: user chose no remote backup service
+0118.344 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads17.zip
+0118.347 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads17.zip.list.tmp)
+0118.349 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0118.357 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads18.zip.tmp: 3100 files added (on-disk size: 0 KB)
+0118.384 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads18.zip.tmp: 3200 files added (on-disk size: 0 KB)
+0118.408 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads18.zip.tmp: 3300 files added (on-disk size: 0 KB)
+0118.418 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (26.2 MB, 4964 files batched, 254 (3343) added so far); re-opening (prior size: 0 KB)
+0120.063 (0) A useful amount of data was added after this amount of zip processing: 2.6 s (normalised: 2.5 s, rate: 10353.9 KB/s)
+0120.065 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=2.5953431129456, normalised_time=2.4724955191141, max_time=120.06430792809, data points known=1, max_bytes=26214400)
+0120.071 (0) Zip size is at/near split limit (26.3 MB / 25 MB) - bumping index (from: 17)
+0120.495 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads18.zip.list-temp.tmp)
+0120.548 (0) Successfully created zip file manifest (size: 12672)
+0120.553 (0) Created uploads zip (17) - 26909.5 KB in 1.7 s (15397 KB/s) (checksums: sha1: 1a6c087dc45f975581f5099be05c4b5d9ff34b73, sha256: cf2e183ce09a102883c7cbdc2a48468d59eec1f68da8e89c7dea109b5a471b87)
+0120.573 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0120.574 (0) No remote despatch: user chose no remote backup service
+0120.577 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads18.zip
+0120.580 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads18.zip.list.tmp)
+0120.584 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0120.619 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads19.zip.tmp: 3400 files added (on-disk size: 0 KB)
+0120.654 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (25 MB, 4964 files batched, 116 (3459) added so far); re-opening (prior size: 0 KB)
+0122.047 (0) A useful amount of data was added after this amount of zip processing: 2.6 s (normalised: 2.6 s, rate: 9940.1 KB/s)
+0122.049 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=2.578980922699, normalised_time=2.5754235835062, max_time=122.0474178791, data points known=1, max_bytes=26214400)
+0122.052 (0) Zip size is at/near split limit (25.1 MB / 25 MB) - bumping index (from: 18)
+0122.368 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads19.zip.list-temp.tmp)
+0122.390 (0) Successfully created zip file manifest (size: 6021)
+0122.394 (0) Created uploads zip (18) - 25653 KB in 1.5 s (17108.1 KB/s) (checksums: sha1: ed4ada8bb58d52db33660cb50ece4b3ef932f128, sha256: 2a1a17af886b8ec175f422d93703d9f0cd31ac6b5ba63eaf4388d0db26e4a529)
+0122.409 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0122.410 (0) No remote despatch: user chose no remote backup service
+0122.412 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads19.zip
+0122.416 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads19.zip.list.tmp)
+0122.418 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0122.435 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads20.zip.tmp: 3500 files added (on-disk size: 0 KB)
+0122.460 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads20.zip.tmp: 3600 files added (on-disk size: 0 KB)
+0122.477 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (25 MB, 4964 files batched, 204 (3663) added so far); re-opening (prior size: 0 KB)
+0124.079 (0) A useful amount of data was added after this amount of zip processing: 2.6 s (normalised: 2.6 s, rate: 9816 KB/s)
+0124.082 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=2.6105070114136, normalised_time=2.6079937691271, max_time=124.08039999008, data points known=1, max_bytes=26214400)
+0124.087 (0) Zip size is at/near split limit (25 MB / 25 MB) - bumping index (from: 19)
+0124.446 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads20.zip.list-temp.tmp)
+0124.483 (0) Successfully created zip file manifest (size: 10241)
+0124.487 (0) Created uploads zip (19) - 25627.9 KB in 1.7 s (15129.4 KB/s) (checksums: sha1: d985e77216a4090b5ee4b378c716840ceb9703b9, sha256: 7e4bcb1eea8cd35e196717dc0789441b4a1f199a85d13203ca1a478733211727)
+0124.503 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0124.505 (0) No remote despatch: user chose no remote backup service
+0124.507 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads20.zip
+0124.510 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads20.zip.list.tmp)
+0124.513 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0124.530 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads21.zip.tmp: 3700 files added (on-disk size: 0 KB)
+0124.548 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (27.4 MB, 4964 files batched, 100 (3763) added so far); re-opening (prior size: 0 KB)
+0126.165 (0) A useful amount of data was added after this amount of zip processing: 2.7 s (normalised: 2.5 s, rate: 10415.4 KB/s)
+0126.166 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=2.6965100765228, normalised_time=2.4579045721353, max_time=126.16521692276, data points known=1, max_bytes=26214400)
+0126.170 (0) Zip size is at/near split limit (27.4 MB / 25 MB) - bumping index (from: 20)
+0126.555 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads21.zip.list-temp.tmp)
+0126.574 (0) Successfully created zip file manifest (size: 4971)
+0126.578 (0) Created uploads zip (20) - 28099.3 KB in 1.7 s (16694.5 KB/s) (checksums: sha1: da35952743c5e7fc27bfe2efb948f2d40d9b26f8, sha256: 9f302b389c89b7d07f2cf65ae5a6c395533ab769d661660eea35b8d8550fbc7a)
+0126.593 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0126.595 (0) No remote despatch: user chose no remote backup service
+0126.597 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads21.zip
+0126.600 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads21.zip.list.tmp)
+0126.602 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0126.616 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads22.zip.tmp: 3800 files added (on-disk size: 0 KB)
+0126.637 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads22.zip.tmp: 3900 files added (on-disk size: 0 KB)
+0126.654 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (27.4 MB, 4964 files batched, 219 (3982) added so far); re-opening (prior size: 0 KB)
+0128.338 (0) A useful amount of data was added after this amount of zip processing: 2.9 s (normalised: 2.6 s, rate: 9771.7 KB/s)
+0128.340 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=2.8700470924377, normalised_time=2.6198083448121, max_time=128.33847594261, data points known=1, max_bytes=26214400)
+0128.343 (0) Zip size is at/near split limit (27.4 MB / 25 MB) - bumping index (from: 21)
+0128.631 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads22.zip.list-temp.tmp)
+0128.665 (0) Successfully created zip file manifest (size: 13193)
+0128.670 (0) Created uploads zip (21) - 28054.6 KB in 1.8 s (15894.4 KB/s) (checksums: sha1: 29e4e099efb6c9407ca9503807b2af6264483f30, sha256: 45a1fcb6e85d6e6984d2ea6dcbc28bb3c7a461c5651f590eb9b33a068ac0dea3)
+0128.685 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0128.686 (0) No remote despatch: user chose no remote backup service
+0128.688 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads22.zip
+0128.692 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads22.zip.list.tmp)
+0128.694 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0128.704 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads23.zip.tmp: 4000 files added (on-disk size: 0 KB)
+0128.725 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (25 MB, 4964 files batched, 86 (4068) added so far); re-opening (prior size: 0 KB)
+0130.216 (0) A useful amount of data was added after this amount of zip processing: 2.7 s (normalised: 2.7 s, rate: 9330.5 KB/s)
+0130.218 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=2.7481000423431, normalised_time=2.7436759402468, max_time=130.21679592133, data points known=1, max_bytes=26214400)
+0130.223 (0) Zip size is at/near split limit (25.1 MB / 25 MB) - bumping index (from: 22)
+0130.574 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads23.zip.list-temp.tmp)
+0130.605 (0) Successfully created zip file manifest (size: 4225)
+0130.610 (0) Created uploads zip (22) - 25653.8 KB in 1.6 s (16512.7 KB/s) (checksums: sha1: 07289355431e9e7f90b41dd521f081764b02dba7, sha256: 84996b2f973679973f875ce99306270b27a0feef260e67d066636102af18369e)
+0130.629 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0130.631 (0) No remote despatch: user chose no remote backup service
+0130.633 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads23.zip
+0130.637 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads23.zip.list.tmp)
+0130.650 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0130.677 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads24.zip.tmp: 4100 files added (on-disk size: 0 KB)
+0130.701 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (25.1 MB, 4964 files batched, 101 (4169) added so far); re-opening (prior size: 0 KB)
+0132.153 (0) A useful amount of data was added after this amount of zip processing: 2.7 s (normalised: 2.7 s, rate: 9555.8 KB/s)
+0132.155 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=2.6848390102386, normalised_time=2.679004543366, max_time=132.15398097038, data points known=1, max_bytes=26214400)
+0132.159 (0) Zip size is at/near split limit (25.1 MB / 25 MB) - bumping index (from: 23)
+0132.463 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads24.zip.list-temp.tmp)
+0132.483 (0) Successfully created zip file manifest (size: 4863)
+0132.487 (0) Created uploads zip (23) - 25656.6 KB in 1.5 s (16572.4 KB/s) (checksums: sha1: d5e7e02109c031529d8d16856e52513a8cb4c459, sha256: 199c7da82eaac4f3ff05466f62c9b38368d1345c5b632ac87d5164ce2a2aed6a)
+0132.502 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0132.503 (0) No remote despatch: user chose no remote backup service
+0132.505 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads24.zip
+0132.508 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads24.zip.list.tmp)
+0132.510 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0132.522 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads25.zip.tmp: 4200 files added (on-disk size: 0 KB)
+0132.544 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads25.zip.tmp: 4300 files added (on-disk size: 0 KB)
+0132.554 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (25.1 MB, 4964 files batched, 176 (4345) added so far); re-opening (prior size: 0 KB)
+0134.076 (0) A useful amount of data was added after this amount of zip processing: 2.6 s (normalised: 2.6 s, rate: 9838.1 KB/s)
+0134.078 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=2.6080191135406, normalised_time=2.6021204088099, max_time=134.07658600807, data points known=1, max_bytes=26214400)
+0134.082 (0) Zip size is at/near split limit (25.1 MB / 25 MB) - bumping index (from: 24)
+0134.529 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads25.zip.list-temp.tmp)
+0134.591 (0) Successfully created zip file manifest (size: 8972)
+0134.598 (0) Created uploads zip (24) - 25684.2 KB in 1.6 s (16091.1 KB/s) (checksums: sha1: cab34861ee5ab554004c31c256a727438e7faf3f, sha256: 99e9f9c1987872601f2afcb34c51cab31e06c54710557a65749344e283de9f33)
+0134.632 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0134.635 (0) No remote despatch: user chose no remote backup service
+0134.638 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads25.zip
+0134.644 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads25.zip.list.tmp)
+0134.649 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0134.681 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads26.zip.tmp: 4400 files added (on-disk size: 0 KB)
+0134.689 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (25.2 MB, 4964 files batched, 74 (4419) added so far); re-opening (prior size: 0 KB)
+0136.155 (0) A useful amount of data was added after this amount of zip processing: 2.7 s (normalised: 2.7 s, rate: 9585.8 KB/s)
+0136.157 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=2.6872930526733, normalised_time=2.6706202177583, max_time=136.15612792969, data points known=1, max_bytes=26214400)
+0136.161 (0) Zip size is at/near split limit (25.2 MB / 25 MB) - bumping index (from: 25)
+0136.427 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads26.zip.list-temp.tmp)
+0136.442 (0) Successfully created zip file manifest (size: 3603)
+0136.447 (0) Created uploads zip (25) - 25770.6 KB in 1.6 s (16491.8 KB/s) (checksums: sha1: 4a89812ac513460ab710faea0a6b499aead29cdc, sha256: f93eb9b72760fe88cdcf5c3b112d2c03e3bb762d87fb6122fba596390f559e14)
+0136.464 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0136.465 (0) No remote despatch: user chose no remote backup service
+0136.468 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads26.zip
+0136.471 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads26.zip.list.tmp)
+0136.474 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0136.501 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads27.zip.tmp: 4500 files added (on-disk size: 0 KB)
+0136.518 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (25.4 MB, 4964 files batched, 147 (4566) added so far); re-opening (prior size: 0 KB)
+0138.101 (0) A useful amount of data was added after this amount of zip processing: 2.6 s (normalised: 2.6 s, rate: 9882.5 KB/s)
+0138.105 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=2.632826089859, normalised_time=2.5904464437488, max_time=138.10365200043, data points known=1, max_bytes=26214400)
+0138.117 (0) Zip size is at/near split limit (25.4 MB / 25 MB) - bumping index (from: 26)
+0138.399 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads27.zip.list-temp.tmp)
+0138.426 (0) Successfully created zip file manifest (size: 7252)
+0138.431 (0) Created uploads zip (26) - 26015.1 KB in 1.7 s (15562.2 KB/s) (checksums: sha1: 74571c91b99833556470f9210a3d979eddcbd46b, sha256: ef1978540e9665c65a0c692c9450744bb982bd16674041fb129b5a2e4108f782)
+0138.449 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0138.450 (0) No remote despatch: user chose no remote backup service
+0138.453 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads27.zip
+0138.456 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads27.zip.list.tmp)
+0138.459 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0138.474 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads28.zip.tmp: 4600 files added (on-disk size: 0 KB)
+0138.496 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (25.9 MB, 4964 files batched, 103 (4669) added so far); re-opening (prior size: 0 KB)
+0139.843 (0) A useful amount of data was added after this amount of zip processing: 2.4 s (normalised: 2.3 s, rate: 11178.4 KB/s)
+0139.845 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=2.3743999004364, normalised_time=2.2901252920124, max_time=139.84349608421, data points known=1, max_bytes=26214400)
+0139.850 (0) Zip size is at/near split limit (25.9 MB / 25 MB) - bumping index (from: 27)
+0140.120 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads28.zip.list-temp.tmp)
+0140.140 (0) Successfully created zip file manifest (size: 5100)
+0140.144 (0) Created uploads zip (27) - 26557.2 KB in 1.4 s (18718.1 KB/s) (checksums: sha1: 1b21ba7930721639c18d441a72cfb8a6feda582d, sha256: 5c0825b54b36afc61e98fbc542ad22c35c487de6219ccad1bb6c78b80e9abadd)
+0140.161 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0140.162 (0) No remote despatch: user chose no remote backup service
+0140.164 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads28.zip
+0140.168 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads28.zip.list.tmp)
+0140.171 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0140.185 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads29.zip.tmp: 4700 files added (on-disk size: 0 KB)
+0140.205 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (25.1 MB, 4964 files batched, 103 (4772) added so far); re-opening (prior size: 0 KB)
+0141.432 (0) A useful amount of data was added after this amount of zip processing: 2 s (normalised: 2 s, rate: 13073.7 KB/s)
+0141.434 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=1.964154958725, normalised_time=1.9581363248353, max_time=141.43303608894, data points known=1, max_bytes=26214400)
+0141.440 (0) Zip size is at/near split limit (25.1 MB / 25 MB) - bumping index (from: 28)
+0141.731 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads29.zip.list-temp.tmp)
+0141.755 (0) Successfully created zip file manifest (size: 5109)
+0141.760 (0) Created uploads zip (28) - 25693.9 KB in 1.3 s (19825.4 KB/s) (checksums: sha1: 7c30aa33a348cc6c5e7123661fdb2f3f34d237f6, sha256: 45bfa7978940ee8cffc383d4805560992e7e4516b60776ddad95503bdc9da387)
+0141.780 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0141.782 (0) No remote despatch: user chose no remote backup service
+0141.784 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads29.zip
+0141.788 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads29.zip.list.tmp)
+0141.791 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0141.808 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads30.zip.tmp: 4800 files added (on-disk size: 0 KB)
+0141.848 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads30.zip.tmp: 4900 files added (on-disk size: 0 KB)
+0141.856 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (26.3 MB, 4964 files batched, 150 (4922) added so far); re-opening (prior size: 0 KB)
+0143.550 (0) A useful amount of data was added after this amount of zip processing: 3.1 s (normalised: 2.9 s, rate: 8723.2 KB/s)
+0143.552 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=3.0819799900055, normalised_time=2.9347022555457, max_time=143.55083107948, data points known=1, max_bytes=26214400)
+0143.556 (0) Zip size is at/near split limit (26.3 MB / 25 MB) - bumping index (from: 29)
+0143.958 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads30.zip.list-temp.tmp)
+0143.986 (0) Successfully created zip file manifest (size: 7692)
+0143.990 (0) Created uploads zip (29) - 26907.4 KB in 1.8 s (14970.9 KB/s) (checksums: sha1: 08a52e6f6dc9bb149c4d18eed086a2e2b187c01a, sha256: ee013484ab4d2cabb4a9a6e01d5ab0e7c1de311ef282b06e6b85fc40b67ce784)
+0144.006 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0144.007 (0) No remote despatch: user chose no remote backup service
+0144.009 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads30.zip
+0144.012 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads30.zip.list.tmp)
+0144.015 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0144.303 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads31.zip.list-temp.tmp)
+0144.316 (0) Successfully created zip file manifest (size: 2226)
+0144.365 (0) Created uploads zip (30) - 3918.5 KB in 0.4 s (10560.8 KB/s) (sha1: e1fa64b9c5d8ab142e3d00bdf099125acebb9cc7, sha256: e91631585cc8fe49912f3ec9b2208421bbe60963ede5e0f3d131d4b1b64a4e53)
+0144.379 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0144.380 (0) No remote despatch: user chose no remote backup service
+0144.382 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads31.zip
+0144.385 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads31.zip.list.tmp)
+0144.387 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0144.398 (0) Beginning creation of dump of mu-plugins (split every: 25 MB)
+0144.413 (0) Total entities for the zip file: 1 directories, 2 files (0 skipped as non-modified), 0 MB
+0144.429 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-mu-plugins.zip.list-temp.tmp)
+0144.435 (0) Successfully created zip file manifest (size: 101)
+0144.447 (0) Created mu-plugins zip (0) - 2.1 KB in 0 s (58.6 KB/s) (sha1: b395a95c60f12a4c5fc761c41fc99e91e9312320, sha256: d17c0e3f8c2dca06749f978fdf57563e64f7f6541bb214f88086a3c738bf5f50)
+0144.461 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0144.463 (0) No remote despatch: user chose no remote backup service
+0144.465 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-mu-plugins.zip
+0144.469 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-mu-plugins.zip.list.tmp)
+0144.472 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0144.485 (0) Beginning backup of other directories found in the content directory (index: 0)
+0144.487 (0) Exclusion option setting (others): 
+0144.489 (0) Looking for candidates to backup in: /var/www/html/wp-content
+0144.491 (0) finding files: maintenance.php: adding to list (1)
+0144.492 (0) finding files: temp-write-test-5ec63b1cb5c3a5-30493806: adding to list (2)
+0144.494 (0) finding files: upgrade: adding to list (3)
+0144.495 (0) finding files: index.php: adding to list (4)
+0144.496 (0) finding files: upgrade-temp-backup: adding to list (5)
+0144.498 (0) finding files: 111 advanced-cache.php: adding to list (6)
+0144.500 (0) finding files: plugins: skipping: this is the plugins directory
+0144.501 (0) finding files: temp-write-test-68b5e0bde59d52-72731076: adding to list (7)
+0144.502 (0) finding files: advanced-cache-backup.php: adding to list (8)
+0144.504 (0) finding files: uploads: skipping: this is the uploads directory
+0144.505 (0) finding files: updraft: skipping: this is the updraft directory
+0144.506 (0) finding files: languages: adding to list (9)
+0144.507 (0) finding files: w3tc-config: adding to list (10)
+0144.509 (0) finding files: royal-backup-reset: adding to list (11)
+0144.510 (0) finding files: maintenance: adding to list (12)
+0144.511 (0) finding files: fonts: adding to list (13)
+0144.512 (0) finding files: themes: skipping: this is the themes directory
+0144.514 (0) finding files: mu-plugins: skipping: this is the mu-plugins directory
+0144.515 (0) finding files: et-cache: adding to list (14)
+0144.648 (0) Total entities for the zip file: 15 directories, 486 files (0 skipped as non-modified), 11.8 MB
+0144.672 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-others.zip.tmp: 100 files added (on-disk size: 0 KB)
+0144.695 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-others.zip.tmp: 200 files added (on-disk size: 0 KB)
+0144.717 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-others.zip.tmp: 300 files added (on-disk size: 0 KB)
+0144.739 (0) Zip: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-others.zip.tmp: 400 files added (on-disk size: 0 KB)
+0146.737 (0) Creating zip file manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-others.zip.list-temp.tmp)
+0146.808 (0) Successfully created zip file manifest (size: 37500)
+0146.897 (0) Created others zip (0) - 5569 KB in 2.4 s (2349.7 KB/s) (sha1: 196d719ad94b5c8dd7c1c85c92e11a815a43cd1a, sha256: 274e8998a1c061bfc790fb764dd682ccb6075f8ae49b31caeb8fc8f37ac48fa6)
+0146.910 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0146.911 (0) No remote despatch: user chose no remote backup service
+0146.913 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-others.zip
+0146.919 (0) Deleting zip manifest (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-others.zip.list.tmp)
+0146.921 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0146.939 (0) Saving backup status to database (elements: 43)
+0146.943 (0) Beginning creation of database dump (WordPress DB)
+0146.946 (0) SQL compatibility mode is: ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+0146.987 (0) Table wp_options: Total expected rows (via COUNT): 911
+0147.177 (0) Table wp_options: Rows added in this batch (next record: 158392): 905 (uncompressed bytes in this segment=2999550) in 0.20 seconds
+0147.196 (0) Table wp_options: finishing file(s) (2, 477.6 KB)
+0147.209 (0) Table wp_users: Total expected rows (via COUNT): 12
+0147.210 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0147.217 (0) Table wp_users: Rows added in this batch (next record: 13): 12 (uncompressed bytes in this segment=3010) in 0.01 seconds
+0147.229 (0) Table wp_users: finishing file(s) (2, 1.5 KB)
+0147.246 (0) Table wp_usermeta: Total expected rows (via COUNT): 271
+0147.247 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0147.259 (0) Table wp_usermeta: Rows added in this batch (next record: 387): 271 (uncompressed bytes in this segment=70382) in 0.02 seconds
+0147.275 (0) Table wp_usermeta: finishing file(s) (2, 13.8 KB)
+0147.291 (0) Table wp_commentmeta: Total expected rows (via COUNT): 0
+0147.297 (0) Table wp_commentmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=630) in 0.01 seconds
+0147.312 (0) Table wp_commentmeta: finishing file(s) (2, 0.4 KB)
+0147.325 (0) Table wp_comments: Total expected rows (via COUNT): 417
+0147.326 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0147.346 (0) Table wp_comments: Rows added in this batch (next record: 461): 417 (uncompressed bytes in this segment=155829) in 0.02 seconds
+0147.360 (0) Table wp_comments: finishing file(s) (2, 19.8 KB)
+0147.385 (0) Table wp_e_notes: Total expected rows (via COUNT): 0
+0147.393 (0) Table wp_e_notes: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1885) in 0.02 seconds
+0147.409 (0) Table wp_e_notes: finishing file(s) (2, 0.7 KB)
+0147.421 (0) Table wp_e_notes_users_relations: Total expected rows (via COUNT): 0
+0147.425 (0) Table wp_e_notes_users_relations: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=852) in 0.01 seconds
+0147.437 (0) Table wp_e_notes_users_relations: finishing file(s) (2, 0.4 KB)
+0147.450 (0) Table wp_links: Total expected rows (via COUNT): 0
+0147.453 (0) Table wp_links: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1023) in 0.01 seconds
+0147.465 (0) Table wp_links: finishing file(s) (2, 0.5 KB)
+0148.018 (0) Table wp_postmeta: Total expected rows (approximate): 24446
+0149.088 (0) Table wp_postmeta: Rows added in this batch (next record: 34800): 24446 (uncompressed bytes in this segment=18365342) in 1.61 seconds
+0149.121 (0) Table wp_postmeta: finishing file(s) (2, 1648.7 KB)
+0149.317 (0) Table wp_posts: Total expected rows (approximate): 3734
+0149.975 (0) Table wp_posts: Rows added in this batch (next record: 5661): 3734 (uncompressed bytes in this segment=9955833) in 0.84 seconds
+0150.001 (0) Table wp_posts: finishing file(s) (2, 1267.2 KB)
+0150.015 (0) Table wp_term_relationships: Total expected rows (approximate): 519
+0150.025 (0) Table wp_term_relationships: Rows added in this batch (next record: 100000): 519 (uncompressed bytes in this segment=8619) in 0.01 seconds
+0150.040 (0) Table wp_term_relationships: finishing file(s) (2, 1.7 KB)
+0150.058 (0) Table wp_term_taxonomy: Total expected rows (via COUNT): 49
+0150.060 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0150.067 (0) Table wp_term_taxonomy: Rows added in this batch (next record: 54): 49 (uncompressed bytes in this segment=2723) in 0.02 seconds
+0150.083 (0) Table wp_term_taxonomy: finishing file(s) (2, 0.8 KB)
+0150.098 (0) Table wp_termmeta: Total expected rows (via COUNT): 13
+0150.100 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0150.107 (0) Table wp_termmeta: Rows added in this batch (next record: 18): 13 (uncompressed bytes in this segment=1188) in 0.02 seconds
+0150.123 (0) Table wp_termmeta: finishing file(s) (2, 0.5 KB)
+0150.140 (0) Table wp_terms: Total expected rows (via COUNT): 49
+0150.142 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0150.152 (0) Table wp_terms: Rows added in this batch (next record: 54): 49 (uncompressed bytes in this segment=2356) in 0.02 seconds
+0150.167 (0) Table wp_terms: finishing file(s) (2, 0.9 KB)
+0150.206 (0) Table wp_actionscheduler_actions: Total expected rows (via COUNT): 565
+0150.226 (0) Table wp_actionscheduler_actions: Rows added in this batch (next record: 5845): 565 (uncompressed bytes in this segment=249212) in 0.05 seconds
+0150.242 (0) Table wp_actionscheduler_actions: finishing file(s) (2, 16.9 KB)
+0150.252 (0) Table wp_actionscheduler_claims: Total expected rows (via COUNT): 0
+0150.255 (0) Table wp_actionscheduler_claims: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=626) in 0.01 seconds
+0150.266 (0) Table wp_actionscheduler_claims: finishing file(s) (2, 0.4 KB)
+0150.278 (0) Table wp_actionscheduler_groups: Total expected rows (via COUNT): 8
+0150.279 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0150.285 (0) Table wp_actionscheduler_groups: Rows added in this batch (next record: 8): 8 (uncompressed bytes in this segment=825) in 0.01 seconds
+0150.297 (0) Table wp_actionscheduler_groups: finishing file(s) (2, 0.5 KB)
+0150.308 (0) Table wp_actionscheduler_logs: Total expected rows (approximate): 1669
+0150.334 (0) Table wp_actionscheduler_logs: Rows added in this batch (next record: 3004): 1669 (uncompressed bytes in this segment=146652) in 0.03 seconds
+0150.348 (0) Table wp_actionscheduler_logs: finishing file(s) (2, 12.9 KB)
+0150.369 (0) Table wp_cbe_bookings: Total expected rows (via COUNT): 0
+0150.373 (0) Table wp_cbe_bookings: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1527) in 0.02 seconds
+0150.388 (0) Table wp_cbe_bookings: finishing file(s) (2, 0.6 KB)
+0150.401 (0) Table wp_e_events: Total expected rows (via COUNT): 0
+0150.404 (0) Table wp_e_events: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=511) in 0.01 seconds
+0150.416 (0) Table wp_e_events: finishing file(s) (2, 0.3 KB)
+0150.433 (0) Table wp_e_submissions: Total expected rows (via COUNT): 0
+0150.438 (0) Table wp_e_submissions: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1979) in 0.01 seconds
+0150.450 (0) Table wp_e_submissions: finishing file(s) (2, 0.7 KB)
+0150.466 (0) Table wp_e_submissions_actions_log: Total expected rows (via COUNT): 0
+0150.469 (0) Table wp_e_submissions_actions_log: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1140) in 0.01 seconds
+0150.482 (0) Table wp_e_submissions_actions_log: finishing file(s) (2, 0.5 KB)
+0150.500 (0) Table wp_e_submissions_values: Total expected rows (via COUNT): 0
+0150.503 (0) Table wp_e_submissions_values: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=673) in 0.01 seconds
+0150.519 (0) Table wp_e_submissions_values: finishing file(s) (2, 0.4 KB)
+0150.531 (0) Table wp_ea11y_global_remediation_relationship: Total expected rows (via COUNT): 0
+0150.534 (0) Table wp_ea11y_global_remediation_relationship: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=936) in 0.01 seconds
+0150.546 (0) Table wp_ea11y_global_remediation_relationship: finishing file(s) (2, 0.4 KB)
+0150.563 (0) Table wp_ea11y_page_scanned: Total expected rows (via COUNT): 1
+0150.565 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0150.572 (0) Table wp_ea11y_page_scanned: Rows added in this batch (next record: 11): 1 (uncompressed bytes in this segment=1214) in 0.02 seconds
+0150.588 (0) Table wp_ea11y_page_scanned: finishing file(s) (2, 0.6 KB)
+0150.602 (0) Table wp_ea11y_pages_remediation: Total expected rows (via COUNT): 0
+0150.608 (0) Table wp_ea11y_pages_remediation: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=935) in 0.01 seconds
+0150.621 (0) Table wp_ea11y_pages_remediation: finishing file(s) (2, 0.5 KB)
+0150.634 (0) Table wp_ea11y_scanner_results: Total expected rows (via COUNT): 4
+0150.636 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0150.643 (0) Table wp_ea11y_scanner_results: Rows added in this batch (next record: 14): 4 (uncompressed bytes in this segment=2148) in 0.01 seconds
+0150.656 (0) Table wp_ea11y_scanner_results: finishing file(s) (2, 0.7 KB)
+0150.673 (0) Table wp_mphb_api_keys: Total expected rows (via COUNT): 0
+0150.679 (0) Table wp_mphb_api_keys: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=830) in 0.01 seconds
+0150.694 (0) Table wp_mphb_api_keys: finishing file(s) (2, 0.4 KB)
+0150.706 (0) Table wp_mphb_customers: Total expected rows (approximate): 0
+0150.708 (0) Table wp_mphb_customers: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=981) in 0.00 seconds
+0150.721 (0) Table wp_mphb_customers: finishing file(s) (2, 0.5 KB)
+0150.734 (0) Table wp_mphb_customers_meta: Total expected rows (approximate): 0
+0150.739 (0) Table wp_mphb_customers_meta: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=583) in 0.01 seconds
+0150.754 (0) Table wp_mphb_customers_meta: finishing file(s) (2, 0.3 KB)
+0150.771 (0) Table wp_mphb_sync_logs: Total expected rows (via COUNT): 0
+0150.777 (0) Table wp_mphb_sync_logs: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=594) in 0.01 seconds
+0150.793 (0) Table wp_mphb_sync_logs: finishing file(s) (2, 0.4 KB)
+0150.807 (0) Table wp_mphb_sync_queue: Total expected rows (via COUNT): 0
+0150.810 (0) Table wp_mphb_sync_queue: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=516) in 0.01 seconds
+0150.824 (0) Table wp_mphb_sync_queue: finishing file(s) (2, 0.3 KB)
+0150.837 (0) Table wp_mphb_sync_stats: Total expected rows (via COUNT): 0
+0150.840 (0) Table wp_mphb_sync_stats: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=828) in 0.01 seconds
+0150.853 (0) Table wp_mphb_sync_stats: finishing file(s) (2, 0.4 KB)
+0150.866 (0) Table wp_mphb_sync_urls: Total expected rows (via COUNT): 0
+0150.869 (0) Table wp_mphb_sync_urls: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=537) in 0.01 seconds
+0150.882 (0) Table wp_mphb_sync_urls: finishing file(s) (2, 0.3 KB)
+0150.903 (0) Table wp_nf3_action_meta: Total expected rows (via COUNT): 563
+0150.905 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0150.919 (0) Table wp_nf3_action_meta: Rows added in this batch (next record: 563): 563 (uncompressed bytes in this segment=70262) in 0.03 seconds
+0150.935 (0) Table wp_nf3_action_meta: finishing file(s) (2, 7.3 KB)
+0150.953 (0) Table wp_nf3_actions: Total expected rows (via COUNT): 24
+0150.954 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0150.962 (0) Table wp_nf3_actions: Rows added in this batch (next record: 24): 24 (uncompressed bytes in this segment=3117) in 0.02 seconds
+0150.976 (0) Table wp_nf3_actions: finishing file(s) (2, 0.7 KB)
+0150.995 (0) Table wp_nf3_chunks: Total expected rows (via COUNT): 0
+0151.001 (0) Table wp_nf3_chunks: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=471) in 0.01 seconds
+0151.016 (0) Table wp_nf3_chunks: finishing file(s) (2, 0.3 KB)
+0151.040 (0) Table wp_nf3_field_meta: Total expected rows (approximate): 3078
+0151.078 (0) Table wp_nf3_field_meta: Rows added in this batch (next record: 3979): 3078 (uncompressed bytes in this segment=321762) in 0.05 seconds
+0151.096 (0) Table wp_nf3_field_meta: finishing file(s) (2, 28.6 KB)
+0151.116 (0) Table wp_nf3_fields: Total expected rows (via COUNT): 61
+0151.118 (0) Table is relatively small; fetch_rows will thus be: 100 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0151.128 (0) Table wp_nf3_fields: Rows added in this batch (next record: 80): 61 (uncompressed bytes in this segment=12478) in 0.02 seconds
+0151.144 (0) Table wp_nf3_fields: finishing file(s) (2, 1.9 KB)
+0151.164 (0) Table wp_nf3_form_meta: Total expected rows (via COUNT): 688
+0151.166 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0151.182 (0) Table wp_nf3_form_meta: Rows added in this batch (next record: 688): 688 (uncompressed bytes in this segment=66145) in 0.03 seconds
+0151.197 (0) Table wp_nf3_form_meta: finishing file(s) (2, 6.8 KB)
+0151.214 (0) Table wp_nf3_forms: Total expected rows (via COUNT): 6
+0151.216 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0151.222 (0) Table wp_nf3_forms: Rows added in this batch (next record: 6): 6 (uncompressed bytes in this segment=1938) in 0.02 seconds
+0151.237 (0) Table wp_nf3_forms: finishing file(s) (2, 0.7 KB)
+0151.258 (0) Table wp_nf3_object_meta: Total expected rows (via COUNT): 0
+0151.265 (0) Table wp_nf3_object_meta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=598) in 0.02 seconds
+0151.287 (0) Table wp_nf3_object_meta: finishing file(s) (2, 0.3 KB)
+0151.312 (0) Table wp_nf3_objects: Total expected rows (via COUNT): 0
+0151.321 (0) Table wp_nf3_objects: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=644) in 0.02 seconds
+0151.342 (0) Table wp_nf3_objects: finishing file(s) (2, 0.4 KB)
+0151.362 (0) Table wp_nf3_relationships: Total expected rows (via COUNT): 0
+0151.365 (0) Table wp_nf3_relationships: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=707) in 0.01 seconds
+0151.382 (0) Table wp_nf3_relationships: finishing file(s) (2, 0.4 KB)
+0151.403 (0) Table wp_nf3_upgrades: Total expected rows (via COUNT): 6
+0151.405 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0151.422 (0) Table wp_nf3_upgrades: Rows added in this batch (next record: 6): 6 (uncompressed bytes in this segment=241871) in 0.03 seconds
+0151.438 (0) Table wp_nf3_upgrades: finishing file(s) (2, 23.1 KB)
+0151.456 (0) Table wp_trp_dictionary_en_us_id_id: Total expected rows (via COUNT): 764
+0151.475 (0) Table wp_trp_dictionary_en_us_id_id: Rows added in this batch (next record: 764): 764 (uncompressed bytes in this segment=123373) in 0.03 seconds
+0151.492 (0) Table wp_trp_dictionary_en_us_id_id: finishing file(s) (2, 27.3 KB)
+0151.519 (0) Table wp_trp_gettext_en_us: Total expected rows (approximate): 3567
+0151.556 (0) Table wp_trp_gettext_en_us: Rows added in this batch (next record: 3587): 3587 (uncompressed bytes in this segment=212911) in 0.05 seconds
+0151.570 (0) Table wp_trp_gettext_en_us: finishing file(s) (2, 51.1 KB)
+0151.594 (0) Table wp_trp_gettext_id_id: Total expected rows (approximate): 2848
+0151.624 (0) Table wp_trp_gettext_id_id: Rows added in this batch (next record: 2848): 2848 (uncompressed bytes in this segment=206135) in 0.05 seconds
+0151.641 (0) Table wp_trp_gettext_id_id: finishing file(s) (2, 47.3 KB)
+0151.663 (0) Table wp_trp_gettext_original_meta: Total expected rows (via COUNT): 0
+0151.669 (0) Table wp_trp_gettext_original_meta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=746) in 0.02 seconds
+0151.683 (0) Table wp_trp_gettext_original_meta: finishing file(s) (2, 0.4 KB)
+0151.696 (0) Table wp_trp_gettext_original_strings: Total expected rows (approximate): 4928
+0151.760 (0) Table wp_trp_gettext_original_strings: Rows added in this batch (next record: 4926): 4926 (uncompressed bytes in this segment=333746) in 0.07 seconds
+0151.772 (0) Table wp_trp_gettext_original_strings: finishing file(s) (2, 59.4 KB)
+0151.787 (0) Table wp_trp_original_meta: Total expected rows (via COUNT): 36
+0151.788 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0151.795 (0) Table wp_trp_original_meta: Rows added in this batch (next record: 36): 36 (uncompressed bytes in this segment=2102) in 0.01 seconds
+0151.808 (0) Table wp_trp_original_meta: finishing file(s) (2, 0.6 KB)
+0151.821 (0) Table wp_trp_original_strings: Total expected rows (via COUNT): 764
+0151.837 (0) Table wp_trp_original_strings: Rows added in this batch (next record: 764): 764 (uncompressed bytes in this segment=111726) in 0.02 seconds
+0151.852 (0) Table wp_trp_original_strings: finishing file(s) (2, 24.8 KB)
+0151.868 (0) Table wp_wc_admin_note_actions: Total expected rows (via COUNT): 89
+0151.870 (0) Table is relatively small; fetch_rows will thus be: 100 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0151.878 (0) Table wp_wc_admin_note_actions: Rows added in this batch (next record: 4692): 89 (uncompressed bytes in this segment=16248) in 0.02 seconds
+0151.893 (0) Table wp_wc_admin_note_actions: finishing file(s) (2, 3 KB)
+0151.911 (0) Table wp_wc_admin_notes: Total expected rows (via COUNT): 63
+0151.913 (0) Table is relatively small; fetch_rows will thus be: 100 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0151.920 (0) Table wp_wc_admin_notes: Rows added in this batch (next record: 63): 63 (uncompressed bytes in this segment=31344) in 0.02 seconds
+0151.938 (0) Table wp_wc_admin_notes: finishing file(s) (2, 7.3 KB)
+0151.949 (0) Table wp_wc_category_lookup: Total expected rows (approximate): 0
+0151.956 (0) Table wp_wc_category_lookup: Rows added in this batch (next record: 1000): 1 (uncompressed bytes in this segment=589) in 0.01 seconds
+0151.968 (0) Table wp_wc_category_lookup: finishing file(s) (2, 0.3 KB)
+0151.982 (0) Table wp_wc_customer_lookup: Total expected rows (via COUNT): 0
+0151.984 (0) Table wp_wc_customer_lookup: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1018) in 0.01 seconds
+0151.997 (0) Table wp_wc_customer_lookup: finishing file(s) (2, 0.5 KB)
+0152.010 (0) Table wp_wc_download_log: Total expected rows (via COUNT): 0
+0152.013 (0) Table wp_wc_download_log: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=716) in 0.01 seconds
+0152.025 (0) Table wp_wc_download_log: finishing file(s) (2, 0.4 KB)
+0152.037 (0) Table wp_wc_order_addresses: Total expected rows (via COUNT): 0
+0152.040 (0) Table wp_wc_order_addresses: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1058) in 0.01 seconds
+0152.053 (0) Table wp_wc_order_addresses: finishing file(s) (2, 0.5 KB)
+0152.066 (0) Table wp_wc_order_coupon_lookup: Total expected rows (approximate): 0
+0152.069 (0) Table wp_wc_order_coupon_lookup: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=715) in 0.01 seconds
+0152.083 (0) Table wp_wc_order_coupon_lookup: finishing file(s) (2, 0.4 KB)
+0152.095 (0) Table wp_wc_order_operational_data: Total expected rows (via COUNT): 0
+0152.098 (0) Table wp_wc_order_operational_data: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1399) in 0.01 seconds
+0152.112 (0) Table wp_wc_order_operational_data: finishing file(s) (2, 0.6 KB)
+0152.124 (0) Table wp_wc_order_product_lookup: Total expected rows (approximate): 0
+0152.127 (0) Table wp_wc_order_product_lookup: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=1299) in 0.01 seconds
+0152.141 (0) Table wp_wc_order_product_lookup: finishing file(s) (2, 0.5 KB)
+0152.155 (0) Table wp_wc_order_stats: Total expected rows (via COUNT): 0
+0152.159 (0) Table wp_wc_order_stats: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1258) in 0.01 seconds
+0152.177 (0) Table wp_wc_order_stats: finishing file(s) (2, 0.5 KB)
+0152.188 (0) Table wp_wc_order_tax_lookup: Total expected rows (approximate): 0
+0152.192 (0) Table wp_wc_order_tax_lookup: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=793) in 0.01 seconds
+0152.205 (0) Table wp_wc_order_tax_lookup: finishing file(s) (2, 0.4 KB)
+0152.217 (0) Table wp_wc_orders: Total expected rows (via COUNT): 0
+0152.220 (0) Table wp_wc_orders: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1470) in 0.01 seconds
+0152.232 (0) Table wp_wc_orders: finishing file(s) (2, 0.6 KB)
+0152.244 (0) Table wp_wc_orders_meta: Total expected rows (via COUNT): 0
+0152.250 (0) Table wp_wc_orders_meta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=702) in 0.01 seconds
+0152.262 (0) Table wp_wc_orders_meta: finishing file(s) (2, 0.4 KB)
+0152.274 (0) Table wp_wc_product_attributes_lookup: Total expected rows (approximate): 0
+0152.279 (0) Table wp_wc_product_attributes_lookup: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=866) in 0.01 seconds
+0152.293 (0) Table wp_wc_product_attributes_lookup: finishing file(s) (2, 0.4 KB)
+0152.307 (0) Table wp_wc_product_download_directories: Total expected rows (via COUNT): 2
+0152.308 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0152.315 (0) Table wp_wc_product_download_directories: Rows added in this batch (next record: 2): 2 (uncompressed bytes in this segment=868) in 0.01 seconds
+0152.327 (0) Table wp_wc_product_download_directories: finishing file(s) (2, 0.5 KB)
+0152.344 (0) Table wp_wc_product_meta_lookup: Total expected rows (via COUNT): 0
+0152.352 (0) Table wp_wc_product_meta_lookup: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1296) in 0.02 seconds
+0152.367 (0) Table wp_wc_product_meta_lookup: finishing file(s) (2, 0.5 KB)
+0152.384 (0) Table wp_wc_rate_limits: Total expected rows (via COUNT): 0
+0152.389 (0) Table wp_wc_rate_limits: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=666) in 0.01 seconds
+0152.407 (0) Table wp_wc_rate_limits: finishing file(s) (2, 0.4 KB)
+0152.419 (0) Table wp_wc_reserved_stock: Total expected rows (approximate): 0
+0152.422 (0) Table wp_wc_reserved_stock: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=663) in 0.01 seconds
+0152.437 (0) Table wp_wc_reserved_stock: finishing file(s) (2, 0.4 KB)
+0152.451 (0) Table wp_wc_tax_rate_classes: Total expected rows (via COUNT): 2
+0152.453 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0152.461 (0) Table wp_wc_tax_rate_classes: Rows added in this batch (next record: 2): 2 (uncompressed bytes in this segment=750) in 0.01 seconds
+0152.475 (0) Table wp_wc_tax_rate_classes: finishing file(s) (2, 0.4 KB)
+0152.490 (0) Table wp_wc_webhooks: Total expected rows (via COUNT): 0
+0152.497 (0) Table wp_wc_webhooks: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1070) in 0.01 seconds
+0152.511 (0) Table wp_wc_webhooks: finishing file(s) (2, 0.5 KB)
+0152.531 (0) Table wp_woocommerce_api_keys: Total expected rows (via COUNT): 0
+0152.535 (0) Table wp_woocommerce_api_keys: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=873) in 0.01 seconds
+0152.552 (0) Table wp_woocommerce_api_keys: finishing file(s) (2, 0.4 KB)
+0152.567 (0) Table wp_woocommerce_attribute_taxonomies: Total expected rows (via COUNT): 0
+0152.570 (0) Table wp_woocommerce_attribute_taxonomies: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=836) in 0.01 seconds
+0152.584 (0) Table wp_woocommerce_attribute_taxonomies: finishing file(s) (2, 0.4 KB)
+0152.599 (0) Table wp_woocommerce_downloadable_product_permissions: Total expected rows (via COUNT): 0
+0152.603 (0) Table wp_woocommerce_downloadable_product_permissions: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1454) in 0.01 seconds
+0152.617 (0) Table wp_woocommerce_downloadable_product_permissions: finishing file(s) (2, 0.5 KB)
+0152.636 (0) Table wp_woocommerce_log: Total expected rows (via COUNT): 0
+0152.641 (0) Table wp_woocommerce_log: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=642) in 0.01 seconds
+0152.657 (0) Table wp_woocommerce_log: finishing file(s) (2, 0.4 KB)
+0152.675 (0) Table wp_woocommerce_order_itemmeta: Total expected rows (via COUNT): 0
+0152.683 (0) Table wp_woocommerce_order_itemmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=722) in 0.02 seconds
+0152.701 (0) Table wp_woocommerce_order_itemmeta: finishing file(s) (2, 0.4 KB)
+0152.728 (0) Table wp_woocommerce_order_items: Total expected rows (via COUNT): 0
+0152.735 (0) Table wp_woocommerce_order_items: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=677) in 0.02 seconds
+0152.749 (0) Table wp_woocommerce_order_items: finishing file(s) (2, 0.4 KB)
+0152.767 (0) Table wp_woocommerce_payment_tokenmeta: Total expected rows (via COUNT): 0
+0152.774 (0) Table wp_woocommerce_payment_tokenmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=749) in 0.02 seconds
+0152.790 (0) Table wp_woocommerce_payment_tokenmeta: finishing file(s) (2, 0.4 KB)
+0152.804 (0) Table wp_woocommerce_payment_tokens: Total expected rows (via COUNT): 0
+0152.812 (0) Table wp_woocommerce_payment_tokens: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=744) in 0.01 seconds
+0152.826 (0) Table wp_woocommerce_payment_tokens: finishing file(s) (2, 0.4 KB)
+0152.846 (0) Table wp_woocommerce_sessions: Total expected rows (via COUNT): 1
+0152.849 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0152.857 (0) Table wp_woocommerce_sessions: Rows added in this batch (next record: 12): 1 (uncompressed bytes in this segment=1583) in 0.02 seconds
+0152.874 (0) Table wp_woocommerce_sessions: finishing file(s) (2, 0.7 KB)
+0152.889 (0) Table wp_woocommerce_shipping_zone_locations: Total expected rows (via COUNT): 1
+0152.891 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0152.897 (0) Table wp_woocommerce_shipping_zone_locations: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=907) in 0.01 seconds
+0152.911 (0) Table wp_woocommerce_shipping_zone_locations: finishing file(s) (2, 0.4 KB)
+0152.925 (0) Table wp_woocommerce_shipping_zone_methods: Total expected rows (via COUNT): 1
+0152.926 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0152.933 (0) Table wp_woocommerce_shipping_zone_methods: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=915) in 0.01 seconds
+0152.949 (0) Table wp_woocommerce_shipping_zone_methods: finishing file(s) (2, 0.4 KB)
+0152.964 (0) Table wp_woocommerce_shipping_zones: Total expected rows (via COUNT): 1
+0152.966 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0152.971 (0) Table wp_woocommerce_shipping_zones: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=740) in 0.01 seconds
+0152.987 (0) Table wp_woocommerce_shipping_zones: finishing file(s) (2, 0.4 KB)
+0153.000 (0) Table wp_woocommerce_tax_rate_locations: Total expected rows (via COUNT): 0
+0153.007 (0) Table wp_woocommerce_tax_rate_locations: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=786) in 0.01 seconds
+0153.024 (0) Table wp_woocommerce_tax_rate_locations: finishing file(s) (2, 0.4 KB)
+0153.038 (0) Table wp_woocommerce_tax_rates: Total expected rows (via COUNT): 0
+0153.042 (0) Table wp_woocommerce_tax_rates: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1144) in 0.01 seconds
+0153.059 (0) Table wp_woocommerce_tax_rates: finishing file(s) (2, 0.4 KB)
+0153.076 (0) Table wp_wpfm_backup: Total expected rows (via COUNT): 0
+0153.079 (0) Table wp_wpfm_backup: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=478) in 0.01 seconds
+0153.097 (0) Table wp_wpfm_backup: finishing file(s) (2, 0.3 KB)
+0153.107 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_options.table.tmpr158393.gz (1/87/fopen): adding to final database dump
+0153.470 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_options.table.gz (2/87/fopen): adding to final database dump
+0153.472 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_users.table.tmpr14.gz (3/87/fopen): adding to final database dump
+0153.477 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_users.table.gz (4/87/fopen): adding to final database dump
+0153.479 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_usermeta.table.tmpr388.gz (5/87/fopen): adding to final database dump
+0153.488 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_usermeta.table.gz (6/87/fopen): adding to final database dump
+0153.490 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_commentmeta.table.tmpr0.gz (7/87/fopen): adding to final database dump
+0153.493 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_commentmeta.table.gz (8/87/fopen): adding to final database dump
+0153.494 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_comments.table.tmpr462.gz (9/87/fopen): adding to final database dump
+0153.510 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_comments.table.gz (10/87/fopen): adding to final database dump
+0153.512 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_e_notes.table.tmpr0.gz (11/87/fopen): adding to final database dump
+0153.515 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_e_notes.table.gz (12/87/fopen): adding to final database dump
+0153.517 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_e_notes_users_relations.table.tmpr0.gz (13/87/fopen): adding to final database dump
+0153.520 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_e_notes_users_relations.table.gz (14/87/fopen): adding to final database dump
+0153.521 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_links.table.tmpr0.gz (15/87/fopen): adding to final database dump
+0153.524 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_links.table.gz (16/87/fopen): adding to final database dump
+0153.526 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_postmeta.table.tmpr34801.gz (17/87/fopen): adding to final database dump
+0154.743 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_postmeta.table.gz (18/87/fopen): adding to final database dump
+0154.745 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_posts.table.tmpr5662.gz (19/87/fopen): adding to final database dump
+0155.560 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_posts.table.gz (20/87/fopen): adding to final database dump
+0155.562 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_term_relationships.table.tmpr100001.gz (21/87/fopen): adding to final database dump
+0155.566 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_term_relationships.table.gz (22/87/fopen): adding to final database dump
+0155.567 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_term_taxonomy.table.tmpr55.gz (23/87/fopen): adding to final database dump
+0155.570 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_term_taxonomy.table.gz (24/87/fopen): adding to final database dump
+0155.571 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_termmeta.table.tmpr19.gz (25/87/fopen): adding to final database dump
+0155.574 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_termmeta.table.gz (26/87/fopen): adding to final database dump
+0155.576 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_terms.table.tmpr55.gz (27/87/fopen): adding to final database dump
+0155.578 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_terms.table.gz (28/87/fopen): adding to final database dump
+0155.580 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_actionscheduler_actions.table.tmpr5846.gz (29/87/fopen): adding to final database dump
+0155.591 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_actionscheduler_actions.table.gz (30/87/fopen): adding to final database dump
+0155.592 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_actionscheduler_claims.table.tmpr0.gz (31/87/fopen): adding to final database dump
+0155.595 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_actionscheduler_claims.table.gz (32/87/fopen): adding to final database dump
+0155.596 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_actionscheduler_groups.table.tmpr9.gz (33/87/fopen): adding to final database dump
+0155.599 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_actionscheduler_groups.table.gz (34/87/fopen): adding to final database dump
+0155.601 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_actionscheduler_logs.table.tmpr3005.gz (35/87/fopen): adding to final database dump
+0155.612 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_actionscheduler_logs.table.gz (36/87/fopen): adding to final database dump
+0155.614 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_cbe_bookings.table.tmpr0.gz (37/87/fopen): adding to final database dump
+0155.616 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_cbe_bookings.table.gz (38/87/fopen): adding to final database dump
+0155.618 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_e_events.table.tmpr0.gz (39/87/fopen): adding to final database dump
+0155.620 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_e_events.table.gz (40/87/fopen): adding to final database dump
+0155.622 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_e_submissions.table.tmpr0.gz (41/87/fopen): adding to final database dump
+0155.625 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_e_submissions.table.gz (42/87/fopen): adding to final database dump
+0155.627 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_e_submissions_actions_log.table.tmpr0.gz (43/87/fopen): adding to final database dump
+0155.630 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_e_submissions_actions_log.table.gz (44/87/fopen): adding to final database dump
+0155.632 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_e_submissions_values.table.tmpr0.gz (45/87/fopen): adding to final database dump
+0155.634 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_e_submissions_values.table.gz (46/87/fopen): adding to final database dump
+0155.636 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_ea11y_global_remediation_relationship.table.tmpr0.gz (47/87/fopen): adding to final database dump
+0155.639 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_ea11y_global_remediation_relationship.table.gz (48/87/fopen): adding to final database dump
+0155.641 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_ea11y_page_scanned.table.tmpr12.gz (49/87/fopen): adding to final database dump
+0155.643 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_ea11y_page_scanned.table.gz (50/87/fopen): adding to final database dump
+0155.645 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_ea11y_pages_remediation.table.tmpr0.gz (51/87/fopen): adding to final database dump
+0155.648 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_ea11y_pages_remediation.table.gz (52/87/fopen): adding to final database dump
+0155.650 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_ea11y_scanner_results.table.tmpr15.gz (53/87/fopen): adding to final database dump
+0155.652 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_ea11y_scanner_results.table.gz (54/87/fopen): adding to final database dump
+0155.654 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_mphb_api_keys.table.tmpr0.gz (55/87/fopen): adding to final database dump
+0155.657 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_mphb_api_keys.table.gz (56/87/fopen): adding to final database dump
+0155.659 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_mphb_customers.table.tmpr1.gz (57/87/fopen): adding to final database dump
+0155.661 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_mphb_customers.table.gz (58/87/fopen): adding to final database dump
+0155.663 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_mphb_customers_meta.table.tmpr1.gz (59/87/fopen): adding to final database dump
+0155.666 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_mphb_customers_meta.table.gz (60/87/fopen): adding to final database dump
+0155.667 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_mphb_sync_logs.table.tmpr0.gz (61/87/fopen): adding to final database dump
+0155.670 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_mphb_sync_logs.table.gz (62/87/fopen): adding to final database dump
+0155.671 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_mphb_sync_queue.table.tmpr0.gz (63/87/fopen): adding to final database dump
+0155.674 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_mphb_sync_queue.table.gz (64/87/fopen): adding to final database dump
+0155.676 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_mphb_sync_stats.table.tmpr0.gz (65/87/fopen): adding to final database dump
+0155.679 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_mphb_sync_stats.table.gz (66/87/fopen): adding to final database dump
+0155.680 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_mphb_sync_urls.table.tmpr0.gz (67/87/fopen): adding to final database dump
+0155.683 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_mphb_sync_urls.table.gz (68/87/fopen): adding to final database dump
+0155.685 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_nf3_action_meta.table.tmpr564.gz (69/87/fopen): adding to final database dump
+0155.689 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_nf3_action_meta.table.gz (70/87/fopen): adding to final database dump
+0155.691 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_nf3_actions.table.tmpr25.gz (71/87/fopen): adding to final database dump
+0155.694 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_nf3_actions.table.gz (72/87/fopen): adding to final database dump
+0155.696 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_nf3_chunks.table.tmpr0.gz (73/87/fopen): adding to final database dump
+0155.698 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_nf3_chunks.table.gz (74/87/fopen): adding to final database dump
+0155.700 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_nf3_field_meta.table.tmpr3980.gz (75/87/fopen): adding to final database dump
+0155.723 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_nf3_field_meta.table.gz (76/87/fopen): adding to final database dump
+0155.725 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_nf3_fields.table.tmpr81.gz (77/87/fopen): adding to final database dump
+0155.728 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_nf3_fields.table.gz (78/87/fopen): adding to final database dump
+0155.730 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_nf3_form_meta.table.tmpr689.gz (79/87/fopen): adding to final database dump
+0155.736 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_nf3_form_meta.table.gz (80/87/fopen): adding to final database dump
+0155.738 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_nf3_forms.table.tmpr7.gz (81/87/fopen): adding to final database dump
+0155.740 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_nf3_forms.table.gz (82/87/fopen): adding to final database dump
+0155.742 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_nf3_object_meta.table.tmpr0.gz (83/87/fopen): adding to final database dump
+0155.744 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_nf3_object_meta.table.gz (84/87/fopen): adding to final database dump
+0155.746 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_nf3_objects.table.tmpr0.gz (85/87/fopen): adding to final database dump
+0155.748 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_nf3_objects.table.gz (86/87/fopen): adding to final database dump
+0155.751 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_nf3_relationships.table.tmpr0.gz (87/87/fopen): adding to final database dump
+0155.755 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_nf3_relationships.table.gz (88/87/fopen): adding to final database dump
+0155.757 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_nf3_upgrades.table.tmpr7.gz (89/87/fopen): adding to final database dump
+0155.776 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_nf3_upgrades.table.gz (90/87/fopen): adding to final database dump
+0155.778 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_trp_dictionary_en_us_id_id.table.tmpr765.gz (91/87/fopen): adding to final database dump
+0155.795 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_trp_dictionary_en_us_id_id.table.gz (92/87/fopen): adding to final database dump
+0155.797 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_trp_gettext_en_us.table.tmpr3588.gz (93/87/fopen): adding to final database dump
+0155.833 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_trp_gettext_en_us.table.gz (94/87/fopen): adding to final database dump
+0155.835 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_trp_gettext_id_id.table.tmpr2849.gz (95/87/fopen): adding to final database dump
+0155.879 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_trp_gettext_id_id.table.gz (96/87/fopen): adding to final database dump
+0155.881 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_trp_gettext_original_meta.table.tmpr0.gz (97/87/fopen): adding to final database dump
+0155.884 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_trp_gettext_original_meta.table.gz (98/87/fopen): adding to final database dump
+0155.886 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_trp_gettext_original_strings.table.tmpr4927.gz (99/87/fopen): adding to final database dump
+0155.928 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_trp_gettext_original_strings.table.gz (100/87/fopen): adding to final database dump
+0155.930 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_trp_original_meta.table.tmpr37.gz (101/87/fopen): adding to final database dump
+0155.933 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_trp_original_meta.table.gz (102/87/fopen): adding to final database dump
+0155.935 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_trp_original_strings.table.tmpr765.gz (103/87/fopen): adding to final database dump
+0155.950 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_trp_original_strings.table.gz (104/87/fopen): adding to final database dump
+0155.952 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_admin_note_actions.table.tmpr4693.gz (105/87/fopen): adding to final database dump
+0155.956 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_admin_note_actions.table.gz (106/87/fopen): adding to final database dump
+0155.957 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_admin_notes.table.tmpr64.gz (107/87/fopen): adding to final database dump
+0155.963 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_admin_notes.table.gz (108/87/fopen): adding to final database dump
+0155.965 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_category_lookup.table.tmpr1001.gz (109/87/fopen): adding to final database dump
+0155.967 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_category_lookup.table.gz (110/87/fopen): adding to final database dump
+0155.969 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_customer_lookup.table.tmpr0.gz (111/87/fopen): adding to final database dump
+0155.972 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_customer_lookup.table.gz (112/87/fopen): adding to final database dump
+0155.973 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_download_log.table.tmpr0.gz (113/87/fopen): adding to final database dump
+0155.976 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_download_log.table.gz (114/87/fopen): adding to final database dump
+0155.979 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_order_addresses.table.tmpr0.gz (115/87/fopen): adding to final database dump
+0155.987 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_order_addresses.table.gz (116/87/fopen): adding to final database dump
+0155.991 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_order_coupon_lookup.table.tmpr1.gz (117/87/fopen): adding to final database dump
+0155.995 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_order_coupon_lookup.table.gz (118/87/fopen): adding to final database dump
+0155.998 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_order_operational_data.table.tmpr0.gz (119/87/fopen): adding to final database dump
+0156.001 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_order_operational_data.table.gz (120/87/fopen): adding to final database dump
+0156.004 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_order_product_lookup.table.tmpr1.gz (121/87/fopen): adding to final database dump
+0156.008 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_order_product_lookup.table.gz (122/87/fopen): adding to final database dump
+0156.010 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_order_stats.table.tmpr0.gz (123/87/fopen): adding to final database dump
+0156.013 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_order_stats.table.gz (124/87/fopen): adding to final database dump
+0156.015 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_order_tax_lookup.table.tmpr1.gz (125/87/fopen): adding to final database dump
+0156.018 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_order_tax_lookup.table.gz (126/87/fopen): adding to final database dump
+0156.020 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_orders.table.tmpr0.gz (127/87/fopen): adding to final database dump
+0156.023 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_orders.table.gz (128/87/fopen): adding to final database dump
+0156.024 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_orders_meta.table.tmpr0.gz (129/87/fopen): adding to final database dump
+0156.027 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_orders_meta.table.gz (130/87/fopen): adding to final database dump
+0156.029 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_product_attributes_lookup.table.tmpr1.gz (131/87/fopen): adding to final database dump
+0156.032 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_product_attributes_lookup.table.gz (132/87/fopen): adding to final database dump
+0156.033 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_product_download_directories.table.tmpr3.gz (133/87/fopen): adding to final database dump
+0156.036 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_product_download_directories.table.gz (134/87/fopen): adding to final database dump
+0156.038 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_product_meta_lookup.table.tmpr0.gz (135/87/fopen): adding to final database dump
+0156.041 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_product_meta_lookup.table.gz (136/87/fopen): adding to final database dump
+0156.042 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_rate_limits.table.tmpr0.gz (137/87/fopen): adding to final database dump
+0156.045 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_rate_limits.table.gz (138/87/fopen): adding to final database dump
+0156.047 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_reserved_stock.table.tmpr1.gz (139/87/fopen): adding to final database dump
+0156.049 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_reserved_stock.table.gz (140/87/fopen): adding to final database dump
+0156.051 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_tax_rate_classes.table.tmpr3.gz (141/87/fopen): adding to final database dump
+0156.055 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_tax_rate_classes.table.gz (142/87/fopen): adding to final database dump
+0156.057 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_webhooks.table.tmpr0.gz (143/87/fopen): adding to final database dump
+0156.059 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wc_webhooks.table.gz (144/87/fopen): adding to final database dump
+0156.061 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_api_keys.table.tmpr0.gz (145/87/fopen): adding to final database dump
+0156.064 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_api_keys.table.gz (146/87/fopen): adding to final database dump
+0156.066 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_attribute_taxonomies.table.tmpr0.gz (147/87/fopen): adding to final database dump
+0156.068 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_attribute_taxonomies.table.gz (148/87/fopen): adding to final database dump
+0156.070 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_downloadable_product_permissions.table.tmpr0.gz (149/87/fopen): adding to final database dump
+0156.073 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_downloadable_product_permissions.table.gz (150/87/fopen): adding to final database dump
+0156.074 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_log.table.tmpr0.gz (151/87/fopen): adding to final database dump
+0156.077 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_log.table.gz (152/87/fopen): adding to final database dump
+0156.079 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_order_itemmeta.table.tmpr0.gz (153/87/fopen): adding to final database dump
+0156.082 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_order_itemmeta.table.gz (154/87/fopen): adding to final database dump
+0156.084 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_order_items.table.tmpr0.gz (155/87/fopen): adding to final database dump
+0156.086 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_order_items.table.gz (156/87/fopen): adding to final database dump
+0156.088 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_payment_tokenmeta.table.tmpr0.gz (157/87/fopen): adding to final database dump
+0156.091 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_payment_tokenmeta.table.gz (158/87/fopen): adding to final database dump
+0156.093 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_payment_tokens.table.tmpr0.gz (159/87/fopen): adding to final database dump
+0156.096 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_payment_tokens.table.gz (160/87/fopen): adding to final database dump
+0156.098 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_sessions.table.tmpr13.gz (161/87/fopen): adding to final database dump
+0156.101 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_sessions.table.gz (162/87/fopen): adding to final database dump
+0156.102 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_shipping_zone_locations.table.tmpr2.gz (163/87/fopen): adding to final database dump
+0156.105 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_shipping_zone_locations.table.gz (164/87/fopen): adding to final database dump
+0156.107 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_shipping_zone_methods.table.tmpr2.gz (165/87/fopen): adding to final database dump
+0156.110 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_shipping_zone_methods.table.gz (166/87/fopen): adding to final database dump
+0156.112 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_shipping_zones.table.tmpr2.gz (167/87/fopen): adding to final database dump
+0156.115 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_shipping_zones.table.gz (168/87/fopen): adding to final database dump
+0156.117 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_tax_rate_locations.table.tmpr0.gz (169/87/fopen): adding to final database dump
+0156.119 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_tax_rate_locations.table.gz (170/87/fopen): adding to final database dump
+0156.121 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_tax_rates.table.tmpr0.gz (171/87/fopen): adding to final database dump
+0156.124 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_woocommerce_tax_rates.table.gz (172/87/fopen): adding to final database dump
+0156.125 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wpfm_backup.table.tmpr0.gz (173/87/fopen): adding to final database dump
+0156.128 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db-table-wp_wpfm_backup.table.gz (174/87/fopen): adding to final database dump
+0156.152 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db.gz: finished writing out complete database file (3777.5 KB)
+0156.305 (0) Total database tables backed up: 87 (backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db.gz, size: 3868294, sha1: 4d410fad70105a1496e89397848c8376b6960cc6, sha256: 9dd196f93427075324ef57f13583a2c22305bb0c57e8409429907c9984daf256)
+0156.318 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins.zip: plugins: This file has already been successfully processed
+0156.320 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins2.zip: plugins: This file has already been successfully processed
+0156.321 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins3.zip: plugins: This file has already been successfully processed
+0156.323 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-plugins4.zip: plugins: This file has already been successfully processed
+0156.324 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-themes.zip: themes: This file has already been successfully processed
+0156.326 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads.zip: uploads: This file has already been successfully processed
+0156.327 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads2.zip: uploads: This file has already been successfully processed
+0156.328 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads3.zip: uploads: This file has already been successfully processed
+0156.330 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads4.zip: uploads: This file has already been successfully processed
+0156.331 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads5.zip: uploads: This file has already been successfully processed
+0156.332 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads6.zip: uploads: This file has already been successfully processed
+0156.334 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads7.zip: uploads: This file has already been successfully processed
+0156.335 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads8.zip: uploads: This file has already been successfully processed
+0156.336 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads9.zip: uploads: This file has already been successfully processed
+0156.338 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads10.zip: uploads: This file has already been successfully processed
+0156.339 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads11.zip: uploads: This file has already been successfully processed
+0156.341 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads12.zip: uploads: This file has already been successfully processed
+0156.342 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads13.zip: uploads: This file has already been successfully processed
+0156.343 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads14.zip: uploads: This file has already been successfully processed
+0156.344 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads15.zip: uploads: This file has already been successfully processed
+0156.346 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads16.zip: uploads: This file has already been successfully processed
+0156.348 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads17.zip: uploads: This file has already been successfully processed
+0156.349 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads18.zip: uploads: This file has already been successfully processed
+0156.350 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads19.zip: uploads: This file has already been successfully processed
+0156.352 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads20.zip: uploads: This file has already been successfully processed
+0156.353 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads21.zip: uploads: This file has already been successfully processed
+0156.355 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads22.zip: uploads: This file has already been successfully processed
+0156.356 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads23.zip: uploads: This file has already been successfully processed
+0156.357 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads24.zip: uploads: This file has already been successfully processed
+0156.359 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads25.zip: uploads: This file has already been successfully processed
+0156.360 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads26.zip: uploads: This file has already been successfully processed
+0156.361 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads27.zip: uploads: This file has already been successfully processed
+0156.362 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads28.zip: uploads: This file has already been successfully processed
+0156.364 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads29.zip: uploads: This file has already been successfully processed
+0156.365 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads30.zip: uploads: This file has already been successfully processed
+0156.366 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-uploads31.zip: uploads: This file has already been successfully processed
+0156.368 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-mu-plugins.zip: mu-plugins: This file has already been successfully processed
+0156.369 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-others.zip: others: This file has already been successfully processed
+0156.370 (0) backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db.gz: db: This file has not yet been successfully uploaded: will queue
+0156.372 (0) Saving backup history. Total backup size: 896 MB
+0156.378 (0) Requesting upload of the files that have not yet been successfully uploaded (1)
+0156.385 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0156.386 (0) No remote despatch: user chose no remote backup service
+0156.388 (0) Recording as successfully uploaded: backup_2026-05-11-0103_Doulos_Phos_fc392e3be83f-db.gz
+0156.393 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0156.395 (0) Resume backup (fc392e3be83f, 0): finish run
+0156.399 (0) Decremented the semaphore (fd) by 1
+0156.402 (0) Semaphore (fd) unlocked
+0156.404 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0156.417 (0) No email will/can be sent - the user has not configured an email address.
+0156.419 (0) The backup succeeded and is now complete

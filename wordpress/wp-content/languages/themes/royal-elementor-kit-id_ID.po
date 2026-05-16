@@ -1,0 +1,142 @@
+# Translation of Themes - Royal Elementor Kit in Indonesian
+# This file is distributed under the same license as the Themes - Royal Elementor Kit package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-05-18 18:40:03+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: id\n"
+"Project-Id-Version: Themes - Royal Elementor Kit\n"
+
+#. Theme Name of the theme
+#: style.css inc/admin/customizer/customizer.php:39
+#, gp-priority: high
+msgid "Royal Elementor Kit"
+msgstr "Royal Elementor Kit"
+
+#: inc/admin/activation/class-welcome-notice.php:472
+msgid "Something went wrong, contact support."
+msgstr "Ada yang tidak beres, hubungi dukungan."
+
+#: inc/admin/activation/class-welcome-notice.php:383
+msgid "Get Started with Templates Kit %s"
+msgstr "Mulai dengan Templates Kit %s"
+
+#: inc/admin/activation/class-welcome-notice.php:375
+msgid "Royal Elementor Kit comes with %s with various designs to pick from."
+msgstr "Royal Elementor Kit hadir dengan %s dengan berbagai desain untuk dipilih."
+
+#: inc/admin/activation/class-welcome-notice.php:373
+msgid "Welcome to Royal Elementor Kit"
+msgstr "Selamat Datang di Royal Elementor Kit"
+
+#: inc/admin/activation/class-welcome-notice.php:238
+#: inc/admin/activation/class-welcome-notice.php:273
+msgid "Failed to initialize or activate importer plugin."
+msgstr "Gagal menginisialisasi atau mengaktifkan plugin importir."
+
+#: inc/admin/activation/class-welcome-notice.php:206
+#: inc/admin/activation/class-welcome-notice.php:250
+#: inc/admin/activation/class-welcome-notice.php:285
+msgid "Insufficient permissions to install the plugin."
+msgstr "Izin yang tidak mencukupi untuk menginstal plugin."
+
+#: single.php:65
+msgid "By"
+msgstr "Oleh"
+
+#: page.php:32 single.php:43
+msgid "Pages:"
+msgstr "Halaman:"
+
+#: index.php:41 single.php:28
+msgid "Comments"
+msgstr "Komentar"
+
+#: index.php:41 single.php:28
+msgid "1 Comment"
+msgstr "1 Komentar"
+
+#: header.php:39
+msgid "Home"
+msgstr "Beranda"
+
+#: header.php:24
+msgid "Skip to content"
+msgstr "Lewati ke konten"
+
+#: functions.php:35
+msgid "Main Menu"
+msgstr "Menu Utama"
+
+#: comments.php:44
+msgid "Post Comment"
+msgstr "Kirim Komentar"
+
+#: comments.php:43
+msgid "Comment"
+msgstr "Komentar"
+
+#: comments.php:42
+msgid "Leave a Reply"
+msgstr "Tinggalkan Balasan"
+
+#: comments.php:12
+msgid "% Comments"
+msgstr "% Komentar"
+
+#: comments.php:12
+msgid "One Comment"
+msgstr "Satu Komentar"
+
+#: comments.php:12 index.php:41 single.php:28
+msgid "0 Comments"
+msgstr "0 Komentar"
+
+#: 404.php:5
+msgid "Page not found!"
+msgstr "Halaman tidak ditemukan!"
+
+#: index.php:63
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Maaf, tetapi tidak ada yang cocok dengan istilah pencarian Anda. Mohon silakan coba lagi dengan beberapa kata kunci yang berbeda."
+
+#: index.php:46
+msgid "read more"
+msgstr "Baca Lebih Lanjut"
+
+#: comments.php:30
+msgid "Newer Comments"
+msgstr "Komentar Lebih Baru"
+
+#: comments.php:26
+msgid "Older Comments"
+msgstr "Komentar Sebelumnya"
+
+#: 404.php:8
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Tampaknya kami tak bisa menemukan apa yang Anda inginkan. Mungkin pencarian bisa membantu."
+
+#: index.php:62
+msgid "Nothing Found!"
+msgstr "Tidak Ada yang Ditemukan! "
+
+#. translators: %1$s: theme name, %2$s link, %3$s theme author
+#: footer.php:10
+msgid "%1$s Theme by <a href=\"%2$s\">%3$s.</a>"
+msgstr "Tema %1$s dibuat oleh <a href=\"%2$s\">%3$s.</a>"
+
+#. Author of the theme
+#: style.css
+#, gp-priority: low
+msgid "WP Royal"
+msgstr "WP Royal"
+
+#. Author URI of the theme
+#: style.css
+#, gp-priority: low
+msgid "https://royal-elementor-addons.com/"
+msgstr "https://royal-elementor-addons.com/"

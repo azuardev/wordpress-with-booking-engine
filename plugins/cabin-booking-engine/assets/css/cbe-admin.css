@@ -1,0 +1,694 @@
+.cbe-admin-help {
+  margin: 0 0 16px;
+  padding: 14px 16px;
+  border: 1px solid #d6e4ff;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #eef5ff 0%, #e6f0ff 100%);
+  color: #163e86;
+  line-height: 1.5;
+}
+
+.cbe-admin-help code {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 3px 9px;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #102445;
+  border: 1px solid #d7e4ff;
+}
+
+.cbe-admin-form-table th {
+  width: 220px;
+  font-weight: 600;
+  color: #1a2740;
+}
+
+.cbe-admin-form-table td input.regular-text {
+  min-width: 320px;
+}
+
+.cbe-admin-form-table .description {
+  margin-top: 6px;
+}
+
+.post-type-cabin .column-cbe_price,
+.post-type-cabin .column-cbe_units,
+.post-type-cabin .column-cbe_guests,
+.post-type-cabin .column-cbe_group {
+  width: 110px;
+}
+
+.cbe-cabin-manager-form {
+  margin-top: 16px;
+}
+
+.cbe-cabin-manager-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 18px;
+}
+
+.cbe-cabin-panel-facilities {
+  grid-column: 1 / -1;
+  margin-top: 4px;
+}
+
+.cbe-facilities-checklist-wide {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.cbe-cabin-panel {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid #d9e3f5;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 10px 22px rgba(19, 42, 80, 0.08);
+}
+
+.cbe-cabin-panel h2 {
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5ecfa;
+  color: #162743;
+}
+
+.cbe-cabin-panel p {
+  margin: 0 0 12px;
+}
+
+.cbe-cabin-panel p:last-child {
+  margin-bottom: 0;
+}
+
+.cbe-cabin-panel input[type="number"],
+.cbe-cabin-panel input[type="text"],
+.cbe-cabin-panel textarea,
+.cbe-cabin-panel select {
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid #cfdaf0;
+  border-radius: 10px;
+  min-height: 38px;
+  padding: 8px 10px;
+  background: #fff;
+}
+
+.cbe-cabin-panel textarea {
+  min-height: 120px;
+}
+
+.cbe-cabin-panel input[type="number"]:focus,
+.cbe-cabin-panel input[type="text"]:focus,
+.cbe-cabin-panel textarea:focus,
+.cbe-cabin-panel select:focus {
+  border-color: #83a3dc;
+  box-shadow: 0 0 0 1px #83a3dc;
+}
+
+.cbe-image-preview {
+  width: 210px;
+  min-height: 120px;
+  border: 1px dashed #b8c9e8;
+  border-radius: 10px;
+  background: #f3f7ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cbe-image-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cbe-gallery-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.cbe-gallery-thumb {
+  width: 82px;
+  height: 82px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #d5e0f4;
+  background: #fff;
+  box-shadow: 0 6px 10px rgba(20, 46, 88, 0.08);
+}
+
+.cbe-gallery-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cbe-cabin-manager-table td,
+.cbe-cabin-manager-table th {
+  vertical-align: middle;
+}
+
+.cbe-cabin-manager-table td {
+  color: #202f4d;
+}
+
+.cbe-cabin-manager-table .button {
+  border-color: #c6d6f3;
+}
+
+.cbe-facilities-builder {
+  display: grid;
+  gap: 10px;
+}
+
+.cbe-facilities-list {
+  display: grid;
+  gap: 8px;
+}
+
+.cbe-facility-table-wrap {
+  margin-top: 14px;
+  border: 1px solid #e4ebf5;
+  border-radius: 14px;
+  overflow: visible;
+  background: #ffffff;
+  box-shadow: 0 10px 24px rgba(12, 27, 48, 0.06);
+}
+
+.cbe-facility-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.cbe-facility-table thead th {
+  background: #f8fbff;
+  color: #435777;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 12px 14px;
+  border-bottom: 1px solid #e4ebf5;
+}
+
+.cbe-facility-table tbody td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #edf2f8;
+  vertical-align: middle;
+  color: #1f3658;
+  background: #ffffff;
+}
+
+.cbe-facility-table tbody tr:hover td {
+  background: #fbfdff;
+}
+
+.cbe-facility-row-no {
+  width: 36px;
+  color: #657996;
+  font-weight: 600;
+}
+
+.cbe-facility-catalog-panel {
+  max-width: 1200px;
+}
+
+.cbe-facility-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.cbe-facility-header h2 {
+  margin: 0;
+}
+
+.cbe-facility-header .description {
+  margin-top: 6px;
+}
+
+.cbe-facility-catalog-builder {
+  margin-top: 14px;
+}
+
+.cbe-facility-toolbar {
+  margin-bottom: 14px;
+}
+
+.cbe-facility-table-search {
+  width: min(420px, 100%);
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #d5dfee;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.cbe-facility-table-search:focus {
+  border-color: #83a3dc;
+  box-shadow: 0 0 0 1px #83a3dc;
+}
+
+.cbe-facility-catalog-head {
+  display: none;
+}
+
+.cbe-facility-catalog-row {
+  display: table-row;
+}
+
+.cbe-facility-catalog-row input[type="text"] {
+  width: 100%;
+  min-height: 38px;
+  border: 1px solid #d5dfee;
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+
+.cbe-facility-catalog-row .button {
+  min-width: 40px;
+  border-radius: 10px;
+  border-color: #dae2ef;
+  color: #51627d;
+}
+
+.cbe-facility-catalog-icon-input {
+  display: none;
+}
+
+.cbe-facility-icon-autocomplete {
+  display: none;
+  position: relative;
+  margin-top: 8px;
+}
+
+.cbe-facility-icon-autocomplete-input {
+  width: 100%;
+  min-height: 38px;
+  border: 1px solid #d5dfee;
+  border-radius: 10px;
+  padding: 8px 10px;
+  background: #fff;
+}
+
+.cbe-facility-icon-autocomplete-results {
+  display: none;
+  position: absolute;
+  z-index: 30;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  max-height: 220px;
+  overflow-y: auto;
+  border: 1px solid #d5dfee;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 12px 24px rgba(16, 36, 69, 0.12);
+}
+
+.cbe-facility-icon-result {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #edf2f8;
+  background: #fff;
+  padding: 8px 10px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.cbe-facility-icon-result:last-child {
+  border-bottom: 0;
+}
+
+.cbe-facility-icon-result:hover {
+  background: #f6faff;
+}
+
+.cbe-icon-result-preview {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  border: 1px solid #d7e3f7;
+  background: #ffffff;
+  color: #1a4d8f;
+  font-size: 14px;
+}
+
+.cbe-iconify-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+}
+
+.cbe-facility-catalog-icon-preview .cbe-iconify-icon {
+  font-size: 20px;
+}
+
+.cbe-facility-catalog-icon-preview .cbe-local-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.cbe-icon-result-preview .cbe-iconify-icon {
+  font-size: 14px;
+}
+
+.cbe-icon-result-preview .cbe-local-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.cbe-icon-result-text {
+  color: #16365f;
+  font-size: 13px;
+}
+
+.cbe-facility-icon-empty {
+  padding: 10px;
+  color: #657996;
+  font-size: 12px;
+}
+
+.cbe-facility-catalog-row.is-editing .cbe-facility-icon-autocomplete {
+  display: block;
+}
+
+.cbe-facility-catalog-name-input {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding-left: 0 !important;
+}
+
+.cbe-facility-catalog-row.is-editing .cbe-facility-catalog-name-input {
+  border: 1px solid #d5dfee !important;
+  background: #fff !important;
+  padding-left: 10px !important;
+}
+
+.cbe-facility-actions-cell {
+  white-space: nowrap;
+}
+
+.cbe-edit-facility-catalog-item {
+  color: #49648a !important;
+}
+
+.cbe-remove-facility-catalog-item {
+  color: #d74c4c !important;
+  border-color: #f1c0c0 !important;
+}
+
+.cbe-facility-catalog-icon-preview,
+.cbe-material-symbol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.cbe-facility-catalog-icon-preview {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #d7e3f7;
+  background: #ffffff;
+  color: #1a4d8f;
+  font-size: 20px;
+}
+
+.cbe-material-symbol {
+  font-family: "Material Symbols Outlined";
+  font-weight: 400;
+  font-style: normal;
+  font-size: inherit;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+.cbe-facility-catalog-icon-preview .fa-solid,
+.cbe-facility-catalog-icon-preview .bi,
+.cbe-icon-result-preview .fa-solid,
+.cbe-icon-result-preview .bi {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.cbe-facility-source-badge {
+  display: none;
+}
+
+.cbe-facility-catalog-icon-preview .fa-solid,
+.cbe-facility-catalog-icon-preview .bi {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.cbe-facilities-checklist {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.cbe-facility-check {
+  display: grid;
+  grid-template-columns: auto auto minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+  padding: 10px 12px;
+  border: 1px solid #dce6f8;
+  border-radius: 10px;
+  background: #f8fbff;
+  cursor: pointer;
+}
+
+.cbe-facility-check:hover {
+  border-color: #bcd0f5;
+  background: #f3f8ff;
+}
+
+.cbe-facility-checkbox {
+  margin: 0;
+}
+
+.cbe-facility-check-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.cbe-facility-check-icon.cbe-local-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: inline-block;
+}
+
+.cbe-facility-check-label {
+  font-weight: 500;
+  color: #16365f;
+}
+
+.cbe-stay-page-manager .cbe-cabin-manager-form {
+  margin-top: 18px;
+}
+
+.cbe-stay-page-manager .cbe-cabin-manager-grid {
+  grid-template-columns: minmax(360px, 1fr) minmax(360px, 1fr);
+  gap: 20px;
+}
+
+.cbe-stay-page-manager .cbe-cabin-panel {
+  border: 1px solid #e3e8f1;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(14, 26, 46, 0.06);
+  padding: 24px;
+}
+
+.cbe-stay-page-manager .cbe-cabin-panel h2 {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: #0f2747;
+  border-bottom-color: #eef2f7;
+  margin-bottom: 16px;
+}
+
+.cbe-stay-page-manager .cbe-cabin-panel label strong {
+  color: #223858;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.cbe-stay-page-manager .cbe-cabin-panel input[type="text"],
+.cbe-stay-page-manager .cbe-cabin-panel textarea {
+  border-color: #d7dde8;
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: #fcfdff;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cbe-stay-page-manager .cbe-cabin-panel input[type="text"]:focus,
+.cbe-stay-page-manager .cbe-cabin-panel textarea:focus {
+  border-color: #2d6cdf;
+  box-shadow: 0 0 0 3px rgba(45, 108, 223, 0.14);
+  background: #fff;
+  transform: none;
+}
+
+.cbe-stay-page-subtitle {
+  margin: 2px 0 10px;
+  color: #5d6e86;
+  font-size: 13px;
+}
+
+.cbe-room-picker-list {
+  max-height: 540px;
+  overflow: auto;
+  display: grid;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid #e2e7f0;
+  border-radius: 12px;
+  background: #f9fbfe;
+}
+
+.cbe-room-picker-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px;
+  border: 1px solid #e2e8f2;
+  border-radius: 10px;
+  background: #fff;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cbe-room-picker-item:hover {
+  border-color: #c6d5ee;
+  box-shadow: 0 2px 9px rgba(20, 45, 88, 0.08);
+}
+
+.cbe-room-picker-item input[type="checkbox"] {
+  accent-color: #1f63d2;
+  margin-top: 2px;
+}
+
+.cbe-room-picker-item
+  input[type="checkbox"]:checked
+  + .cbe-room-picker-content {
+  color: #10315d;
+}
+
+.cbe-room-picker-item
+  input[type="checkbox"]:checked
+  + .cbe-room-picker-content
+  strong {
+  color: #10315d;
+}
+
+.cbe-room-picker-content {
+  display: grid;
+  gap: 4px;
+  color: #233854;
+}
+
+.cbe-room-picker-content strong {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.cbe-room-picker-price {
+  display: inline-flex;
+  width: fit-content;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #eef3fb;
+  color: #3d597e;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.cbe-stay-page-actions {
+  margin-top: 18px;
+  padding: 14px;
+  border: 1px solid #e1e7f1;
+  border-radius: 12px;
+  background: #ffffff;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cbe-stay-page-actions .button-hero {
+  min-height: 40px;
+  padding: 0 18px;
+  border-radius: 9px;
+  font-weight: 600;
+}
+
+@media (max-width: 782px) {
+  .cbe-stay-page-manager .cbe-cabin-manager-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .cbe-stay-page-manager .cbe-cabin-panel {
+    padding: 16px;
+  }
+
+  .cbe-room-picker-list {
+    max-height: 420px;
+  }
+
+  .cbe-stay-page-actions {
+    justify-content: stretch;
+  }
+
+  .cbe-stay-page-actions .button-hero {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cbe-facilities-checklist {
+    grid-template-columns: 1fr;
+  }
+
+  .cbe-facility-catalog-head {
+    display: none;
+  }
+
+  .cbe-facility-catalog-row {
+    grid-template-columns: 1fr;
+  }
+}

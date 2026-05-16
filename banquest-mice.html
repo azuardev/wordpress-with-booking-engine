@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events Section</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background: #f5f5f5;
+        color: #111;
+      }
+
+      .events-wrapper {
+        /* width: 90%; */
+        max-width: 1200px;
+        margin: 70px auto;
+      }
+
+      /* =========================
+        TABS
+    ========================== */
+      .tabs {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 50px;
+        flex-wrap: wrap;
+      }
+
+      .tab-btn {
+        padding: 14px 28px;
+        border: none;
+        cursor: pointer;
+        background: #001b63;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 6px;
+        transition: 0.3s;
+      }
+
+      .tab-btn:hover,
+      .tab-btn.active {
+        background: #f0a500;
+        color: #001b63;
+      }
+
+      /* =========================
+        TAB CONTENT
+    ========================== */
+      .tab-content {
+        display: none;
+        animation: fade 0.4s ease;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0;
+          transform: translateY(15px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* =========================
+        CARD SECTION
+    ========================== */
+      .event-card {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 20px;
+        background: #fff;
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      .event-image {
+        flex: 1;
+      }
+
+      .event-image img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 14px;
+      }
+
+      .event-content {
+        flex: 1;
+      }
+
+      .event-content h2 {
+        font-size: 42px;
+        color: #00154d;
+        margin-bottom: 18px;
+      }
+
+      .line {
+        width: 90px;
+        height: 4px;
+        background: #f0a500;
+        margin-bottom: 25px;
+        border-radius: 10px;
+      }
+
+      .event-content p {
+        font-size: 17px;
+        line-height: 1.9;
+        color: #555;
+      }
+
+      /* =========================
+        GALLERY
+    ========================== */
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .gallery-grid img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 12px;
+        transition: 0.4s;
+        cursor: pointer;
+      }
+
+      .gallery-grid img:hover {
+        transform: scale(1.03);
+      }
+
+      /* =========================
+        RESPONSIVE
+    ========================== */
+      @media (max-width: 900px) {
+        .event-card,
+        .event-card:nth-child(even) {
+          flex-direction: column;
+        }
+
+        .event-content h2 {
+          font-size: 32px;
+        }
+
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .tabs {
+          flex-direction: column;
+        }
+
+        .tab-btn {
+          width: 100%;
+        }
+
+        .gallery-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .event-image img {
+          height: 250px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="events-wrapper">
+      <!-- TABS -->
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="spaces">Event Spaces</button>
+
+        <button class="tab-btn" data-tab="menus">F&B Menus</button>
+
+        <button class="tab-btn" data-tab="gallery">Event Gallery</button>
+      </div>
+
+      <!-- =======================
+          EVENT SPACES
+    ======================== -->
+      <div class="tab-content active" id="spaces">
+        <div class="event-card">
+          <div class="event-image">
+            <img
+              src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1400&auto=format&fit=crop"
+              alt=""
+            />
+          </div>
+
+          <div class="event-content">
+            <h2>Banquet Hall</h2>
+            <div class="line"></div>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              cum, quidem quo laboriosam, cupiditate sed dignissimos beatae
+              vitae dolor numquam repellat sapiente quas repudiandae iusto sequi
+              accusantium alias nihil suscipit!
+            </p>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-image">
+            <img
+              src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1400&auto=format&fit=crop"
+              alt=""
+            />
+          </div>
+
+          <div class="event-content">
+            <h2>Concert Deck</h2>
+            <div class="line"></div>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
+              iste placeat. Nam vel sunt esse sed error adipisci, consequuntur
+              placeat obcaecati laboriosam omnis minima magnam. Atque dolore
+              quibusdam temporibus nihil.
+            </p>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-image">
+            <img
+              src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1400&auto=format&fit=crop"
+              alt=""
+            />
+          </div>
+
+          <div class="event-content">
+            <h2>Captain's Table</h2>
+            <div class="line"></div>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
+              iste placeat. Nam vel sunt esse sed error adipisci, consequuntur
+              placeat obcaecati laboriosam omnis minima magnam. Atque dolore
+              quibusdam temporibus nihil.
+            </p>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-image">
+            <img
+              src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1400&auto=format&fit=crop"
+              alt=""
+            />
+          </div>
+
+          <div class="event-content">
+            <h2>Forward Prom Meeting Room</h2>
+            <div class="line"></div>
+
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae,
+              ipsam. Assumenda perferendis quaerat at mollitia perspiciatis odio
+              temporibus obcaecati recusandae, distinctio officia, quas vel amet
+              molestiae. Eum, alias. Officiis, repudiandae.
+            </p>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-image">
+            <img
+              src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1400&auto=format&fit=crop"
+              alt=""
+            />
+          </div>
+
+          <div class="event-content">
+            <h2>Starboard Prom Meeting Room</h2>
+            <div class="line"></div>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Distinctio, dolorem omnis ducimus minus quaerat, fugit aut officia
+              maxime rem dolores dignissimos? Placeat aperiam vero quos officia
+              quod sit, fugiat nostrum.
+            </p>
+          </div>
+        </div>
+
+        </div>
+      </div>
+
+      <!-- =======================
+          F&B MENUS
+    ======================== -->
+      <div class="tab-content" id="menus"></div>
+
+      <!-- =======================
+          GALLERY
+    ======================== -->
+      <div class="tab-content" id="gallery">
+        <div class="gallery-grid">
+          <img
+            src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop"
+            alt=""
+          />
+
+          <img
+            src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop"
+            alt=""
+          />
+
+          <img
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop"
+            alt=""
+          />
+
+          <img
+            src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=1200&auto=format&fit=crop"
+            alt=""
+          />
+
+          <img
+            src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop"
+            alt=""
+          />
+
+          <img
+            src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const buttons = document.querySelectorAll(".tab-btn");
+      const tabs = document.querySelectorAll(".tab-content");
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          buttons.forEach((btn) => btn.classList.remove("active"));
+          tabs.forEach((tab) => tab.classList.remove("active"));
+
+          button.classList.add("active");
+
+          const target = document.getElementById(button.dataset.tab);
+          target.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
