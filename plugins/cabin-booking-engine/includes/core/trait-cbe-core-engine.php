@@ -227,10 +227,10 @@ trait CBE_Core_Engine_Trait {
         <main class="cbe-virtual-stay-page cbe-custom-stay-page">
             <section class="cbe-virtual-stay-hero<?php echo $hero_image_url !== '' ? ' cbe-virtual-stay-hero-has-image' : ''; ?>"<?php echo $hero_image_url !== '' ? ' style="--cbe-hero-image:url(' . esc_url($hero_image_url) . ');"' : ''; ?>>
                 <div class="cbe-virtual-stay-hero-inner">
-                    <h1><?php echo esc_html(get_the_title($page->ID)); ?></h1>
+                    <h1 class="white-title">Indulge in our <?php echo esc_html(get_the_title($page->ID)); ?> Cabins</h1>
                     <div class="cbe-virtual-stay-hero-meta">
                         <?php if ($room_count > 0) : ?>
-                            <span><?php echo esc_html(sprintf(_n('%d Room Type', '%d Room Types', $room_count, 'cabin-booking-engine'), $room_count)); ?></span>
+                            <span><?php echo esc_html(sprintf(_n('%d Cabin Type', '%d Cabin Types', $room_count, 'cabin-booking-engine'), $room_count)); ?></span>
                         <?php endif; ?>
                         <?php if ($starting_price > 0) : ?>
                             <span><?php echo esc_html(sprintf(__('From %s / night', 'cabin-booking-engine'), number_format_i18n($starting_price, 0))); ?></span>
@@ -250,8 +250,8 @@ trait CBE_Core_Engine_Trait {
                     <div class="cbe-message cbe-error"><?php esc_html_e('No rooms are assigned to this stay page yet.', 'cabin-booking-engine'); ?></div>
                 <?php else : ?>
                     <div class="cbe-custom-stay-section-head">
-                        <h2><?php esc_html_e('Available Rooms', 'cabin-booking-engine'); ?></h2>
-                        <p><?php echo esc_html(sprintf(_n('%d curated room type for this stay.', '%d curated room types for this stay.', $room_count, 'cabin-booking-engine'), $room_count)); ?></p>
+                        <h2><?php esc_html_e('Cabins Type Available', 'cabin-booking-engine'); ?></h2>
+                        <p><?php echo esc_html(sprintf(_n('%d curated room type for this stay.', '%d curated cabin types for this stay.', $room_count, 'cabin-booking-engine'), $room_count)); ?></p>
                     </div>
                     <div class="cbe-custom-stay-cabin-list">
                         <?php foreach ($selected_cabin_ids as $cabin_id) : ?>

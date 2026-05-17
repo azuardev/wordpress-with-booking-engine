@@ -785,7 +785,7 @@
 
       // ── Facilities ────────────────────────────────────────────
       html += '<div class="cbe-detail-row cbe-detail-row-facilities">';
-      html += '<span class="cbe-detail-row-label">Room Facilities</span>';
+      html += '<span class="cbe-detail-row-label">In Cabin Amenities</span>';
       if (facilities.length > 0) {
         html += '<div class="cbe-detail-facilities-grid">';
 

@@ -1146,7 +1146,7 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.cbe-virtual-stay-hero-has-image .cbe-virtual-stay-hero-inner {
+/* .cbe-virtual-stay-hero-has-image .cbe-virtual-stay-hero-inner {
   background: linear-gradient(
     155deg,
     rgba(255, 255, 255, 0.96) 0%,
@@ -1154,7 +1154,7 @@
   );
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-}
+} */
 
 .cbe-virtual-stay-hero-inner {
   position: relative;
@@ -1162,14 +1162,12 @@
   max-width: 1240px;
   margin: 0 auto;
   padding: 40px 40px 36px;
-  border: 1px solid #d8e2f2;
-  border-radius: 28px;
-  background: linear-gradient(170deg, #ffffff 0%, #f4f8ff 100%);
-  box-shadow:
-    0 2px 0 rgba(255, 255, 255, 0.9) inset,
-    0 28px 60px rgba(12, 26, 52, 0.13);
 }
 
+.white-title {
+  color: #fff !important;
+  text-align: center;
+}
 .cbe-virtual-stay-kicker {
   display: inline-flex;
   align-items: center;
@@ -1213,6 +1211,7 @@
 }
 
 .cbe-virtual-stay-hero-meta {
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -1244,6 +1243,7 @@
 }
 
 .cbe-custom-stay-page {
+  margin-top: 5em;
   display: block;
 }
 
