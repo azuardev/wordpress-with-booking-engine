@@ -1105,10 +1105,6 @@
 
 .cbe-virtual-stay-page {
   padding: 0 0 80px;
-  background:
-    radial-gradient(ellipse 70% 40% at 5% 0%, #efe9da 0%, transparent 55%),
-    radial-gradient(ellipse 60% 50% at 95% 10%, #daeaff 0%, transparent 50%),
-    #f2f5fb;
 }
 
 /* ---- Hero ---- */
@@ -1262,6 +1258,61 @@
   font-size: 0.97rem;
 }
 
+.cbe-custom-stay-gallery {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  margin-bottom: 28px;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.cbe-custom-stay-gallery::-webkit-scrollbar {
+  display: none;
+}
+
+.cbe-custom-stay-gallery-thumb {
+  flex: 0 0 450px;
+  width: 450px;
+  display: block;
+  overflow: hidden;
+  border-radius: 0;
+  background: transparent;
+  aspect-ratio: 16 / 9;
+  min-height: 280px;
+  transition: transform 0.3s ease;
+  scroll-snap-align: start;
+}
+
+.cbe-custom-stay-gallery-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.cbe-custom-stay-gallery-thumb:hover img,
+.cbe-custom-stay-gallery-thumb:hover {
+  transform: scale(1.03);
+}
+
+@media (max-width: 980px) {
+  .cbe-custom-stay-gallery-thumb {
+    flex: 0 0 260px;
+    width: 260px;
+  }
+}
+
+@media (max-width: 680px) {
+  .cbe-custom-stay-gallery-thumb {
+    flex: 0 0 220px;
+    width: 220px;
+  }
+}
+
 .cbe-custom-stay-intro::before {
   content: "✦";
   position: absolute;
@@ -1280,23 +1331,26 @@
   align-items: flex-end;
   justify-content: space-between;
   gap: 14px;
-  margin: 8px 0 20px;
-  padding: 18px 24px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, #0d2040 0%, #1a3c7a 100%);
-  box-shadow: 0 10px 24px rgba(10, 24, 52, 0.22);
+  /* margin-bottom: 15px; */
 }
 
-.cbe-custom-stay-section-head h2 {
+.cbe-custom-stay-section-head h4 {
   margin: 0;
-  color: #ffffff;
-  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  color: #001a4d;
   letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.cbe-custom-stay-cabin-list hr {
+  width: 100px;
+  border: 1px solid #c9963e;
+  background-color: #c9963e;
+  margin-bottom: 0;
 }
 
 .cbe-custom-stay-section-head p {
   margin: 0;
-  color: rgba(255, 255, 255, 0.65);
+  color: #001a4d;
   font-size: 0.9rem;
   font-weight: 500;
 }
@@ -1312,17 +1366,13 @@
   display: grid;
   grid-template-columns: 380px minmax(0, 1fr);
   gap: 0;
-  border-radius: 24px;
-  border: 1px solid #d4dff0;
   background: #ffffff;
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.9) inset,
-    0 16px 40px rgba(12, 28, 56, 0.1);
   overflow: hidden;
   transition:
     transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 0.25s ease,
     border-color 0.25s ease;
+  height: 18em;
 }
 
 .cbe-stay-page-cabin-card:hover {
@@ -1342,6 +1392,37 @@
 
 .cbe-stay-page-cabin-media img {
   transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cbe-stay-page-cabin-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  padding: 16px;
+  background: #ffffff;
+}
+
+.cbe-stay-page-cabin-gallery-thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid #e6ecf5;
+  position: relative;
+  background: #f8faff;
+}
+
+.cbe-stay-page-cabin-gallery-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.cbe-stay-page-cabin-gallery-thumb:hover img {
+  transform: scale(1.05);
 }
 
 .cbe-stay-page-cabin-card:hover .cbe-stay-page-cabin-media img {

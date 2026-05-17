@@ -268,7 +268,7 @@ trait CBE_Admin_Meta_Assets_Trait {
             $admin_css_version
         );
 
-        if ($active_page === 'cbe-cabins' || $active_page === 'cbe-facilities') {
+        if ($active_page === 'cbe-cabins' || $active_page === 'cbe-facilities' || $active_page === 'cbe-pages') {
             $admin_js_file = CBE_PLUGIN_DIR . 'assets/js/cbe-admin.js';
             $admin_js_version = file_exists($admin_js_file) ? (string) filemtime($admin_js_file) : self::VERSION;
 
@@ -289,7 +289,7 @@ trait CBE_Admin_Meta_Assets_Trait {
             );
         }
 
-        if ($active_page === 'cbe-cabins') {
+        if ($active_page === 'cbe-cabins' || $active_page === 'cbe-pages') {
             wp_enqueue_media();
         }
     }

@@ -206,6 +206,8 @@ trait CBE_Core_Engine_Trait {
         $room_count = count($selected_cabin_ids);
         $starting_price = 0.0;
         $hero_image_url = '';
+        $page_gallery_ids_raw = (string) get_post_meta($page->ID, '_cbe_page_gallery_ids', true);
+        $page_gallery_ids = array_filter(array_map('intval', explode(',', $page_gallery_ids_raw)));
 
         foreach ($selected_cabin_ids as $selected_cabin_id) {
             if ($selected_cabin_id <= 0 || get_post_type($selected_cabin_id) !== 'cabin') {
@@ -245,15 +247,34 @@ trait CBE_Core_Engine_Trait {
                         <?php echo wp_kses_post($page_overview_html); ?>
                     </div>
                 <?php endif; ?>
+                <?php if (!empty($page_gallery_ids)) : ?>
+                    <div class="cbe-custom-stay-gallery">
+                        <?php foreach ($page_gallery_ids as $gallery_image_id) :
+                            $gallery_image_thumb_url = wp_get_attachment_image_url($gallery_image_id, 'medium');
+                            $gallery_image_full_url = wp_get_attachment_image_url($gallery_image_id, 'large');
+                            if (!$gallery_image_thumb_url) {
+                                continue;
+                            }
+                            if (!$gallery_image_full_url) {
+                                $gallery_image_full_url = $gallery_image_thumb_url;
+                            }
+                        ?>
+                            <a class="cbe-custom-stay-gallery-thumb" href="<?php echo esc_url($gallery_image_full_url); ?>" target="_blank" rel="noopener noreferrer">
+                                <img src="<?php echo esc_url($gallery_image_thumb_url); ?>" alt="<?php echo esc_attr(get_the_title($page->ID)); ?>" loading="lazy" />
+                            </a>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
 
                 <?php if (empty($selected_cabin_ids)) : ?>
                     <div class="cbe-message cbe-error"><?php esc_html_e('No rooms are assigned to this stay page yet.', 'cabin-booking-engine'); ?></div>
                 <?php else : ?>
                     <div class="cbe-custom-stay-section-head">
-                        <h2><?php esc_html_e('Cabins Type Available', 'cabin-booking-engine'); ?></h2>
+                        <h4><?php esc_html_e('Cabins Type Available', 'cabin-booking-engine'); ?></h4>
                         <p><?php echo esc_html(sprintf(_n('%d curated room type for this stay.', '%d curated cabin types for this stay.', $room_count, 'cabin-booking-engine'), $room_count)); ?></p>
                     </div>
                     <div class="cbe-custom-stay-cabin-list">
+                        <hr class="cbe-section-divider" />
                         <?php foreach ($selected_cabin_ids as $cabin_id) : ?>
                             <?php echo $this->render_stay_page_cabin_card($cabin_id); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                         <?php endforeach; ?>
@@ -680,6 +701,11 @@ trait CBE_Core_Engine_Trait {
             }
         }
 
+        $gallery_thumb_ids = array();
+        if (count($gallery_image_ids) > 1) {
+            $gallery_thumb_ids = array_slice($gallery_image_ids, 1, 3);
+        }
+
         self::$modal_cabin_ids[$cabin_id] = true;
 
         ob_start();
@@ -687,6 +713,22 @@ trait CBE_Core_Engine_Trait {
         <article class="cbe-stay-page-cabin-card" data-cabin-id="<?php echo (int) $cabin_id; ?>" data-cabin-details="<?php echo esc_attr(wp_json_encode($detail_data)); ?>">
             <div class="cbe-stay-page-cabin-media">
                 <?php echo $image ? $image : '<div class="cbe-cabin-image cbe-cabin-image-placeholder"></div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+
+                <?php if (!empty($gallery_thumb_ids)) : ?>
+                    <div class="cbe-stay-page-cabin-gallery">
+                        <?php foreach ($gallery_thumb_ids as $gallery_image_id) :
+                            $gallery_thumb_url = wp_get_attachment_image_url($gallery_image_id, 'medium');
+                            $gallery_full_url = wp_get_attachment_image_url($gallery_image_id, 'large') ?: $gallery_thumb_url;
+                            if (!$gallery_thumb_url) {
+                                continue;
+                            }
+                        ?>
+                            <a class="cbe-stay-page-cabin-gallery-thumb" href="<?php echo esc_url($gallery_full_url); ?>" data-full-image="<?php echo esc_attr($gallery_full_url); ?>">
+                                <img src="<?php echo esc_url($gallery_thumb_url); ?>" alt="<?php echo esc_attr(get_the_title($cabin_id)); ?>" loading="lazy" />
+                            </a>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
             </div>
 
             <div class="cbe-stay-page-cabin-body">

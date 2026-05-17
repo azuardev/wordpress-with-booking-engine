@@ -301,6 +301,7 @@ trait CBE_Admin_Pages_Trait {
         $title = $is_edit ? $post->post_title : '';
         $slug = $is_edit ? $post->post_name : '';
         $overview = $is_edit ? $post->post_content : '';
+        $page_gallery = $is_edit ? (string) get_post_meta($page_id, '_cbe_page_gallery_ids', true) : '';
         $selected_cabin_ids = $is_edit ? $this->get_stay_page_cabin_ids($page_id) : array();
 
         $cabins = get_posts(array(
@@ -385,6 +386,11 @@ trait CBE_Admin_Pages_Trait {
             echo '<textarea name="page_overview" rows="12" class="large-text">' . esc_textarea($overview) . '</textarea>';
         }
         echo '</div>';
+
+        echo '<p><strong>' . esc_html__('Page Gallery', 'cabin-booking-engine') . '</strong></p>';
+        echo '<input type="hidden" name="cbe_page_gallery_ids" id="cbe_page_gallery_ids" value="' . esc_attr($page_gallery) . '" />';
+        echo '<div id="cbe-page-gallery-preview" class="cbe-gallery-preview" data-gallery-ids="' . esc_attr($page_gallery) . '"></div>';
+        echo '<p><button type="button" class="button" id="cbe-select-page-gallery">' . esc_html__('Select Gallery Photos', 'cabin-booking-engine') . '</button> <button type="button" class="button" id="cbe-clear-page-gallery">' . esc_html__('Clear Gallery', 'cabin-booking-engine') . '</button></p>';
         echo '</div>';
 
         echo '<div class="cbe-cabin-panel">';
@@ -722,6 +728,10 @@ trait CBE_Admin_Pages_Trait {
 
         $saved_id = (int) $saved_id;
         update_post_meta($saved_id, '_cbe_page_cabin_ids', implode(',', $cabin_ids));
+
+        $page_gallery_ids_raw = isset($_POST['cbe_page_gallery_ids']) ? (string) wp_unslash($_POST['cbe_page_gallery_ids']) : '';
+        $page_gallery_ids = array_filter(array_map('intval', explode(',', $page_gallery_ids_raw)));
+        update_post_meta($saved_id, '_cbe_page_gallery_ids', implode(',', $page_gallery_ids));
 
         wp_safe_redirect(admin_url('admin.php?page=cbe-pages&action_type=edit&page_id=' . $saved_id . '&cbe_msg=saved'));
         exit;
