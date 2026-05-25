@@ -1,0 +1,415 @@
+msgid ""
+msgstr ""
+"Language: fr_FR\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-24 06:58+0000\n"
+"PO-Revision-Date: 2025-11-24 06:58+0000\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.8.0; wp-6.8.3; php-8.1.23\n"
+"Language-Team: French (France)"
+
+msgid ""
+" The test email did not reach our test server. Did you get any test emails "
+"on your email? This could be a temporary problem, but it can also mean that "
+"emails are getting stuck on your server, or getting rejected by recipients."
+msgstr ""
+"L'e-mail de test n'a pas atteint notre serveur de test. Avez-vous reçu des "
+"e-mails de test ? Cela pourrait être un problème temporaire, mais cela peut "
+"aussi signifier que les e-mails sont bloqués sur votre serveur ou rejetés par les destinataires."
+
+msgid "%1$s ( %2$s%% ) remaining"
+msgstr "%1$s ( %2$s%% ) restant"
+
+msgid "%1$s of %2$s ( %3$s%% ) used"
+msgstr "%1$s sur %2$s ( %3$s%% ) utilisé"
+
+msgid ""
+"A Duplicate Pages and Posts Plugin is a tool for WordPress that enables "
+"users to easily create duplicate versions of existing posts, pages, or "
+"custom post types with just a click."
+msgstr ""
+"Un plugin de duplication de pages et d'articles est un outil pour WordPress qui permet "
+"aux utilisateurs de créer facilement des versions dupliquées d'articles, de pages ou "
+"de types de contenu personnalisés existants en un seul clic."
+
+msgid "API key is empty."
+msgstr "La clé API est vide."
+
+msgid "Access to expert support when you need it"
+msgstr "Accès au support expert quand vous en avez besoin"
+
+msgid "Activate"
+msgstr "Activer"
+
+msgid "Active"
+msgstr "Actif"
+
+msgid "An error has occured. Please try again."
+msgstr "Une erreur s'est produite. Veuillez réessayer."
+
+msgid ""
+"An error has occurred while creating your account. Please try again later"
+msgstr ""
+"Une erreur s'est produite lors de la création de votre compte. Veuillez réessayer plus tard"
+
+msgid "An error occured. Please try again later."
+msgstr "Une erreur s'est produite. Veuillez réessayer plus tard."
+
+msgid "An unknown error has occured. Please try again later."
+msgstr "Une erreur inconnue s'est produite. Veuillez réessayer plus tard."
+
+msgid "Buy Now"
+msgstr "Acheter maintenant"
+
+msgid "Confirming email delivery"
+msgstr "Confirmation de la livraison d'e-mail"
+
+msgid "Congrats, test email was sent successfully!"
+msgstr "Félicitations, l'e-mail de test a été envoyé avec succès !"
+
+msgid ""
+"Create self-expiring, automatic login links for WordPress. Give them to "
+"developers when they ask for admin access to your site."
+msgstr ""
+"Créez des liens de connexion automatique auto-expirants pour WordPress. Donnez-les aux "
+"développeurs lorsqu'ils demandent l'accès administrateur à votre site."
+
+msgid "Creating your account"
+msgstr "Création de votre compte"
+
+msgid "Dashboard"
+msgstr "Tableau de bord"
+
+msgid "Do you want to track opens when people view your emails?"
+msgstr "Voulez-vous suivre les ouvertures lorsque les gens consultent vos e-mails ?"
+
+msgid "Duplicate Pages and Posts"
+msgstr "Dupliquer les pages et les articles"
+
+msgid "Email Log"
+msgstr "Journal des e-mails"
+
+msgid "Email Logs"
+msgstr "Journaux des e-mails"
+
+msgid "Email is invalid."
+msgstr "L'e-mail n'est pas valide."
+
+msgid "Email sent"
+msgstr "E-mail envoyé"
+
+msgid "Email testing"
+msgstr "Test d'e-mail"
+
+msgid "Enable Icegram mailer"
+msgstr "Activer Icegram mailer"
+
+msgid "Excellent! activating your free Plan"
+msgstr "Excellent ! Activation de votre plan gratuit"
+
+msgid "From email"
+msgstr "E-mail expéditeur"
+
+msgid "From name"
+msgstr "Nom expéditeur"
+
+msgid ""
+"Get readymade contact forms, email subscription forms and custom forms for "
+"your website. Choose from beautiful templates and get started within seconds"
+msgstr ""
+"Obtenez des formulaires de contact prêts à l'emploi, des formulaires d'abonnement par e-mail et des formulaires personnalisés pour "
+"votre site web. Choisissez parmi de beaux modèles et commencez en quelques secondes"
+
+msgid ""
+"Hey 👋, we at %1$sIcegram Mailer%2$s just wanted to thank you for using our "
+"plugin. If you're enjoying it, we'd really appreciate a %3$s5 star%4$s "
+"review. It keeps us motivated to keep building and improving."
+msgstr ""
+"Salut 👋, nous chez %1$sIcegram Mailer%2$s voulions juste vous remercier d'utiliser notre "
+"plugin. Si vous l'appréciez, nous apprécierions vraiment un avis %3$s5 étoiles%4$s. "
+"Cela nous motive à continuer à construire et améliorer."
+
+msgid "High speed email sending"
+msgstr "Envoi d'e-mails à haute vitesse"
+
+msgid "I couldn't get the plugin to work"
+msgstr "Je n'ai pas réussi à faire fonctionner le plugin"
+
+msgid "I no longer need the plugin"
+msgstr "Je n'ai plus besoin du plugin"
+
+msgid "I'm switching to a different plugin"
+msgstr "Je passe à un plugin différent"
+
+msgid "Icegram Collect"
+msgstr "Icegram Collect"
+
+msgid "Icegram Engage"
+msgstr "Icegram Engage"
+
+msgid "Icegram Express"
+msgstr "Icegram Express"
+
+msgid "Icegram Mailer"
+msgstr "Icegram Mailer"
+
+msgid ""
+"If you find this plugin useful, please consider giving us %1$s5 stars "
+"review%2$s on WordPress!"
+msgstr ""
+"Si vous trouvez ce plugin utile, veuillez considérer nous donner un %1$savis 5 étoiles%2$s "
+"sur WordPress !"
+
+msgid "Inactive"
+msgstr "Inactif"
+
+msgid "Insights"
+msgstr "Statistiques"
+
+msgid "Install"
+msgstr "Installer"
+
+msgid "Installed plugin unknowingly"
+msgstr "Plugin installé sans le savoir"
+
+msgid "It's a temporary deactivation"
+msgstr "C'est une désactivation temporaire"
+
+msgid "Last 30 days"
+msgstr "30 derniers jours"
+
+msgid "Learn more"
+msgstr "En savoir plus"
+
+msgid "Leave a review"
+msgstr "Laisser un avis"
+
+msgid "My free email limit has been exhausted"
+msgstr "Ma limite d'e-mails gratuits a été épuisée"
+
+msgid "No handler found."
+msgstr "Aucun gestionnaire trouvé."
+
+msgid "No method found."
+msgstr "Aucune méthode trouvée."
+
+msgid "Not Installed"
+msgstr "Non installé"
+
+msgid "Number of email logs per page"
+msgstr "Nombre de journaux d'e-mails par page"
+
+msgid "Open tracking"
+msgstr "Suivi d'ouverture"
+
+msgid "Opened at"
+msgstr "Ouvert à"
+
+msgid "Optimized performance for high-volume campaigns"
+msgstr "Performance optimisée pour les campagnes à grand volume"
+
+msgid "Other"
+msgstr "Autre"
+
+msgid "Other awesome plugins"
+msgstr "Autres plugins géniaux"
+
+msgid "Plan usage"
+msgstr "Utilisation du plan"
+
+msgid "Please select an option"
+msgstr "Veuillez sélectionner une option"
+
+msgid "Please select option"
+msgstr "Veuillez sélectionner une option"
+
+msgid "Please share the reason"
+msgstr "Veuillez partager la raison"
+
+msgid "Please share which plugin"
+msgstr "Veuillez partager quel plugin"
+
+msgid "Processing..."
+msgstr "Traitement en cours..."
+
+msgid "Quick Feedback"
+msgstr "Commentaire rapide"
+
+msgid "Ready to send more?"
+msgstr "Prêt à envoyer plus ?"
+
+msgid "Reliable email delivery"
+msgstr "Livraison d'e-mails fiable"
+
+msgid "Reliable email delivery with Icegram Mailer"
+msgstr "Livraison d'e-mails fiable avec Icegram Mailer"
+
+msgid "Remind me later"
+msgstr "Me rappeler plus tard"
+
+msgid "Save"
+msgstr "Enregistrer"
+
+msgid "Send email"
+msgstr "Envoyer un e-mail"
+
+msgid "Sender"
+msgstr "Expéditeur"
+
+msgid "Sending a test email"
+msgstr "Envoi d'un e-mail de test"
+
+msgid "Sent at"
+msgstr "Envoyé à"
+
+msgid "Settings"
+msgstr "Paramètres"
+
+msgid "Settings saved."
+msgstr "Paramètres enregistrés."
+
+msgid ""
+"Simple and Effective Email Marketing WordPress Plugin. Email Subscribers is "
+"a complete newsletter plugin that lets you collect leads, send automated new "
+"blog post notification emails, create & send broadcasts"
+msgstr ""
+"Plugin WordPress de marketing par e-mail simple et efficace. Email Subscribers est "
+"un plugin de newsletter complet qui vous permet de collecter des prospects, d'envoyer des "
+"e-mails de notification automatisés pour les nouveaux articles de blog, de créer et envoyer des diffusions"
+
+msgid "Site url is not valid. Please check your site url."
+msgstr "L'URL du site n'est pas valide. Veuillez vérifier l'URL de votre site."
+
+msgid "Skip %s Deactivate"
+msgstr "Ignorer %s Désactiver"
+
+msgid "Start sending"
+msgstr "Commencer l'envoi"
+
+msgid "Start with 200 free emails/month"
+msgstr "Commencez avec 200 e-mails gratuits/mois"
+
+msgid "Status"
+msgstr "Statut"
+
+msgid "Subject"
+msgstr "Sujet"
+
+msgid "Submit %s Deactivate"
+msgstr "Soumettre %s Désactiver"
+
+msgid "Submit your feedback"
+msgstr "Soumettre vos commentaires"
+
+msgid "Substantially increased monthly sending capacity"
+msgstr "Capacité d'envoi mensuelle considérablement augmentée"
+
+msgid "Tell us more about your desired feature"
+msgstr "Parlez-nous davantage de la fonctionnalité souhaitée"
+
+msgid "Temporary Login Without Password"
+msgstr "Connexion temporaire sans mot de passe"
+
+msgid "Test email to %s"
+msgstr "E-mail de test vers %s"
+
+msgid "Thank You :) "
+msgstr "Merci :) "
+
+msgid "Thank You!"
+msgstr "Merci !"
+
+msgid ""
+"Thank you for trying out Icegram Mailer. We are on a mission to make the "
+"best Email delivery plugin for WordPress."
+msgstr ""
+"Merci d'avoir essayé Icegram Mailer. Nous avons pour mission de créer le "
+"meilleur plugin de livraison d'e-mails pour WordPress."
+
+msgid ""
+"The \"From name\" and \"From email\" people will see when they receive emails"
+msgstr ""
+"Le \"Nom expéditeur\" et l'\"E-mail expéditeur\" que les gens verront lorsqu'ils reçoivent des e-mails"
+
+msgid ""
+"The best WP popup plugin that creates a popup. Customize popup, target "
+"popups to show offers, email signups, social buttons, etc and increase "
+"conversions on your website."
+msgstr ""
+"Le meilleur plugin de popup WP qui crée une popup. Personnalisez la popup, ciblez "
+"les popups pour afficher des offres, des inscriptions par e-mail, des boutons sociaux, etc. et augmentez "
+"les conversions sur votre site web."
+
+msgid "To"
+msgstr "À"
+
+msgid "Total failed"
+msgstr "Total échoué"
+
+msgid "Total opened"
+msgstr "Total ouvert"
+
+msgid "Total sent"
+msgstr "Total envoyé"
+
+msgid "Turn this on to allow Icegram Mailer to handle your emails"
+msgstr "Activez ceci pour permettre à Icegram Mailer de gérer vos e-mails"
+
+msgid ""
+"Unable to create your account. Please try again later or contact us at https:"
+"//icegram.com/contact-us if issue persist."
+msgstr ""
+"Impossible de créer votre compte. Veuillez réessayer plus tard ou nous contacter à https:"
+"//icegram.com/contact-us si le problème persiste."
+
+msgid "Unauthorized"
+msgstr "Non autorisé"
+
+msgid "Unauthorized request."
+msgstr "Demande non autorisée."
+
+msgid ""
+"Unlock higher email sending limits and elevate your communication strategy."
+msgstr ""
+"Débloquez des limites d'envoi d'e-mails plus élevées et élevez votre stratégie de communication."
+
+msgid "Upgrade plan"
+msgstr "Mettre à niveau le plan"
+
+msgid "WP Mail Error: Unknown"
+msgstr "Erreur WP Mail : Inconnue"
+
+msgid ""
+"Yes, I give my consent to track plugin usage and contact me back to make "
+"this plugin works!"
+msgstr ""
+"Oui, je donne mon consentement pour suivre l'utilisation du plugin et me recontacter pour faire "
+"fonctionner ce plugin !"
+
+msgid ""
+"You've used %1$s%% of your monthly email quota. Email sending is paused "
+"currently. To resume sending, consider upgrading your plan."
+msgstr ""
+"Vous avez utilisé %1$s%% de votre quota d'e-mails mensuel. L'envoi d'e-mails est actuellement "
+"en pause. Pour reprendre l'envoi, considérez mettre à niveau votre plan."
+
+msgid ""
+"You've used %1$s%% of your monthly email quota. Email sending will be paused "
+"after your monthly email quota reaches 100%%. To avoid service interruptions,"
+" consider upgrading your plan."
+msgstr ""
+"Vous avez utilisé %1$s%% de votre quota d'e-mails mensuel. L'envoi d'e-mails sera mis en pause "
+"après que votre quota d'e-mails mensuel atteigne 100%%. Pour éviter les interruptions de service,"
+" considérez mettre à niveau votre plan."
+
+msgid "Your feedback submitted successfully."
+msgstr "Vos commentaires ont été soumis avec succès."
+
+msgid "resets on "
+msgstr "se réinitialise le "

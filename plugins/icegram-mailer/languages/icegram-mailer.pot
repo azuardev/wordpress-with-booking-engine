@@ -1,0 +1,1021 @@
+# Copyright (C) 2026 Icegram
+# This file is distributed under the GPL-2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Icegram Mailer 1.0.11\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/icegram-mailer\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-04-23T07:38:21+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: icegram-mailer\n"
+
+#. Plugin Name of the plugin
+#: icegram-mailer.php
+#: admin/partials/header.php:18
+#: admin/templates/emails/partials/email-header.php:16
+msgid "Icegram Mailer"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: icegram-mailer.php
+msgid "https://icegram.com"
+msgstr ""
+
+#. Description of the plugin
+#: icegram-mailer.php
+msgid "Plugin to send emails via Icegram sending service"
+msgstr ""
+
+#. Author of the plugin
+#: icegram-mailer.php
+msgid "Icegram"
+msgstr ""
+
+#. Author URI of the plugin
+#: icegram-mailer.php
+msgid "https://icegram.com/"
+msgstr ""
+
+#: admin/class-icegram-mailer-admin.php:103
+#: admin/partials/settings.php:16
+msgid "Dashboard"
+msgstr ""
+
+#: admin/class-icegram-mailer-admin.php:104
+#: admin/partials/dashboard.php:16
+msgid "Settings"
+msgstr ""
+
+#: admin/class-icegram-mailer-admin.php:106
+msgid "Other awesome plugins"
+msgstr ""
+
+#: admin/class-icegram-mailer-email-list-table.php:66
+msgid "Email Log"
+msgstr ""
+
+#: admin/class-icegram-mailer-email-list-table.php:67
+msgid "Email Logs"
+msgstr ""
+
+#: admin/class-icegram-mailer-email-list-table.php:88
+msgid "Number of email logs per page"
+msgstr ""
+
+#: admin/class-icegram-mailer-email-list-table.php:176
+msgid "No email logs available."
+msgstr ""
+
+#: admin/class-icegram-mailer-email-list-table.php:232
+msgid "(no subject)"
+msgstr ""
+
+#: admin/class-icegram-mailer-email-list-table.php:240
+#: admin/class-icegram-mailer-email-list-table.php:306
+msgid "Resend"
+msgstr ""
+
+#: admin/class-icegram-mailer-email-list-table.php:246
+#: admin/class-icegram-mailer-email-list-table.php:307
+#: admin/js/admin.js:432
+msgid "Delete"
+msgstr ""
+
+#: admin/class-icegram-mailer-email-list-table.php:263
+msgid "Subject"
+msgstr ""
+
+#: admin/class-icegram-mailer-email-list-table.php:264
+msgid "To"
+msgstr ""
+
+#: admin/class-icegram-mailer-email-list-table.php:265
+#: admin/templates/other-icegram-plugins.php:105
+msgid "Status"
+msgstr ""
+
+#: admin/class-icegram-mailer-email-list-table.php:266
+msgid "Sent at"
+msgstr ""
+
+#: admin/class-icegram-mailer-email-list-table.php:267
+msgid "Opened at"
+msgstr ""
+
+#: admin/class-icegram-mailer-email-list-table.php:349
+#: admin/class-icegram-mailer-email-list-table.php:394
+msgid "Security check failed"
+msgstr ""
+
+#: admin/class-icegram-mailer-email-list-table.php:354
+#: admin/class-icegram-mailer-email-list-table.php:399
+msgid "You do not have permission to delete email logs."
+msgstr ""
+
+#: admin/class-icegram-mailer-email-list-table.php:470
+msgid "All"
+msgstr ""
+
+#: admin/class-icegram-mailer-email-list-table.php:479
+msgid "Sent"
+msgstr ""
+
+#: admin/class-icegram-mailer-email-list-table.php:488
+msgid "Failed"
+msgstr ""
+
+#: admin/class-icegram-mailer-email-list-table.php:505
+#: admin/class-icegram-mailer-list-table.php:34
+msgid "Search Logs"
+msgstr ""
+
+#: admin/class-icegram-mailer-email-list-table.php:519
+msgid "Search email or subject..."
+msgstr ""
+
+#: admin/class-icegram-mailer-settings.php:23
+msgid "Unauthorized"
+msgstr ""
+
+#. translators: %1$s and %2$s: opening and closing <strong> tags around "Icegram Mailer", %3$s and %4$s: opening and closing <strong> tags around "5 star".
+#: admin/notices/class-icegram-mailer-plugin-review-notice.php:27
+#, php-format
+msgid "Hey 👋, we at %1$sIcegram Mailer%2$s just wanted to thank you for using our plugin. If you’re enjoying it, we’d really appreciate a %3$s5 star%4$s review. It keeps us motivated to keep building and improving."
+msgstr ""
+
+#: admin/notices/class-icegram-mailer-plugin-review-notice.php:41
+msgid "Leave a review"
+msgstr ""
+
+#: admin/notices/class-icegram-mailer-plugin-review-notice.php:46
+msgid "Remind me later"
+msgstr ""
+
+#: admin/partials/ess-optin-popup.php:18
+msgid "Reliable email delivery with Icegram Mailer"
+msgstr ""
+
+#: admin/partials/ess-optin-popup.php:26
+msgid "Start with 200 free emails/month"
+msgstr ""
+
+#: admin/partials/ess-optin-popup.php:31
+msgid "High speed email sending"
+msgstr ""
+
+#: admin/partials/ess-optin-popup.php:38
+msgid "Reliable email delivery"
+msgstr ""
+
+#: admin/partials/ess-optin-popup.php:45
+msgid "Start sending"
+msgstr ""
+
+#: admin/partials/ess-optin-popup.php:56
+msgid "Excellent! activating your free Plan"
+msgstr ""
+
+#. translators: 1: Main List 2: Test List
+#: admin/partials/ess-optin-popup.php:68
+msgid "Creating your account"
+msgstr ""
+
+#: admin/partials/ess-optin-popup.php:80
+msgid "Sending a test email"
+msgstr ""
+
+#: admin/partials/ess-optin-popup.php:91
+msgid "Confirming email delivery"
+msgstr ""
+
+#: admin/partials/ess-optin-popup.php:99
+msgid "Processing..."
+msgstr ""
+
+#: admin/partials/ess-stats-with-upgrade-block.php:24
+#: admin/partials/ess-stats.php:23
+msgid "Plan usage"
+msgstr ""
+
+#: admin/partials/ess-stats-with-upgrade-block.php:27
+#: admin/partials/ess-stats.php:26
+#: admin/js/admin.js:344
+msgid "resets on "
+msgstr ""
+
+#: admin/partials/ess-stats-with-upgrade-block.php:32
+#: admin/partials/ess-stats.php:31
+msgid "Email sent"
+msgstr ""
+
+#. translators: 1. Used limit count 2. Allocated limit 3. Used limit percentage
+#: admin/partials/ess-stats-with-upgrade-block.php:37
+#: admin/partials/ess-stats.php:36
+#: includes/controllers/class-icegram-mailer-dashboard-controller.php:217
+#, php-format
+msgid "%1$s of %2$s ( %3$s%% ) used"
+msgstr ""
+
+#. translators: 1. Remaining limit count 2. Remaining limit percentage
+#: admin/partials/ess-stats-with-upgrade-block.php:48
+#: admin/partials/ess-stats.php:46
+#: includes/controllers/class-icegram-mailer-dashboard-controller.php:225
+#, php-format
+msgid "%1$s ( %2$s%% ) remaining"
+msgstr ""
+
+#: admin/partials/ess-stats-with-upgrade-block.php:55
+#: admin/js/admin.js:291
+msgid "Refresh now"
+msgstr ""
+
+#: admin/partials/ess-stats-with-upgrade-block.php:62
+#: admin/partials/ess-stats.php:53
+msgid "Insights"
+msgstr ""
+
+#: admin/partials/ess-stats-with-upgrade-block.php:65
+#: admin/partials/ess-stats.php:56
+msgid "Last 30 days"
+msgstr ""
+
+#: admin/partials/ess-stats-with-upgrade-block.php:74
+#: admin/partials/ess-stats.php:65
+msgid "Total sent"
+msgstr ""
+
+#: admin/partials/ess-stats-with-upgrade-block.php:82
+#: admin/partials/ess-stats.php:73
+msgid "Total opened"
+msgstr ""
+
+#: admin/partials/ess-stats-with-upgrade-block.php:90
+#: admin/partials/ess-stats.php:81
+msgid "Total failed"
+msgstr ""
+
+#: admin/partials/ess-stats-with-upgrade-block.php:100
+msgid "Ready to send more?"
+msgstr ""
+
+#: admin/partials/ess-stats-with-upgrade-block.php:103
+msgid "Unlock higher email sending limits and elevate your communication strategy."
+msgstr ""
+
+#: admin/partials/ess-stats-with-upgrade-block.php:111
+msgid "Substantially increased monthly sending capacity"
+msgstr ""
+
+#: admin/partials/ess-stats-with-upgrade-block.php:118
+msgid "Optimized performance for high-volume campaigns"
+msgstr ""
+
+#: admin/partials/ess-stats-with-upgrade-block.php:125
+msgid "Access to expert support when you need it"
+msgstr ""
+
+#: admin/partials/ess-stats-with-upgrade-block.php:131
+#: includes/class-icegram-mailer-account.php:941
+msgid "Upgrade plan"
+msgstr ""
+
+#: admin/partials/settings.php:24
+msgid "Settings saved."
+msgstr ""
+
+#: admin/partials/settings.php:35
+msgid "Enable Icegram mailer"
+msgstr ""
+
+#: admin/partials/settings.php:38
+msgid "Turn this on to allow Icegram Mailer to handle your emails."
+msgstr ""
+
+#: admin/partials/settings.php:52
+msgid "Sender"
+msgstr ""
+
+#: admin/partials/settings.php:55
+msgid "The \"From name\", \"From email\", \"Reply-To name\" and \"Reply-To email\" people will see when they receive emails."
+msgstr ""
+
+#: admin/partials/settings.php:63
+msgid "From name"
+msgstr ""
+
+#: admin/partials/settings.php:65
+#: admin/partials/settings.php:87
+msgid "Name"
+msgstr ""
+
+#: admin/partials/settings.php:70
+msgid "From email"
+msgstr ""
+
+#: admin/partials/settings.php:73
+#: admin/partials/settings.php:98
+msgid "Email"
+msgstr ""
+
+#: admin/partials/settings.php:81
+msgid "Reply-To Name"
+msgstr ""
+
+#: admin/partials/settings.php:91
+msgid "Reply-To Email"
+msgstr ""
+
+#: admin/partials/settings.php:110
+msgid "Open tracking"
+msgstr ""
+
+#: admin/partials/settings.php:113
+msgid "Do you want to track opens when people view your emails?"
+msgstr ""
+
+#: admin/partials/settings.php:128
+msgid "Show \"Sent by Icegram\""
+msgstr ""
+
+#: admin/partials/settings.php:130
+#: admin/partials/settings.php:131
+msgid "Upgrade to Premium"
+msgstr ""
+
+#: admin/partials/settings.php:136
+msgid "Include \"Sent by Icegram\" link in the footer of your emails."
+msgstr ""
+
+#: admin/partials/settings.php:151
+msgid "Email testing"
+msgstr ""
+
+#: admin/partials/settings.php:154
+msgid "Enter email address to test your configuration."
+msgstr ""
+
+#: admin/partials/settings.php:159
+msgid "Enter email"
+msgstr ""
+
+#: admin/partials/settings.php:164
+msgid "Send email"
+msgstr ""
+
+#: admin/partials/settings.php:182
+msgid "Save"
+msgstr ""
+
+#: admin/templates/emails/failed-emails.php:34
+msgid "Email Delivery Update"
+msgstr ""
+
+#. translators: %1$s: number of failed emails
+#: admin/templates/emails/failed-emails.php:48
+#, php-format
+msgid "%1$s email recently failed to send"
+msgid_plural "%1$s emails recently failed to send"
+msgstr[0] ""
+msgstr[1] ""
+
+#: admin/templates/emails/failed-emails.php:66
+msgid "RECIPIENT"
+msgstr ""
+
+#: admin/templates/emails/failed-emails.php:67
+msgid "SUBJECT"
+msgstr ""
+
+#: admin/templates/emails/failed-emails.php:68
+msgid "DATE & TIME"
+msgstr ""
+
+#: admin/templates/emails/failed-emails.php:97
+msgid "These issues are usually temporary. You may want to review your delivery logs."
+msgstr ""
+
+#: admin/templates/emails/failed-emails.php:103
+msgid "Review Delivery Logs"
+msgstr ""
+
+#: admin/templates/emails/limit-reached.php:41
+msgid "Email Usage Update"
+msgstr ""
+
+#. translators: %s: percentage with strong tag
+#: admin/templates/emails/limit-reached.php:55
+#, php-format
+msgid "You have reached %s of your monthly email sending limit."
+msgstr ""
+
+#: admin/templates/emails/limit-reached.php:71
+msgid "Allocated Limit"
+msgstr ""
+
+#: admin/templates/emails/limit-reached.php:78
+msgid "Used"
+msgstr ""
+
+#: admin/templates/emails/limit-reached.php:85
+msgid "Remaining"
+msgstr ""
+
+#: admin/templates/emails/limit-reached.php:95
+#: admin/templates/emails/monthly-summary.php:145
+msgid "View Dashboard"
+msgstr ""
+
+#. translators: %s: reset date
+#: admin/templates/emails/limit-reached.php:106
+#: admin/templates/emails/monthly-summary.php:155
+#, php-format
+msgid "Next Limit Reset: %s"
+msgstr ""
+
+#. translators: %s: upgrade link
+#: admin/templates/emails/limit-reached.php:117
+#: admin/templates/emails/monthly-summary.php:165
+#, php-format
+msgid "Running low on credits? %s"
+msgstr ""
+
+#: admin/templates/emails/limit-reached.php:118
+#: admin/templates/emails/monthly-summary.php:166
+msgid "Upgrade your plan"
+msgstr ""
+
+#: admin/templates/emails/monthly-summary.php:50
+msgid "Monthly Email Summary"
+msgstr ""
+
+#: admin/templates/emails/monthly-summary.php:65
+msgid "Plan Usage"
+msgstr ""
+
+#: admin/templates/emails/monthly-summary.php:68
+msgid "Emails sent"
+msgstr ""
+
+#. translators: 1: used emails, 2: allocated limit, 3: percentage
+#: admin/templates/emails/monthly-summary.php:73
+#, php-format
+msgid "%1$s / %2$s (%3$s%%)"
+msgstr ""
+
+#: admin/templates/emails/monthly-summary.php:89
+msgid "Delivery Insights"
+msgstr ""
+
+#: admin/templates/emails/monthly-summary.php:92
+msgid "Successful sent"
+msgstr ""
+
+#. translators: 1: successful emails, 2: success rate
+#. translators: 1: failed emails, 2: failure rate
+#. translators: 1: opened emails, 2: open rate
+#: admin/templates/emails/monthly-summary.php:97
+#: admin/templates/emails/monthly-summary.php:112
+#: admin/templates/emails/monthly-summary.php:132
+#, php-format
+msgid "%1$s (%2$s%%)"
+msgstr ""
+
+#: admin/templates/emails/monthly-summary.php:107
+msgid "Emails failed"
+msgstr ""
+
+#: admin/templates/emails/monthly-summary.php:124
+msgid "Engagement Insights"
+msgstr ""
+
+#: admin/templates/emails/monthly-summary.php:127
+msgid "Emails opened"
+msgstr ""
+
+#: admin/templates/emails/partials/email-footer.php:12
+msgid "Powered by Icegram Mailer"
+msgstr ""
+
+#: admin/templates/other-icegram-plugins.php:29
+msgid "Icegram Express"
+msgstr ""
+
+#: admin/templates/other-icegram-plugins.php:31
+msgid "Simple and Effective Email Marketing WordPress Plugin. Email Subscribers is a complete newsletter plugin that lets you collect leads, send automated new blog post notification emails, create & send broadcasts"
+msgstr ""
+
+#: admin/templates/other-icegram-plugins.php:37
+msgid "Icegram Engage"
+msgstr ""
+
+#: admin/templates/other-icegram-plugins.php:39
+msgid "The best WP popup plugin that creates a popup. Customize popup, target popups to show offers, email signups, social buttons, etc and increase conversions on your website."
+msgstr ""
+
+#: admin/templates/other-icegram-plugins.php:46
+msgid "Icegram Collect"
+msgstr ""
+
+#: admin/templates/other-icegram-plugins.php:48
+msgid "Get readymade contact forms, email subscription forms and custom forms for your website. Choose from beautiful templates and get started within seconds"
+msgstr ""
+
+#: admin/templates/other-icegram-plugins.php:54
+msgid "Temporary Login Without Password"
+msgstr ""
+
+#: admin/templates/other-icegram-plugins.php:56
+msgid "Create self-expiring, automatic login links for WordPress. Give them to developers when they ask for admin access to your site."
+msgstr ""
+
+#: admin/templates/other-icegram-plugins.php:62
+msgid "Duplicate Pages and Posts"
+msgstr ""
+
+#: admin/templates/other-icegram-plugins.php:64
+msgid "A Duplicate Pages and Posts Plugin is a tool for WordPress that enables users to easily create duplicate versions of existing posts, pages, or custom post types with just a click."
+msgstr ""
+
+#: admin/templates/other-icegram-plugins.php:107
+msgid "Active"
+msgstr ""
+
+#: admin/templates/other-icegram-plugins.php:109
+msgid "Inactive"
+msgstr ""
+
+#: admin/templates/other-icegram-plugins.php:111
+msgid "Not Installed"
+msgstr ""
+
+#: admin/templates/other-icegram-plugins.php:126
+msgid "Buy Now"
+msgstr ""
+
+#: admin/templates/other-icegram-plugins.php:128
+msgid "Install"
+msgstr ""
+
+#: admin/templates/other-icegram-plugins.php:134
+msgid "Activate"
+msgstr ""
+
+#: includes/class-icegram-mailer-account.php:155
+#: includes/controllers/class-icegram-mailer-onboarding-controller.php:148
+msgid "An error occured. Please try again later."
+msgstr ""
+
+#: includes/class-icegram-mailer-account.php:218
+#: includes/controllers/class-icegram-mailer-onboarding-controller.php:361
+msgid "Site url is not valid. Please check your site url."
+msgstr ""
+
+#: includes/class-icegram-mailer-account.php:247
+#: includes/controllers/class-icegram-mailer-onboarding-controller.php:390
+msgid "An error has occurred while creating your account. Please try again later"
+msgstr ""
+
+#: includes/class-icegram-mailer-account.php:254
+#: includes/class-icegram-mailer-account.php:261
+#: includes/controllers/class-icegram-mailer-onboarding-controller.php:397
+#: includes/controllers/class-icegram-mailer-onboarding-controller.php:404
+msgid "Unable to create your account. Please try again later or contact us at https://icegram.com/contact-us if issue persist."
+msgstr ""
+
+#. translators: %1$s: Percentage used, %2$s and %4$s: opening and closing <strong> tags, %5$s and %6$s: opening and closing <a> tags.
+#: includes/class-icegram-mailer-account.php:921
+#, php-format
+msgid "You've used %1$s%% of your monthly email quota. Email sending will be paused after your monthly email quota reaches 100%%. To avoid service interruptions, consider upgrading your plan."
+msgstr ""
+
+#. translators: %1$s: Percentage used, %2$s and %4$s: opening and closing <strong> tags, %5$s and %6$s: opening and closing <a> tags.
+#: includes/class-icegram-mailer-account.php:926
+#, php-format
+msgid "You've used %1$s%% of your monthly email quota. Email sending is paused currently. To resume sending, consider upgrading your plan."
+msgstr ""
+
+#: includes/class-icegram-mailer-account.php:946
+msgid "Learn more"
+msgstr ""
+
+#. translators: %s. Email address
+#: includes/class-icegram-mailer-client.php:224
+#, php-format
+msgid "Test email to %s"
+msgstr ""
+
+#: includes/class-icegram-mailer-client.php:247
+msgid "Congrats, test email was sent successfully!"
+msgstr ""
+
+#: includes/class-icegram-mailer-client.php:248
+msgid "Thank you for trying out Icegram Mailer. We are on a mission to make the best Email delivery plugin for WordPress."
+msgstr ""
+
+#. translators: 1: <a> 2: </a>
+#: includes/class-icegram-mailer-client.php:252
+#, php-format
+msgid "If you find this plugin useful, please consider giving us %1$s5 stars review%2$s on WordPress!"
+msgstr ""
+
+#: includes/class-icegram-mailer-ess-mailer.php:121
+#: includes/class-icegram-mailer-ess-mailer.php:321
+msgid "API key is empty."
+msgstr ""
+
+#: includes/class-icegram-mailer-ess-mailer.php:386
+#: includes/class-icegram-mailer-ess-mailer.php:778
+msgid "An unknown error has occured. Please try again later."
+msgstr ""
+
+#. translators: %d: interval in minutes
+#: includes/class-icegram-mailer-notifications.php:112
+#, php-format
+msgid "Every %d Minutes"
+msgstr ""
+
+#: includes/class-icegram-mailer-notifications.php:122
+msgid "Icegram Mailer - Monthly Summary Check"
+msgstr ""
+
+#: includes/class-icegram-mailer-notifications.php:206
+#: includes/class-icegram-mailer-notifications.php:404
+msgid "Unknown error"
+msgstr ""
+
+#. translators: 1: site name, 2: plugin name
+#: includes/class-icegram-mailer-notifications.php:385
+#, php-format
+msgid "[%1$s] – %2$s: Email Delivery Update"
+msgstr ""
+
+#: includes/class-icegram-mailer-notifications.php:402
+msgid "Unknown recipient"
+msgstr ""
+
+#: includes/class-icegram-mailer-notifications.php:403
+msgid "No subject"
+msgstr ""
+
+#. translators: 1: site name, 2: plugin name
+#: includes/class-icegram-mailer-notifications.php:572
+#, php-format
+msgid "[%1$s] - %2$s Limit Almost Reached"
+msgstr ""
+
+#. translators: 1: site name, 2: plugin name
+#: includes/class-icegram-mailer-notifications.php:577
+#, php-format
+msgid "[%1$s] - %2$s Limit Reached"
+msgstr ""
+
+#. translators: 1: site name, 2: plugin name
+#: includes/class-icegram-mailer-notifications.php:760
+#, php-format
+msgid "[%1$s] - %2$s Monthly Summary"
+msgstr ""
+
+#: includes/class-icegram-mailer-router.php:28
+msgid "Unauthorized request."
+msgstr ""
+
+#: includes/class-icegram-mailer-router.php:37
+msgid "No handler found."
+msgstr ""
+
+#: includes/class-icegram-mailer-router.php:41
+msgid "No method found."
+msgstr ""
+
+#: includes/controllers/class-icegram-mailer-dashboard-controller.php:40
+msgid "Unable to resend email."
+msgstr ""
+
+#: includes/controllers/class-icegram-mailer-dashboard-controller.php:46
+#: includes/controllers/class-icegram-mailer-dashboard-controller.php:268
+msgid "Invalid email ID."
+msgstr ""
+
+#: includes/controllers/class-icegram-mailer-dashboard-controller.php:54
+msgid "Email not found in logs."
+msgstr ""
+
+#: includes/controllers/class-icegram-mailer-dashboard-controller.php:106
+#: admin/js/admin.js:236
+msgid "Email resent successfully!"
+msgstr ""
+
+#: includes/controllers/class-icegram-mailer-dashboard-controller.php:134
+msgid "Unable to retrieve email."
+msgstr ""
+
+#: includes/controllers/class-icegram-mailer-dashboard-controller.php:162
+msgid "Unable to sync account statistics."
+msgstr ""
+
+#: includes/controllers/class-icegram-mailer-dashboard-controller.php:167
+msgid "ESS account not found. Please setup your account first."
+msgstr ""
+
+#: includes/controllers/class-icegram-mailer-dashboard-controller.php:176
+#: admin/js/admin.js:357
+msgid "Failed to refresh usage data."
+msgstr ""
+
+#: includes/controllers/class-icegram-mailer-dashboard-controller.php:231
+msgid "Account statistics synced successfully!"
+msgstr ""
+
+#: includes/controllers/class-icegram-mailer-dashboard-controller.php:262
+msgid "Unable to delete email."
+msgstr ""
+
+#: includes/controllers/class-icegram-mailer-dashboard-controller.php:277
+msgid "Email deleted successfully!"
+msgstr ""
+
+#: includes/controllers/class-icegram-mailer-dashboard-controller.php:279
+msgid "Email not found or could not be deleted."
+msgstr ""
+
+#: includes/controllers/class-icegram-mailer-settings-controller.php:30
+msgid "Email is invalid."
+msgstr ""
+
+#: includes/controllers/class-icegram-mailer-settings-controller.php:49
+msgid "WP Mail Error: Unknown"
+msgstr ""
+
+#: includes/feedback.php:13
+msgid "I faced issues getting the plugin to work properly"
+msgstr ""
+
+#: includes/feedback.php:16
+msgid "The free email is exhausted"
+msgstr ""
+
+#: includes/feedback.php:19
+msgid "Missing a feature I need"
+msgstr ""
+
+#: includes/feedback.php:22
+msgid "Switching to another plugin"
+msgstr ""
+
+#: includes/feedback.php:25
+msgid "Installed by mistake"
+msgstr ""
+
+#: includes/feedback.php:28
+msgid "Other"
+msgstr ""
+
+#: includes/feedback.php:162
+msgid "What made you deactivate Icegram Mailer?"
+msgstr ""
+
+#: includes/feedback.php:182
+msgid "Can you tell us more about the problem?"
+msgstr ""
+
+#: includes/feedback.php:185
+msgid "Set up issue / configuration confusion"
+msgstr ""
+
+#: includes/feedback.php:186
+msgid "Delivery issue - emails were not getting sent"
+msgstr ""
+
+#: includes/feedback.php:187
+msgid "I'm not sure"
+msgstr ""
+
+#: includes/feedback.php:192
+msgid "Get Expert Help"
+msgstr ""
+
+#: includes/feedback.php:192
+msgid "Thank you for reaching out, we are here for you."
+msgstr ""
+
+#: includes/feedback.php:193
+#: includes/feedback.php:244
+#: includes/feedback.php:279
+#: includes/feedback.php:290
+msgid "Continue Deactivation"
+msgstr ""
+
+#: includes/feedback.php:201
+msgid "It looks like you haven't set up Icegram Mailer yet."
+msgstr ""
+
+#. translators: %s: number of remaining emails
+#: includes/feedback.php:212
+#, php-format
+msgid "You have %s emails remaining in your sending limit."
+msgstr ""
+
+#: includes/feedback.php:218
+msgid "Set it up to start sending emails and make the most of your free sending limit."
+msgstr ""
+
+#. translators: %s: next email limit reset date
+#: includes/feedback.php:228
+#, php-format
+msgid "Use them before %s."
+msgstr ""
+
+#: includes/feedback.php:237
+msgid "Need more than the free plan? Explore our plans."
+msgstr ""
+
+#: includes/feedback.php:239
+msgid "Or upgrade to keep sending without limits."
+msgstr ""
+
+#: includes/feedback.php:243
+msgid "See Plans"
+msgstr ""
+
+#: includes/feedback.php:248
+msgid "Missing a feature?"
+msgstr ""
+
+#: includes/feedback.php:249
+msgid "Tell us what you were looking for — your feedback helps us improve future updates."
+msgstr ""
+
+#: includes/feedback.php:252
+msgid "Describe the feature you need..."
+msgstr ""
+
+#: includes/feedback.php:253
+#, php-format
+msgid "You can also check <a href=\"%s\" target=\"_blank\">our docs</a> in case the feature already exists."
+msgstr ""
+
+#: includes/feedback.php:255
+msgid "Share and Continue Deactivation"
+msgstr ""
+
+#: includes/feedback.php:256
+#: includes/feedback.php:268
+msgid "Deactivate"
+msgstr ""
+
+#: includes/feedback.php:260
+msgid "Trying a different plugin?"
+msgstr ""
+
+#: includes/feedback.php:261
+msgid "No worries—we’d love to know what you picked. It helps us make Icegram Mailer better."
+msgstr ""
+
+#: includes/feedback.php:264
+msgid "Which plugin are you switching to? (optional)"
+msgstr ""
+
+#: includes/feedback.php:267
+msgid "Submit & Deactivate"
+msgstr ""
+
+#: includes/feedback.php:272
+msgid "Installed by mistake? No worries"
+msgstr ""
+
+#: includes/feedback.php:273
+msgid "Icegram Mailer quietly improves your email delivery in the background. Want to take a quick look before you go?"
+msgstr ""
+
+#: includes/feedback.php:278
+msgid "Quick Overview"
+msgstr ""
+
+#: includes/feedback.php:283
+msgid "Tell us more (optional)"
+msgstr ""
+
+#: includes/feedback.php:287
+msgid "Your feedback (optional)..."
+msgstr ""
+
+#: includes/services/class-icegram-mailer-email-delivery-check.php:54
+msgid " The test email did not reach our test server. Did you get any test emails on your email? This could be a temporary problem, but it can also mean that emails are getting stuck on your server, or getting rejected by recipients."
+msgstr ""
+
+#: admin/js/admin.js:26
+msgid "Sending"
+msgstr ""
+
+#: admin/js/admin.js:34
+msgid "Email has been sent. Please check your inbox"
+msgstr ""
+
+#: admin/js/admin.js:38
+msgid "Sending error"
+msgstr ""
+
+#: admin/js/admin.js:44
+#: admin/js/admin.js:49
+msgid "Send Email"
+msgstr ""
+
+#: admin/js/admin.js:53
+msgid "Add test email"
+msgstr ""
+
+#: admin/js/admin.js:202
+msgid "Confirm Resend"
+msgstr ""
+
+#: admin/js/admin.js:203
+msgid "Are you sure you want to resend this email?"
+msgstr ""
+
+#: admin/js/admin.js:207
+#: admin/js/admin.js:427
+msgid "Cancel"
+msgstr ""
+
+#: admin/js/admin.js:212
+#: admin/js/admin.js:240
+#: admin/js/admin.js:255
+#: admin/js/admin.js:271
+#: admin/js/admin.js:477
+#: admin/js/admin.js:493
+msgid "OK"
+msgstr ""
+
+#: admin/js/admin.js:216
+msgid "Resending Email..."
+msgstr ""
+
+#: admin/js/admin.js:235
+msgid "Success"
+msgstr ""
+
+#: admin/js/admin.js:250
+#: admin/js/admin.js:266
+#: admin/js/admin.js:472
+#: admin/js/admin.js:488
+msgid "Error"
+msgstr ""
+
+#: admin/js/admin.js:251
+#: admin/js/admin.js:473
+msgid "Unknown error occurred"
+msgstr ""
+
+#: admin/js/admin.js:267
+#: admin/js/admin.js:489
+msgid "An error occurred. Please try again."
+msgstr ""
+
+#: admin/js/admin.js:294
+msgid "Refreshing..."
+msgstr ""
+
+#: admin/js/admin.js:314
+msgid "Usage data refreshed successfully."
+msgstr ""
+
+#: admin/js/admin.js:315
+msgid "Dismiss this notice."
+msgstr ""
+
+#: admin/js/admin.js:363
+msgid "An error occurred while refreshing. Please try again."
+msgstr ""
+
+#: admin/js/admin.js:377
+msgid "email(s) resent successfully."
+msgstr ""
+
+#: admin/js/admin.js:381
+msgid "email(s) failed to resend."
+msgstr ""
+
+#: admin/js/admin.js:385
+msgid "email(s) deleted successfully."
+msgstr ""
+
+#: admin/js/admin.js:422
+msgid "Confirm Delete"
+msgstr ""
+
+#: admin/js/admin.js:423
+msgid "Are you sure you want to delete this email log?"
+msgstr ""
+
+#: admin/js/admin.js:436
+msgid "Deleting Email..."
+msgstr ""
+
+#: admin/js/ess-onboarding.js:220
+msgid "Continue"
+msgstr ""

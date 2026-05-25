@@ -829,7 +829,7 @@
       html +=
         '<button type="button" class="cbe-detail-book-btn" data-cbe-cabin-id="' +
         detailData.id +
-        '">Pesan Sekarang</button>';
+        '">Book Now</button>';
       html += "</div>";
 
       html += "</div>";

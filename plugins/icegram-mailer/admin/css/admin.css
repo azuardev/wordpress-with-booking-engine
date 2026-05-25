@@ -1,0 +1,236 @@
+.icegram-mailer-items-list table.fixed,
+.post-type-es_template table.fixed {
+	position: static;
+}
+
+/* Hide top pagination but keep bulk actions visible */
+#icegram-mailer-container .tablenav.top .tablenav-pages {
+    display: none;
+}
+
+#icegram-mailer-container .tablenav.top {
+    display: block !important;
+}
+
+#icegram-mailer-container .tablenav.top .alignleft.actions.bulkactions {
+    display: inline-block !important;
+    margin-right: 10px;
+}
+
+#icegram-mailer-container .tablenav.top .bulkactions select {
+    min-width: 120px;
+    margin-right: 5px;
+}
+
+#icegram-mailer-container table.wp-list-table.widefat.fixed.striped.table-view-list.emaillogs {
+    border: none;
+}
+
+#icegram-mailer-container .alternate, #icegram-mailer-container .striped>tbody>:nth-child(odd), #icegram-mailer-container ul.striped>:nth-child(odd) {
+    background: #fff;
+}
+
+#icegram-mailer-container .icegram-mailer-email-log-list.icegram-mailer-items-list table thead {
+    background-color: #ececec;
+}
+
+input.icegram-mailer-input[type="text"],
+input.icegram-mailer-input[type="email"] {
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0.5px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    -webkit-box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+    border: none;
+    padding: 5px 10px;
+}
+
+.icegram-mailer-form label.text-lg {
+    padding-bottom: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+}
+
+.icegram-mailer-form hr {
+    border-bottom: none;
+}
+
+.icegram-mailer-form .help-text {
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.375;
+    --tw-text-opacity: 1;
+    color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+/* Email status styles */
+.icegram-mailer-email-sent {
+    color: #46b450;
+    font-weight: 500;
+}
+
+.icegram-mailer-email-failed {
+    color: #dc3232;
+    font-weight: 500;
+    cursor: help;
+}
+
+/* Resend action link styles */
+.icegram-mailer-resend-email {
+    color: #2271b1;
+    text-decoration: none;
+}
+
+.icegram-mailer-resend-email:hover {
+    color: #135e96;
+    text-decoration: underline;
+}
+
+/* Custom Modal Styles */
+.icegram-mailer-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.icegram-mailer-modal-overlay.show {
+    opacity: 1;
+}
+
+.icegram-mailer-modal {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    min-width: 400px;
+    max-width: 500px;
+    overflow: hidden;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.icegram-mailer-modal-overlay.show .icegram-mailer-modal {
+    transform: scale(1);
+}
+
+.icegram-mailer-modal-header {
+    padding: 24px 24px 16px;
+    background: #fff;
+}
+
+.icegram-mailer-modal-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.icegram-mailer-modal-body {
+    padding: 24px;
+}
+
+.icegram-mailer-modal-body p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #374151;
+}
+
+.icegram-mailer-modal-footer {
+    padding: 16px 24px;
+    background: #fff;
+    border-top: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.icegram-mailer-modal-footer button {
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.icegram-mailer-modal-btn-primary {
+    background: #6b3c99;
+    color: #fff;
+}
+
+.icegram-mailer-modal-btn-primary:hover {
+    background: #5a3280;
+}
+
+.icegram-mailer-modal-btn-secondary {
+    background: #fff;
+    color: #6b7280;
+    border: 1px solid #d1d5db;
+}
+
+.icegram-mailer-modal-btn-secondary:hover {
+    background: #f9fafb;
+}
+
+/* Loading Spinner */
+.icegram-mailer-spinner {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    border: 4px solid #f3f4f6;
+    border-top: 4px solid #6b3c99;
+    border-radius: 50%;
+    animation: icegram-mailer-spin 1s linear infinite;
+}
+
+@keyframes icegram-mailer-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.icegram-mailer-loading-modal .icegram-mailer-modal {
+    min-width: 300px;
+}
+
+.animate-spin {
+    animation: icegram-mailer-spin 1s linear infinite;
+}
+ 
+.refresh-now-btn {
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.refresh-now-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.icegram-mailer-email-log-list .tablenav.top {
+    height: unset;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.icegram-mailer-email-log-list .search-box { 
+    margin: 0 !important; 
+}
+
+.icegram-mailer-email-log-list #bulk-action-selector-bottom{
+    min-width: 120px;
+}
