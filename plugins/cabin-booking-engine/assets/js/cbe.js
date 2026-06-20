@@ -287,9 +287,148 @@
     var forms = document.querySelectorAll(".cbe-booking-form");
     forms.forEach(bindForm);
 
+    initStayGalleryAutoScroll();
+    initStayGalleryImageViewer();
     initModal();
     initCabinDetails();
   });
+
+  function initStayGalleryImageViewer() {
+    var imageViewerOverlay = document.getElementById(
+      "cbe-image-viewer-overlay",
+    );
+    var imageViewerImage = imageViewerOverlay
+      ? imageViewerOverlay.querySelector("#cbe-image-viewer-image")
+      : null;
+    var imageViewerCounter = imageViewerOverlay
+      ? imageViewerOverlay.querySelector("#cbe-image-viewer-counter")
+      : null;
+    var imageViewerCloseBtn = imageViewerOverlay
+      ? imageViewerOverlay.querySelector(".cbe-image-viewer-close")
+      : null;
+
+    if (!imageViewerOverlay || !imageViewerImage) {
+      return;
+    }
+
+    document.addEventListener("click", function (e) {
+      var thumb = e.target.closest(".cbe-custom-stay-gallery-thumb");
+      if (!thumb) {
+        return;
+      }
+
+      var gallery = thumb.closest(".cbe-custom-stay-gallery");
+      if (!gallery) {
+        return;
+      }
+
+      e.preventDefault();
+      e.stopPropagation();
+
+      var thumbs = gallery.querySelectorAll(".cbe-custom-stay-gallery-thumb");
+      var viewerState = {
+        images: [],
+        index: 0,
+      };
+
+      thumbs.forEach(function (item) {
+        var fullImageUrl = item.getAttribute("href") || "";
+        if (fullImageUrl) {
+          viewerState.images.push(fullImageUrl);
+        }
+      });
+
+      if (!viewerState.images.length) {
+        return;
+      }
+
+      var targetImageUrl = thumb.getAttribute("href") || "";
+      var selectedIndex = viewerState.images.indexOf(targetImageUrl);
+      viewerState.index = selectedIndex >= 0 ? selectedIndex : 0;
+
+      imageViewerOverlay._cbeViewerState = viewerState;
+      syncViewerControls(imageViewerOverlay, viewerState);
+      renderImageViewer(imageViewerImage, imageViewerCounter, viewerState);
+      imageViewerOverlay.hidden = false;
+      document.body.style.overflow = "hidden";
+
+      if (imageViewerCloseBtn) {
+        imageViewerCloseBtn.focus();
+      }
+    });
+  }
+
+  function initStayGalleryAutoScroll() {
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      return;
+    }
+
+    var galleries = document.querySelectorAll(".cbe-custom-stay-gallery");
+    galleries.forEach(function (gallery) {
+      var thumbs = gallery.querySelectorAll(".cbe-custom-stay-gallery-thumb");
+      if (thumbs.length <= 1) {
+        return;
+      }
+
+      var timerId = null;
+      var gap = parseFloat(window.getComputedStyle(gallery).gap || "16") || 16;
+
+      function getStep() {
+        var firstThumb = gallery.querySelector(
+          ".cbe-custom-stay-gallery-thumb",
+        );
+        if (!firstThumb) {
+          return 280;
+        }
+        return firstThumb.getBoundingClientRect().width + gap;
+      }
+
+      function tick() {
+        var maxScrollLeft = gallery.scrollWidth - gallery.clientWidth;
+        if (maxScrollLeft <= 0) {
+          return;
+        }
+
+        var nextLeft = gallery.scrollLeft + getStep();
+        if (nextLeft >= maxScrollLeft - 2) {
+          nextLeft = 0;
+        }
+
+        gallery.scrollTo({
+          left: nextLeft,
+          behavior: "smooth",
+        });
+      }
+
+      function start() {
+        if (timerId !== null) {
+          return;
+        }
+        timerId = window.setInterval(tick, 3200);
+      }
+
+      function stop() {
+        if (timerId === null) {
+          return;
+        }
+        window.clearInterval(timerId);
+        timerId = null;
+      }
+
+      gallery.addEventListener("mouseenter", stop);
+      gallery.addEventListener("mouseleave", start);
+      gallery.addEventListener("focusin", stop);
+      gallery.addEventListener("focusout", start);
+      gallery.addEventListener("touchstart", stop, { passive: true });
+      gallery.addEventListener("pointerdown", stop);
+      gallery.addEventListener("wheel", stop, { passive: true });
+
+      start();
+    });
+  }
 
   function initCabinDetails() {
     var detailOverlay = document.getElementById("cbe-detail-overlay");
@@ -362,7 +501,9 @@
     });
 
     detailOverlay.addEventListener("click", function (e) {
-      var thumb = e.target.closest(".cbe-cabin-detail-thumb");
+      var thumb =
+        e.target.closest(".cbe-cabin-detail-thumb") ||
+        e.target.closest(".cbe-detail-gallery-thumb");
       if (thumb && imageViewerOverlay && imageViewerImage) {
         e.preventDefault();
 
@@ -414,11 +555,14 @@
 
     if (imageViewerPrevBtn) {
       imageViewerPrevBtn.addEventListener("click", function () {
+        var activeViewerState =
+          (imageViewerOverlay && imageViewerOverlay._cbeViewerState) ||
+          viewerState;
         moveViewer(
           imageViewerOverlay,
           imageViewerImage,
           imageViewerCounter,
-          viewerState,
+          activeViewerState,
           -1,
         );
       });
@@ -426,11 +570,14 @@
 
     if (imageViewerNextBtn) {
       imageViewerNextBtn.addEventListener("click", function () {
+        var activeViewerState =
+          (imageViewerOverlay && imageViewerOverlay._cbeViewerState) ||
+          viewerState;
         moveViewer(
           imageViewerOverlay,
           imageViewerImage,
           imageViewerCounter,
-          viewerState,
+          activeViewerState,
           1,
         );
       });
@@ -438,6 +585,22 @@
 
     document.addEventListener("keydown", function (e) {
       if (e.key !== "Escape") {
+        if (
+          imageViewerOverlay &&
+          !imageViewerOverlay.hidden &&
+          (e.key === "ArrowLeft" || e.key === "ArrowRight")
+        ) {
+          e.preventDefault();
+          var activeViewerState =
+            imageViewerOverlay._cbeViewerState || viewerState;
+          moveViewer(
+            imageViewerOverlay,
+            imageViewerImage,
+            imageViewerCounter,
+            activeViewerState,
+            e.key === "ArrowLeft" ? -1 : 1,
+          );
+        }
         return;
       }
 
@@ -457,7 +620,9 @@
       return [];
     }
 
-    var thumbs = detailBody.querySelectorAll(".cbe-cabin-detail-thumb");
+    var thumbs = detailBody.querySelectorAll(
+      ".cbe-cabin-detail-thumb, .cbe-detail-gallery-thumb",
+    );
     var images = [];
 
     thumbs.forEach(function (thumb) {
@@ -490,6 +655,8 @@
 
     var index = viewerState.images.indexOf(targetImageUrl);
     viewerState.index = index >= 0 ? index : 0;
+    imageViewerOverlay._cbeViewerState = viewerState;
+    syncViewerControls(imageViewerOverlay, viewerState);
     renderImageViewer(imageViewerImage, imageViewerCounter, viewerState);
     imageViewerOverlay.hidden = false;
     document.body.style.overflow = "hidden";
@@ -537,6 +704,29 @@
     }
   }
 
+  function syncViewerControls(imageViewerOverlay, viewerState) {
+    if (!imageViewerOverlay) {
+      return;
+    }
+
+    var prevBtn = imageViewerOverlay.querySelector(".cbe-image-viewer-prev");
+    var nextBtn = imageViewerOverlay.querySelector(".cbe-image-viewer-next");
+    var hasMultipleImages = viewerState && viewerState.images.length > 1;
+
+    if (prevBtn) {
+      prevBtn.disabled = !hasMultipleImages;
+    }
+
+    if (nextBtn) {
+      nextBtn.disabled = !hasMultipleImages;
+    }
+
+    imageViewerOverlay.classList.toggle(
+      "cbe-image-viewer-single",
+      !hasMultipleImages,
+    );
+  }
+
   function hideDetailModal(
     detailOverlay,
     imageViewerOverlay,
@@ -560,8 +750,19 @@
     }
 
     imageViewerOverlay.hidden = true;
+    imageViewerOverlay.classList.remove("cbe-image-viewer-single");
+    imageViewerOverlay._cbeViewerState = null;
     if (imageViewerImage) {
       imageViewerImage.setAttribute("src", "");
+    }
+
+    var detailOverlay = document.getElementById("cbe-detail-overlay");
+    var modalOverlay = document.getElementById("cbe-modal-overlay");
+    var isDetailOpen = detailOverlay && !detailOverlay.hidden;
+    var isModalOpen = modalOverlay && !modalOverlay.hidden;
+
+    if (!isDetailOpen && !isModalOpen) {
+      document.body.style.overflow = "";
     }
   }
 
@@ -774,7 +975,7 @@
       // ── Overview ─────────────────────────────────────────────
       if (overviewText !== "") {
         html += '<div class="cbe-detail-row cbe-detail-row-overview">';
-        html += '<span class="cbe-detail-row-label">Room Overview</span>';
+        html += '<span class="cbe-detail-row-label">Cabin Overview</span>';
         html +=
           '<div class="cbe-detail-overview">' +
           escapeHtml(overviewText).replace(/\n/g, "<br />") +
@@ -874,6 +1075,8 @@
             }
 
             detailViewerState.index = idx;
+            imageViewerOverlay._cbeViewerState = detailViewerState;
+            syncViewerControls(imageViewerOverlay, detailViewerState);
             renderImageViewer(
               imageViewerImage,
               imageViewerCounter,

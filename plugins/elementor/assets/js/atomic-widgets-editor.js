@@ -881,7 +881,8 @@ var AtomicElementBaseModel = exports["default"] = /*#__PURE__*/function (_elemen
         settings: (_element$settings = element.settings) !== null && _element$settings !== void 0 ? _element$settings : {},
         elements: elements,
         isLocked: element.isLocked || false,
-        editor_settings: element.editor_settings || {}
+        editor_settings: element.editor_settings || {},
+        meta: element.meta || {}
       };
     }
   }]);

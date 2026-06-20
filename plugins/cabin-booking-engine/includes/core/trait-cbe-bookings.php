@@ -24,10 +24,6 @@ trait CBE_Bookings_Trait {
             $this->safe_redirect($redirect_url, 'invalid_dates');
         }
 
-        if (!$this->is_cabin_available($cabin_id, $checkin_date, $checkout_date)) {
-            $this->safe_redirect($redirect_url, 'not_available');
-        }
-
         $guest_name = isset($_POST['guest_name']) ? sanitize_text_field(wp_unslash($_POST['guest_name'])) : '';
         $guest_email = isset($_POST['guest_email']) ? sanitize_email(wp_unslash($_POST['guest_email'])) : '';
         $guest_phone = isset($_POST['guest_phone']) ? sanitize_text_field(wp_unslash($_POST['guest_phone'])) : '';
@@ -48,61 +44,107 @@ trait CBE_Bookings_Trait {
         }
 
         $nights = $this->calculate_nights($checkin_date, $checkout_date);
-        $price_per_night = $this->get_cabin_price_per_night($cabin_id);
-        $total_price = round($nights * $price_per_night, 2);
+        $selected_rooms_raw = isset($_POST['cbe_selected_rooms']) ? sanitize_text_field(wp_unslash($_POST['cbe_selected_rooms'])) : '';
+        $requested_rooms = $this->parse_requested_rooms($selected_rooms_raw);
+        if (empty($requested_rooms)) {
+            $requested_rooms = array(
+                $cabin_id => 1,
+            );
+        } elseif (!isset($requested_rooms[$cabin_id])) {
+            $requested_rooms[$cabin_id] = 1;
+        }
+
+        foreach ($requested_rooms as $requested_cabin_id => $requested_units) {
+            if ((int) $requested_cabin_id <= 0 || get_post_type((int) $requested_cabin_id) !== 'cabin') {
+                $this->safe_redirect($redirect_url, 'invalid_cabin');
+            }
+
+            if (!$this->is_cabin_available((int) $requested_cabin_id, $checkin_date, $checkout_date, (int) $requested_units)) {
+                $this->safe_redirect($redirect_url, 'not_available');
+            }
+        }
+
+        // Keep DOKU flow simple and safe: multi-cabin selection is processed as manual booking.
+        if (count($requested_rooms) > 1 && $payment_method === 'doku') {
+            $payment_method = 'manual';
+        }
 
         global $wpdb;
-        $inserted = $wpdb->insert(
-            $this->table_name,
-            array(
-                'cabin_id' => $cabin_id,
-                'checkin_date' => $checkin_date,
-                'checkout_date' => $checkout_date,
-                'nights' => $nights,
-                'price_per_night' => $price_per_night,
-                'total_price' => $total_price,
-                'payment_method' => $payment_method,
-                'payment_status' => $payment_method === 'doku' ? 'pending' : 'unpaid',
-                'guest_name' => $guest_name,
-                'guest_email' => $guest_email,
-                'guest_phone' => $guest_phone,
-                'total_guests' => $total_guests,
-                'notes' => $notes,
-                'status' => $payment_method === 'doku' ? 'pending_payment' : 'pending',
-                'payment_log' => '',
-            ),
-            array('%d', '%s', '%s', '%d', '%f', '%f', '%s', '%s', '%s', '%s', '%s', '%d', '%s', '%s', '%s')
-        );
+        $booking_ids = array();
+        $aggregate_total_price = 0.0;
+        $selected_room_lines = array();
 
-        if (!$inserted) {
+        foreach ($requested_rooms as $requested_cabin_id => $requested_units) {
+            $requested_cabin_id = (int) $requested_cabin_id;
+            $requested_units = max(1, (int) $requested_units);
+            $price_per_night = $this->get_cabin_price_per_night($requested_cabin_id);
+            $single_total_price = round($nights * $price_per_night, 2);
+
+            $selected_room_lines[] = $requested_units . 'x ' . get_the_title($requested_cabin_id);
+
+            for ($unit_no = 1; $unit_no <= $requested_units; $unit_no++) {
+                $inserted = $wpdb->insert(
+                    $this->table_name,
+                    array(
+                        'cabin_id' => $requested_cabin_id,
+                        'checkin_date' => $checkin_date,
+                        'checkout_date' => $checkout_date,
+                        'nights' => $nights,
+                        'price_per_night' => $price_per_night,
+                        'total_price' => $single_total_price,
+                        'payment_method' => $payment_method,
+                        'payment_status' => $payment_method === 'doku' ? 'pending' : 'unpaid',
+                        'guest_name' => $guest_name,
+                        'guest_email' => $guest_email,
+                        'guest_phone' => $guest_phone,
+                        'total_guests' => $total_guests,
+                        'notes' => $notes,
+                        'status' => $payment_method === 'doku' ? 'pending_payment' : 'pending',
+                        'payment_log' => '',
+                    ),
+                    array('%d', '%s', '%s', '%d', '%f', '%f', '%s', '%s', '%s', '%s', '%s', '%d', '%s', '%s', '%s')
+                );
+
+                if (!$inserted) {
+                    $this->safe_redirect($redirect_url, 'failed');
+                }
+
+                $booking_ids[] = (int) $wpdb->insert_id;
+                $aggregate_total_price += $single_total_price;
+            }
+        }
+
+        if (empty($booking_ids)) {
             $this->safe_redirect($redirect_url, 'failed');
         }
 
-        $booking_id = (int) $wpdb->insert_id;
+        $booking_id = (int) $booking_ids[0];
         $booking_data = array(
             'id' => $booking_id,
             'cabin_id' => $cabin_id,
             'checkin_date' => $checkin_date,
             'checkout_date' => $checkout_date,
             'nights' => $nights,
-            'price_per_night' => $price_per_night,
-            'total_price' => $total_price,
+            'price_per_night' => $this->get_cabin_price_per_night($cabin_id),
+            'total_price' => round($aggregate_total_price, 2),
             'payment_method' => $payment_method,
             'payment_status' => $payment_method === 'doku' ? 'pending' : 'unpaid',
             'guest_name' => $guest_name,
             'guest_email' => $guest_email,
             'guest_phone' => $guest_phone,
             'total_guests' => $total_guests,
-            'notes' => $notes,
+            'notes' => trim($notes . "\n" . 'Rooms: ' . implode(', ', $selected_room_lines)),
             'status' => $payment_method === 'doku' ? 'pending_payment' : 'pending',
             'redirect_url' => $redirect_url,
         );
 
         $this->append_booking_log($booking_id, 'Booking created', array(
             'payment_method' => $payment_method,
-            'total_price' => $total_price,
+            'total_price' => round($aggregate_total_price, 2),
             'checkin_date' => $checkin_date,
             'checkout_date' => $checkout_date,
+            'selected_rooms' => implode(', ', $selected_room_lines),
+            'booking_units' => count($booking_ids),
         ));
 
         $this->send_booking_notifications($booking_id, $booking_data);
@@ -160,7 +202,7 @@ trait CBE_Bookings_Trait {
         return $in >= $today && $out > $in;
     }
 
-    private function is_cabin_available($cabin_id, $checkin_date, $checkout_date) {
+    public function is_cabin_available($cabin_id, $checkin_date, $checkout_date, $required_units = 1) {
         global $wpdb;
 
         $total_units = (int) get_post_meta($cabin_id, '_cbe_total_units', true);
@@ -182,7 +224,39 @@ trait CBE_Bookings_Trait {
             )
         );
 
-        return $booked_units < $total_units;
+        $required_units = max(1, (int) $required_units);
+        $available_units = max(0, $total_units - $booked_units);
+        return $available_units >= $required_units;
+    }
+
+    private function parse_requested_rooms($raw_rooms) {
+        $raw = trim((string) $raw_rooms);
+        if ($raw === '') {
+            return array();
+        }
+
+        $pairs = array_filter(array_map('trim', explode(',', $raw)));
+        $rooms = array();
+
+        foreach ($pairs as $pair) {
+            $parts = array_map('trim', explode(':', $pair));
+            if (count($parts) !== 2) {
+                continue;
+            }
+
+            $room_cabin_id = (int) $parts[0];
+            $room_qty = max(1, (int) $parts[1]);
+            if ($room_cabin_id <= 0) {
+                continue;
+            }
+
+            if (!isset($rooms[$room_cabin_id])) {
+                $rooms[$room_cabin_id] = 0;
+            }
+            $rooms[$room_cabin_id] += $room_qty;
+        }
+
+        return $rooms;
     }
 
     private function safe_redirect($url, $status) {

@@ -22,6 +22,8 @@
 
 /*! ../../hooks/use-prefetch-css-class-usage */
 
+/*! ../../load-existing-classes */
+
 /*! ../../save-global-classes */
 
 /*! ../../service/css-class-usage-service */
@@ -42,6 +44,8 @@
 
 /*! ../load-document-classes */
 
+/*! ../load-existing-classes */
+
 /*! ../save-global-classes */
 
 /*! ../search-and-filter/components/filter/active-filters */
@@ -57,6 +61,8 @@
 /*! ../src/components/css-class-usage/utils */
 
 /*! ../store */
+
+/*! ../utils/create-labels-for-classes */
 
 /*! ../utils/tracking */
 
@@ -87,6 +93,8 @@
 /*! ./components/convert-local-class-to-global-class */
 
 /*! ./components/global-styles-import-listener */
+
+/*! ./components/open-panel-from-event */
 
 /*! ./components/open-panel-from-url */
 
@@ -427,6 +435,10 @@
 /*!**********************************************************************************************!*\
   !*** ./packages/packages/core/editor-global-classes/src/mcp-integration/classes-resource.ts ***!
   \**********************************************************************************************/
+
+/*!***********************************************************************************************!*\
+  !*** ./packages/packages/core/editor-global-classes/src/components/open-panel-from-event.tsx ***!
+  \***********************************************************************************************/
 
 /*!************************************************************************************************!*\
   !*** ./packages/packages/core/editor-global-classes/src/components/class-manager/sortable.tsx ***!

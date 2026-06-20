@@ -156,7 +156,7 @@ class RoyalBR_Rating_Notice {
 		$review_url = 'https://wordpress.org/support/plugin/royal-backup-reset/reviews/#new-post';
 		$logo_url   = ROYALBR_ASSETS_URL . 'images/logo.png';
 		?>
-		<div class="notice royalbr-rating-notice is-dismissible">
+		<div class="notice royalbr-rating-notice is-dismissible" style="border-left-color: #7A75FF!important;">
 			<div class="royalbr-rating-notice-logo">
 				<img src="<?php echo esc_url( $logo_url ); ?>" alt="">
 			</div>

@@ -730,11 +730,17 @@ class Utils {
 				return $element;
 			}
 
-			if ( ! empty( $element['elements'] ) ) {
-				$element = self::find_element_recursive( $element['elements'], $id );
+			$inner_elements = apply_filters(
+				'elementor/utils/find_element_recursive/inner_elements',
+				$element['elements'] ?? [],
+				$element
+			);
 
-				if ( $element ) {
-					return $element;
+			if ( ! empty( $inner_elements ) ) {
+				$found = self::find_element_recursive( $inner_elements, $id );
+
+				if ( $found ) {
+					return $found;
 				}
 			}
 		}
@@ -923,8 +929,8 @@ class Utils {
 	}
 
 	public static function is_sale_time(): bool {
-		$sale_start_time = gmmktime( 12, 0, 0, 11, 25, 2025 );
-		$sale_end_time = gmmktime( 3, 59, 0, 12, 3, 2025 );
+		$sale_start_time = gmmktime( 10, 0, 0, 6, 15, 2026 );
+		$sale_end_time = gmmktime( 3, 59, 0, 6, 17, 2026 );
 
 		$now_time = gmdate( 'U' );
 

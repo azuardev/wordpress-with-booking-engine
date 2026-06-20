@@ -3,6 +3,7 @@
 final class Cabin_Booking_Engine {
     use CBE_Core_Engine_Trait;
     use CBE_Bookings_Trait;
+    use CBE_Availability_Trait;
     use CBE_Booking_Messages_Trait;
     use CBE_Admin_Pages_Trait;
     use CBE_Admin_Meta_Assets_Trait;
@@ -39,6 +40,7 @@ final class Cabin_Booking_Engine {
         add_action('init', array($this, 'maybe_upgrade_schema'));
         add_action('init', array($this, 'register_cpt'));
         add_action('init', array($this, 'maybe_flush_rewrite_rules'));
+        add_action('init', array($this, 'ensure_default_results_page'), 20);
         add_action('init', array($this, 'register_shortcodes'));
         add_action('add_meta_boxes', array($this, 'register_meta_boxes'));
         add_action('save_post_cabin', array($this, 'save_cabin_meta'));

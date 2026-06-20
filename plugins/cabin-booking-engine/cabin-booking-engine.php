@@ -21,6 +21,7 @@ define('CBE_INCLUDES_DIR', CBE_PLUGIN_DIR . 'includes/');
 require_once CBE_INCLUDES_DIR . 'helpers/functions.php';
 require_once CBE_INCLUDES_DIR . 'core/trait-cbe-core-engine.php';
 require_once CBE_INCLUDES_DIR . 'core/trait-cbe-bookings.php';
+require_once CBE_INCLUDES_DIR . 'core/trait-cbe-availability.php';
 require_once CBE_INCLUDES_DIR . 'core/trait-cbe-booking-messages.php';
 require_once CBE_INCLUDES_DIR . 'admin/trait-cbe-admin-pages.php';
 require_once CBE_INCLUDES_DIR . 'admin/trait-cbe-admin-meta-assets.php';

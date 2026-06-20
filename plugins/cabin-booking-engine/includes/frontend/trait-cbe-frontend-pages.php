@@ -70,12 +70,12 @@ trait CBE_Frontend_Pages_Trait {
         }
 
         if ($group === '') {
-            return '<div class="cbe-message cbe-error">' . esc_html__('Room listing requires a page or group slug.', 'cabin-booking-engine') . '</div>';
+            return '<div class="cbe-message cbe-error">' . esc_html__('Cabin listing requires a page or group slug.', 'cabin-booking-engine') . '</div>';
         }
 
         $cabins = $this->get_cabins_by_group($group, false);
         if (empty($cabins)) {
-            return '<div class="cbe-message cbe-error">' . esc_html(sprintf(__('No rooms were found for the "%s" stay page yet.', 'cabin-booking-engine'), $group)) . '</div>';
+            return '<div class="cbe-message cbe-error">' . esc_html(sprintf(__('No cabins were found for the "%s" stay page yet.', 'cabin-booking-engine'), $group)) . '</div>';
         }
 
         wp_enqueue_style('cbe-frontend');
@@ -361,7 +361,7 @@ trait CBE_Frontend_Pages_Trait {
         echo '</div>';
         echo '</div>';
 
-        echo '<div id="cbe-image-viewer-overlay" class="cbe-image-viewer-overlay" role="dialog" aria-modal="true" aria-label="' . esc_attr__('Room Image', 'cabin-booking-engine') . '" hidden>';
+        echo '<div id="cbe-image-viewer-overlay" class="cbe-image-viewer-overlay" role="dialog" aria-modal="true" aria-label="' . esc_attr__('Cabin Image', 'cabin-booking-engine') . '" hidden>';
         echo '<div class="cbe-image-viewer-wrap">';
         echo '<button type="button" class="cbe-image-viewer-close" aria-label="' . esc_attr__('Close image', 'cabin-booking-engine') . '">&times;</button>';
         echo '<button type="button" class="cbe-image-viewer-nav cbe-image-viewer-prev" aria-label="' . esc_attr__('Previous image', 'cabin-booking-engine') . '">&#10094;</button>';
@@ -388,12 +388,69 @@ trait CBE_Frontend_Pages_Trait {
             $cabin_id = $this->resolve_cabin_id_for_current_view();
         }
 
+        $primary_cabin_id = isset($_GET['cbe_primary_cabin']) ? (int) wp_unslash($_GET['cbe_primary_cabin']) : 0;
+        if ($primary_cabin_id > 0 && get_post_type($primary_cabin_id) === 'cabin') {
+            $cabin_id = $primary_cabin_id;
+        }
+
         if ($cabin_id <= 0 || get_post_type($cabin_id) !== 'cabin') {
-            return '<div class="cbe-message cbe-error">' . esc_html__('Room is not valid.', 'cabin-booking-engine') . '</div>';
+            return '<div class="cbe-message cbe-error">' . esc_html__('Cabin is not valid.', 'cabin-booking-engine') . '</div>';
         }
 
         $price_per_night = $this->get_cabin_price_per_night($cabin_id);
         $payment_methods = $this->get_available_payment_methods();
+        $prefill_checkin = '';
+        if (isset($_GET['cbe_checkin'])) {
+            $prefill_checkin = sanitize_text_field(wp_unslash($_GET['cbe_checkin']));
+        } elseif (isset($_GET['checkin_date'])) {
+            $prefill_checkin = sanitize_text_field(wp_unslash($_GET['checkin_date']));
+        }
+
+        $prefill_checkout = '';
+        if (isset($_GET['cbe_checkout'])) {
+            $prefill_checkout = sanitize_text_field(wp_unslash($_GET['cbe_checkout']));
+        } elseif (isset($_GET['checkout_date'])) {
+            $prefill_checkout = sanitize_text_field(wp_unslash($_GET['checkout_date']));
+        }
+
+        $prefill_guests = 1;
+        if (isset($_GET['cbe_guests'])) {
+            $prefill_guests = (int) wp_unslash($_GET['cbe_guests']);
+        } elseif (isset($_GET['total_guests'])) {
+            $prefill_guests = (int) wp_unslash($_GET['total_guests']);
+        }
+        if ($prefill_guests < 1) {
+            $prefill_guests = 1;
+        }
+
+        $prefill_notes = '';
+        if (isset($_GET['cbe_room_plan'])) {
+            $prefill_notes = sanitize_textarea_field(wp_unslash($_GET['cbe_room_plan']));
+        }
+
+        $selected_rooms_raw = isset($_GET['cbe_selected_rooms'])
+            ? sanitize_text_field(wp_unslash($_GET['cbe_selected_rooms']))
+            : '';
+        $selected_room_items = array();
+        if ($selected_rooms_raw !== '') {
+            $pairs = array_filter(array_map('trim', explode(',', $selected_rooms_raw)));
+            foreach ($pairs as $pair) {
+                $parts = array_map('trim', explode(':', $pair));
+                if (count($parts) !== 2) {
+                    continue;
+                }
+                $item_cabin_id = (int) $parts[0];
+                $item_qty = max(1, (int) $parts[1]);
+                if ($item_cabin_id <= 0 || get_post_type($item_cabin_id) !== 'cabin') {
+                    continue;
+                }
+
+                $selected_room_items[] = array(
+                    'name' => get_the_title($item_cabin_id),
+                    'qty' => $item_qty,
+                );
+            }
+        }
 
         wp_enqueue_style('cbe-frontend');
         wp_enqueue_script('cbe-frontend');
@@ -405,16 +462,28 @@ trait CBE_Frontend_Pages_Trait {
             <input type="hidden" name="cabin_id" value="<?php echo esc_attr($cabin_id); ?>" />
             <input type="hidden" name="redirect_url" value="<?php echo esc_url($atts['redirect_url'] ?: get_permalink(get_queried_object_id() ?: $cabin_id)); ?>" />
             <input type="hidden" name="price_per_night" value="<?php echo esc_attr($price_per_night); ?>" />
+            <input type="hidden" name="cbe_selected_rooms" value="<?php echo esc_attr($selected_rooms_raw); ?>" />
             <?php wp_nonce_field(self::NONCE_ACTION, self::NONCE_FIELD); ?>
+
+            <?php if (!empty($selected_room_items)) : ?>
+                <div class="cbe-message cbe-success" style="margin-bottom:12px;">
+                    <strong><?php esc_html_e('Selected Cabins', 'cabin-booking-engine'); ?>:</strong>
+                    <ul style="margin:8px 0 0 16px;">
+                        <?php foreach ($selected_room_items as $selected_room_item) : ?>
+                            <li><?php echo esc_html($selected_room_item['qty'] . 'x ' . $selected_room_item['name']); ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            <?php endif; ?>
 
             <div class="cbe-row">
                 <label for="cbe_checkin_date"><?php esc_html_e('Check-in Date', 'cabin-booking-engine'); ?></label>
-                <input type="date" id="cbe_checkin_date" name="checkin_date" required />
+                <input type="date" id="cbe_checkin_date" name="checkin_date" value="<?php echo esc_attr($prefill_checkin); ?>" required />
             </div>
 
             <div class="cbe-row">
                 <label for="cbe_checkout_date"><?php esc_html_e('Check-out Date', 'cabin-booking-engine'); ?></label>
-                <input type="date" id="cbe_checkout_date" name="checkout_date" required />
+                <input type="date" id="cbe_checkout_date" name="checkout_date" value="<?php echo esc_attr($prefill_checkout); ?>" required />
             </div>
 
             <div class="cbe-row">
@@ -434,12 +503,12 @@ trait CBE_Frontend_Pages_Trait {
 
             <div class="cbe-row">
                 <label for="cbe_total_guests"><?php esc_html_e('Total Guests', 'cabin-booking-engine'); ?></label>
-                <input type="number" id="cbe_total_guests" name="total_guests" min="1" step="1" value="1" required />
+                <input type="number" id="cbe_total_guests" name="total_guests" min="1" step="1" value="<?php echo esc_attr((string) $prefill_guests); ?>" required />
             </div>
 
             <div class="cbe-row">
                 <label for="cbe_notes"><?php esc_html_e('Notes', 'cabin-booking-engine'); ?></label>
-                <textarea id="cbe_notes" name="notes" rows="4"></textarea>
+                <textarea id="cbe_notes" name="notes" rows="4"><?php echo esc_textarea($prefill_notes); ?></textarea>
             </div>
 
             <div class="cbe-row">
@@ -472,6 +541,330 @@ trait CBE_Frontend_Pages_Trait {
         </form>
         <?php
         return ob_get_clean();
+    }
+
+    public function render_booking_search_shortcode($atts) {
+        $atts = shortcode_atts(
+            array(
+                'group'       => '',
+                'show_price'  => '1',
+                'show_availability' => '1',
+                'results_page' => '',
+            ),
+            $atts,
+            'cabin_booking_search'
+        );
+
+        $group = sanitize_title($atts['group']);
+        if ($group === '') {
+            $group = $this->resolve_stay_group_for_current_view();
+        }
+
+        $query_group = $group !== '' ? $group : 'all';
+        $cabin_options = $this->get_cabins_by_group($query_group, true);
+
+        foreach ($cabin_options as $cabin_option) {
+            if (isset($cabin_option->ID) && (int) $cabin_option->ID > 0) {
+                self::$modal_cabin_ids[(int) $cabin_option->ID] = true;
+            }
+        }
+
+        $show_price = (int) $atts['show_price'] === 1;
+        $show_availability = (int) $atts['show_availability'] === 1;
+        $results_page = trim((string) $atts['results_page']);
+        $current_page_url = get_permalink(get_queried_object_id());
+        if (!$current_page_url) {
+            $current_page_url = home_url('/');
+        }
+
+        $default_results_page_url = $this->get_default_results_page_url();
+        $results_page_url = $default_results_page_url !== '' ? $default_results_page_url : $current_page_url;
+        if ($results_page !== '') {
+            if (is_numeric($results_page)) {
+                $resolved_page_url = get_permalink((int) $results_page);
+                if ($resolved_page_url) {
+                    $results_page_url = $resolved_page_url;
+                }
+            } else {
+                $is_absolute_url = preg_match('#^https?://#i', $results_page) === 1;
+                $candidate_url = $is_absolute_url
+                    ? esc_url_raw($results_page)
+                    : home_url('/' . ltrim($results_page, '/') . '/');
+
+                if ($candidate_url !== '') {
+                    $candidate_post_id = url_to_postid($candidate_url);
+                    if ($candidate_post_id > 0 || $is_absolute_url) {
+                        $results_page_url = $candidate_url;
+                    }
+                }
+            }
+        }
+
+        $prefill_search = isset($_GET['cbe_search']) && sanitize_text_field(wp_unslash($_GET['cbe_search'])) === '1';
+        $prefill_checkin = '';
+        if ($prefill_search) {
+            if (isset($_GET['cbe_checkin'])) {
+                $prefill_checkin = sanitize_text_field(wp_unslash($_GET['cbe_checkin']));
+            } elseif (isset($_GET['checkin_date'])) {
+                $prefill_checkin = sanitize_text_field(wp_unslash($_GET['checkin_date']));
+            }
+        }
+
+        $prefill_checkout = '';
+        if ($prefill_search) {
+            if (isset($_GET['cbe_checkout'])) {
+                $prefill_checkout = sanitize_text_field(wp_unslash($_GET['cbe_checkout']));
+            } elseif (isset($_GET['checkout_date'])) {
+                $prefill_checkout = sanitize_text_field(wp_unslash($_GET['checkout_date']));
+            }
+        }
+
+        $prefill_guests = '2';
+        if ($prefill_search) {
+            if (isset($_GET['cbe_guests'])) {
+                $prefill_guests = sanitize_text_field(wp_unslash($_GET['cbe_guests']));
+            } elseif (isset($_GET['total_guests'])) {
+                $prefill_guests = sanitize_text_field(wp_unslash($_GET['total_guests']));
+            }
+        }
+
+        $prefill_cabin_id = 0;
+        if ($prefill_search) {
+            if (isset($_GET['cbe_cabin'])) {
+                $prefill_cabin_id = (int) wp_unslash($_GET['cbe_cabin']);
+            } elseif (isset($_GET['cabin_id'])) {
+                $prefill_cabin_id = (int) wp_unslash($_GET['cabin_id']);
+            }
+        }
+
+        $prefill_group = $query_group;
+        if ($prefill_search) {
+            if (isset($_GET['cbe_group'])) {
+                $prefill_group = sanitize_text_field(wp_unslash($_GET['cbe_group']));
+            } elseif (isset($_GET['group'])) {
+                $prefill_group = sanitize_text_field(wp_unslash($_GET['group']));
+            }
+        }
+        $form_id = wp_unique_id('cbe_search_');
+
+        $this->ensure_frontend_assets_registered();
+
+        wp_enqueue_style('cbe-frontend');
+        wp_enqueue_script('cbe-frontend');
+        wp_enqueue_style('cbe-availability');
+        wp_enqueue_script('cbe-availability');
+
+        ob_start();
+        ?>
+        <section class="cbe-booking-search cbe-search-card-wrap">
+            <form class="cbe-search-form cbe-search-card" method="get" action="<?php echo esc_url($results_page_url); ?>" data-cbe-group="<?php echo esc_attr($group); ?>" data-cbe-results-page="<?php echo esc_url($results_page_url); ?>">
+                <input type="hidden" name="cbe_search" value="1" />
+                <input type="hidden" name="group" value="<?php echo esc_attr($prefill_group !== '' ? $prefill_group : $query_group); ?>" data-cbe-group />
+                <input type="hidden" name="show_price" value="<?php echo esc_attr($show_price ? '1' : '0'); ?>" />
+
+                <div class="cbe-search-card-top">
+                    <div>
+                        <h3 class="cbe-search-card-title"><?php esc_html_e('Check Availability & Book', 'cabin-booking-engine'); ?></h3>
+                        <p class="cbe-search-card-subtitle"><?php esc_html_e('Best rate guaranteed - Free cancellation on select cabins', 'cabin-booking-engine'); ?></p>
+                    </div>
+                    <span class="cbe-search-card-pill"><?php esc_html_e('Cabins Available', 'cabin-booking-engine'); ?></span>
+                </div>
+
+                <div class="cbe-search-card-grid">
+                    <div class="cbe-search-field cbe-search-field--plain cbe-search-field--roomtype">
+                        <label for="<?php echo esc_attr($form_id); ?>_room"><?php esc_html_e('Cabin Type', 'cabin-booking-engine'); ?></label>
+                        <div class="cbe-search-plain-select">
+                            <select id="<?php echo esc_attr($form_id); ?>_room" name="cabin_id">
+                                <option value=""><?php esc_html_e('All Cabins', 'cabin-booking-engine'); ?></option>
+                                <?php foreach ($cabin_options as $cabin_option) : ?>
+                                    <option value="<?php echo esc_attr((string) $cabin_option->ID); ?>" <?php selected($prefill_cabin_id, (int) $cabin_option->ID); ?>><?php echo esc_html(get_the_title((int) $cabin_option->ID)); ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                            <span class="cbe-search-chevron" aria-hidden="true"></span>
+                        </div>
+                    </div>
+
+                    <div class="cbe-search-field cbe-search-field--boxed">
+                        <label for="<?php echo esc_attr($form_id); ?>_checkin"><?php esc_html_e('Check In', 'cabin-booking-engine'); ?></label>
+                        <input type="date" id="<?php echo esc_attr($form_id); ?>_checkin" name="checkin_date" data-cbe-checkin value="<?php echo esc_attr($prefill_checkin); ?>" required />
+                    </div>
+
+                    <div class="cbe-search-field cbe-search-field--boxed">
+                        <label for="<?php echo esc_attr($form_id); ?>_checkout"><?php esc_html_e('Check Out', 'cabin-booking-engine'); ?></label>
+                        <input type="date" id="<?php echo esc_attr($form_id); ?>_checkout" name="checkout_date" data-cbe-checkout value="<?php echo esc_attr($prefill_checkout); ?>" required />
+                    </div>
+
+                    <div class="cbe-search-field cbe-search-field--boxed">
+                        <label for="<?php echo esc_attr($form_id); ?>_promo"><?php esc_html_e('Promotion Code', 'cabin-booking-engine'); ?></label>
+                        <input type="text" id="<?php echo esc_attr($form_id); ?>_promo" name="promo_code" placeholder="<?php esc_attr_e('Input your promo code', 'cabin-booking-engine'); ?>" />
+                    </div>
+
+                    <div class="cbe-search-field cbe-search-field--plain cbe-search-field--guests">
+                        <label for="<?php echo esc_attr($form_id); ?>_guests"><?php esc_html_e('Guests', 'cabin-booking-engine'); ?></label>
+                        <div class="cbe-search-plain-select cbe-search-plain-select--guests">
+                            <span class="cbe-search-guest-icon" aria-hidden="true"></span>
+                            <select id="<?php echo esc_attr($form_id); ?>_guests" name="total_guests">
+                                <option value="2" <?php selected($prefill_guests, '2'); ?>><?php esc_html_e('1 Cabin - 2 Adults', 'cabin-booking-engine'); ?></option>
+                                <option value="1" <?php selected($prefill_guests, '1'); ?>><?php esc_html_e('1 Cabin - 1 Adult', 'cabin-booking-engine'); ?></option>
+                                <option value="3" <?php selected($prefill_guests, '3'); ?>><?php esc_html_e('1 Cabin - 3 Adults', 'cabin-booking-engine'); ?></option>
+                                <option value="4" <?php selected($prefill_guests, '4'); ?>><?php esc_html_e('1 Cabin - 4 Adults', 'cabin-booking-engine'); ?></option>
+                            </select>
+                            <span class="cbe-search-chevron" aria-hidden="true"></span>
+                        </div>
+                    </div>
+
+                    <div class="cbe-search-action">
+                        <button type="submit" class="cbe-search-button">
+                            <span><?php esc_html_e('Search', 'cabin-booking-engine'); ?></span>
+                            <span class="cbe-search-button-arrow" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="cbe-search-trusts" aria-hidden="true">
+                    <span><?php esc_html_e('Secure Booking', 'cabin-booking-engine'); ?></span>
+                    <span><?php esc_html_e('No Booking Fees', 'cabin-booking-engine'); ?></span>
+                    <span><?php esc_html_e('Instant Confirmation', 'cabin-booking-engine'); ?></span>
+                </div>
+
+                <?php if ($show_availability) : ?>
+                    <div class="cbe-search-results-page" data-cbe-search-results <?php echo $prefill_search ? '' : 'hidden'; ?>>
+                        <div class="cbe-search-results-head">
+                            <h4 class="cbe-search-results-title"><?php esc_html_e('Available Cabins', 'cabin-booking-engine'); ?></h4>
+                            <p class="cbe-search-results-count" data-cbe-results-count></p>
+                        </div>
+                        <div class="cbe-search-results-controls">
+                            <label class="cbe-search-results-filter">
+                                <input type="checkbox" data-cbe-results-available checked />
+                                <span><?php esc_html_e('Only available', 'cabin-booking-engine'); ?></span>
+                            </label>
+                            <label class="cbe-search-results-sort-wrap">
+                                <span><?php esc_html_e('Sort', 'cabin-booking-engine'); ?></span>
+                                <select data-cbe-results-sort>
+                                    <option value="recommended"><?php esc_html_e('Recommended', 'cabin-booking-engine'); ?></option>
+                                    <option value="price_asc"><?php esc_html_e('Price: Low to High', 'cabin-booking-engine'); ?></option>
+                                    <option value="price_desc"><?php esc_html_e('Price: High to Low', 'cabin-booking-engine'); ?></option>
+                                    <option value="name_asc"><?php esc_html_e('Name: A to Z', 'cabin-booking-engine'); ?></option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="cbe-search-results-layout">
+                            <div class="cbe-availability-list" data-cbe-results-list></div>
+                            <aside class="cbe-search-selection-panel" data-cbe-selection-panel hidden>
+                                <div class="cbe-search-selection-header">
+                                    <h5><?php esc_html_e('Pilihan Kamar Anda', 'cabin-booking-engine'); ?></h5>
+                                    <p data-cbe-selection-count></p>
+                                </div>
+                                <div class="cbe-search-selection-list" data-cbe-selection-list></div>
+                                <div class="cbe-search-selection-total" data-cbe-selection-total></div>
+                                <button type="button" class="cbe-search-selection-book" data-cbe-selection-book><?php esc_html_e('Book Now', 'cabin-booking-engine'); ?></button>
+                            </aside>
+                        </div>
+                    </div>
+                <?php endif; ?>
+            </form>
+
+        </section>
+        <?php
+        return ob_get_clean();
+    }
+
+    private function ensure_frontend_assets_registered() {
+        $css_file = CBE_PLUGIN_DIR . 'assets/css/cbe.css';
+        $js_file = CBE_PLUGIN_DIR . 'assets/js/cbe.js';
+        $availability_css_file = CBE_PLUGIN_DIR . 'assets/css/cbe-availability.css';
+        $availability_js_file = CBE_PLUGIN_DIR . 'assets/js/cbe-availability.js';
+
+        $css_version = file_exists($css_file) ? (string) filemtime($css_file) : self::VERSION;
+        $js_version = file_exists($js_file) ? (string) filemtime($js_file) : self::VERSION;
+        $availability_css_version = file_exists($availability_css_file) ? (string) filemtime($availability_css_file) : self::VERSION;
+        $availability_js_version = file_exists($availability_js_file) ? (string) filemtime($availability_js_file) : self::VERSION;
+
+        if (!wp_style_is('cbe-material-symbols', 'registered')) {
+            wp_register_style(
+                'cbe-material-symbols',
+                $this->get_material_symbols_stylesheet_url(),
+                array(),
+                null
+            );
+        }
+
+        if (!wp_style_is('cbe-fontawesome', 'registered')) {
+            wp_register_style(
+                'cbe-fontawesome',
+                $this->get_fontawesome_stylesheet_url(),
+                array(),
+                null
+            );
+        }
+
+        if (!wp_style_is('cbe-bootstrap-icons', 'registered')) {
+            wp_register_style(
+                'cbe-bootstrap-icons',
+                $this->get_bootstrap_icons_stylesheet_url(),
+                array(),
+                null
+            );
+        }
+
+        if (!wp_style_is('cbe-frontend', 'registered')) {
+            wp_register_style(
+                'cbe-frontend',
+                CBE_PLUGIN_URL . 'assets/css/cbe.css',
+                array('cbe-material-symbols', 'cbe-fontawesome', 'cbe-bootstrap-icons'),
+                $css_version
+            );
+        }
+
+        if (!wp_style_is('cbe-availability', 'registered')) {
+            wp_register_style(
+                'cbe-availability',
+                CBE_PLUGIN_URL . 'assets/css/cbe-availability.css',
+                array(),
+                $availability_css_version
+            );
+        }
+
+        if (!wp_script_is('cbe-frontend', 'registered')) {
+            wp_register_script(
+                'cbe-frontend',
+                CBE_PLUGIN_URL . 'assets/js/cbe.js',
+                array(),
+                $js_version,
+                true
+            );
+
+            wp_localize_script(
+                'cbe-frontend',
+                'cbeConfig',
+                array(
+                    'facilityIconsUrl' => CBE_PLUGIN_URL . 'assets/icons/facilities/',
+                )
+            );
+        }
+
+        if (!wp_script_is('cbe-availability', 'registered')) {
+            wp_register_script(
+                'cbe-availability',
+                CBE_PLUGIN_URL . 'assets/js/cbe-availability.js',
+                array(),
+                $availability_js_version,
+                true
+            );
+
+            wp_localize_script(
+                'cbe-availability',
+                'cbeAvailabilityConfig',
+                array(
+                    'adminPostUrl' => admin_url('admin-post.php'),
+                    'nonceField' => self::NONCE_FIELD,
+                    'nonceAction' => self::NONCE_ACTION,
+                    'nonceValue' => wp_create_nonce(self::NONCE_ACTION),
+                    'redirectUrl' => get_permalink(get_queried_object_id()) ?: home_url('/'),
+                    'paymentMethods' => $this->get_available_payment_methods(),
+                )
+            );
+        }
     }
 
     private function resolve_cabin_id_for_current_view() {

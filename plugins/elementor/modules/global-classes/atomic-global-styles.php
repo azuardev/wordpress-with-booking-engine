@@ -91,7 +91,9 @@ class Atomic_Global_Styles {
 				continue;
 			}
 
-			$item['id'] = $item['label'];
+			$resolved_label = $global_order[ $class_id ] ?? $item['label'];
+			$item['id'] = $resolved_label;
+			$item['label'] = $resolved_label;
 			$styles[] = $item;
 		}
 
@@ -125,6 +127,12 @@ class Atomic_Global_Styles {
 
 		$document_ids = [];
 		$is_preview = Global_Classes_Repository::CONTEXT_PREVIEW === $context;
+
+		if ( ! empty( $changes['affected_post_ids'] ) ) {
+			foreach ( $changes['affected_post_ids'] as $post_id ) {
+				$document_ids[ (int) $post_id ] = true;
+			}
+		}
 
 		foreach ( $affected as $class_id ) {
 			foreach ( $this->relations->set_preview( $is_preview )->get_posts_by_style( $class_id ) as $doc_id ) {
@@ -160,15 +168,10 @@ class Atomic_Global_Styles {
 	}
 
 	private function transform_classes_names( $ids ) {
-		$context = $this->get_context();
 
-		$repository = Global_Classes_Repository::make();
-
-		if ( Global_Classes_Repository::CONTEXT_PREVIEW === $context ) {
-			$repository->set_preview( true );
-		}
-
-		$labels = $repository->all_labels();
+		$labels = Global_Classes_Repository::make()
+			->set_preview( $this->is_preview() )
+			->all_labels();
 
 		return array_map(
 			static function( $id ) use ( $labels ) {
@@ -179,8 +182,12 @@ class Atomic_Global_Styles {
 	}
 
 	private function get_context(): string {
-		return Plugin::$instance->preview->is_editor_or_preview()
+		return $this->is_preview()
 			? Global_Classes_Repository::CONTEXT_PREVIEW
 			: Global_Classes_Repository::CONTEXT_FRONTEND;
+	}
+
+	private function is_preview(): bool {
+		return Plugin::$instance->preview->is_editor_or_preview();
 	}
 }

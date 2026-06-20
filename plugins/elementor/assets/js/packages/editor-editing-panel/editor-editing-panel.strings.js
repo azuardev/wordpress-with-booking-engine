@@ -63,14 +63,14 @@ __( 'Classes', 'elementor' );
 __( 'Type class name', 'elementor' );
 __( 'With your current role, you can use existing classes but can’t modify them.', 'elementor' );
 __( 'Sorry, nothing matched', 'elementor' );
+__( 'Clear & try again', 'elementor' );
 __( 'With your current role,', 'elementor' );
 __( 'you can only use existing classes.', 'elementor' );
-__( 'Clear & try again', 'elementor' );
 /* translators: %s is the maximum number of classes */
-__(
-					'You’ve reached the limit of %s classes. Please remove an existing one to create a new class.',
-					'elementor'
-				);
+__( 'Limit of %s classes reached', 'elementor' );
+__( 'Remove a class to create a new one.', 'elementor' );
+__( 'Clear', 'elementor' );
+__( 'Class Manager', 'elementor' );
 __( 'normal', 'elementor' );
 __( 'hover', 'elementor' );
 __( 'focus', 'elementor' );

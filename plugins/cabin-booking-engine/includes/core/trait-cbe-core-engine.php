@@ -135,6 +135,71 @@ trait CBE_Core_Engine_Trait {
         update_option('cbe_rewrite_version', self::VERSION);
     }
 
+    public function ensure_default_results_page() {
+        $saved_id = $this->get_saved_results_page_id();
+        if ($saved_id > 0) {
+            $saved_post = get_post($saved_id);
+            if ($saved_post instanceof WP_Post && $saved_post->post_type === 'page' && $saved_post->post_status !== 'trash') {
+                return;
+            }
+        }
+
+        $existing_page = get_page_by_path('booking-results', OBJECT, 'page');
+        if ($existing_page instanceof WP_Post && (int) $existing_page->ID > 0 && $existing_page->post_status !== 'trash') {
+            $this->save_results_page_id((int) $existing_page->ID);
+            return;
+        }
+
+        $new_page_id = wp_insert_post(
+            array(
+                'post_type' => 'page',
+                'post_status' => 'publish',
+                'post_title' => __('Booking Results', 'cabin-booking-engine'),
+                'post_name' => 'booking-results',
+                'post_content' => '[cabin_booking_search show_availability="1"]',
+            ),
+            true
+        );
+
+        if (!is_wp_error($new_page_id) && (int) $new_page_id > 0) {
+            $this->save_results_page_id((int) $new_page_id);
+        }
+    }
+
+    public function get_default_results_page_url() {
+        $saved_id = $this->get_saved_results_page_id();
+        if ($saved_id > 0) {
+            $saved_url = get_permalink($saved_id);
+            if ($saved_url) {
+                return $saved_url;
+            }
+        }
+
+        $existing_page = get_page_by_path('booking-results', OBJECT, 'page');
+        if ($existing_page instanceof WP_Post && (int) $existing_page->ID > 0 && $existing_page->post_status !== 'trash') {
+            $this->save_results_page_id((int) $existing_page->ID);
+            $existing_url = get_permalink((int) $existing_page->ID);
+            if ($existing_url) {
+                return $existing_url;
+            }
+        }
+
+        return home_url('/booking-results/');
+    }
+
+    private function get_saved_results_page_id() {
+        $settings_raw = get_option(self::SETTINGS_KEY, array());
+        $settings = is_array($settings_raw) ? $settings_raw : array();
+        return isset($settings['results_page_id']) ? (int) $settings['results_page_id'] : 0;
+    }
+
+    private function save_results_page_id($page_id) {
+        $settings_raw = get_option(self::SETTINGS_KEY, array());
+        $settings = is_array($settings_raw) ? $settings_raw : array();
+        $settings['results_page_id'] = (int) $page_id;
+        update_option(self::SETTINGS_KEY, $settings);
+    }
+
     public function load_virtual_templates($template) {
         if (is_singular('cbe_stay_page')) {
             $virtual_template = CBE_PLUGIN_DIR . 'templates/stay-page.php';
@@ -230,14 +295,6 @@ trait CBE_Core_Engine_Trait {
             <section class="cbe-virtual-stay-hero<?php echo $hero_image_url !== '' ? ' cbe-virtual-stay-hero-has-image' : ''; ?>"<?php echo $hero_image_url !== '' ? ' style="--cbe-hero-image:url(' . esc_url($hero_image_url) . ');"' : ''; ?>>
                 <div class="cbe-virtual-stay-hero-inner">
                     <h1 class="white-title">Indulge in our <?php echo esc_html(get_the_title($page->ID)); ?> Cabins</h1>
-                    <div class="cbe-virtual-stay-hero-meta">
-                        <?php if ($room_count > 0) : ?>
-                            <span><?php echo esc_html(sprintf(_n('%d Cabin Type', '%d Cabin Types', $room_count, 'cabin-booking-engine'), $room_count)); ?></span>
-                        <?php endif; ?>
-                        <?php if ($starting_price > 0) : ?>
-                            <span><?php echo esc_html(sprintf(__('From %s / night', 'cabin-booking-engine'), number_format_i18n($starting_price, 0))); ?></span>
-                        <?php endif; ?>
-                    </div>
                 </div>
             </section>
 
@@ -245,8 +302,19 @@ trait CBE_Core_Engine_Trait {
                 <?php if ($page_overview_html !== '') : ?>
                     <div class="cbe-custom-stay-intro">
                         <?php echo wp_kses_post($page_overview_html); ?>
+                        <?php if ($room_count > 0 || $starting_price > 0) : ?>
+                            <div class="cbe-virtual-stay-hero-meta cbe-custom-stay-overview-meta">
+                                <?php if ($room_count > 0) : ?>
+                                    <span><?php echo esc_html(sprintf(_n('%d Cabin Type', '%d Cabin Types', $room_count, 'cabin-booking-engine'), $room_count)); ?></span>
+                                <?php endif; ?>
+                                <?php if ($starting_price > 0) : ?>
+                                    <span><?php echo esc_html(sprintf(__('From %s / night', 'cabin-booking-engine'), number_format_i18n($starting_price, 0))); ?></span>
+                                <?php endif; ?>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 <?php endif; ?>
+                
                 <?php if (!empty($page_gallery_ids)) : ?>
                     <div class="cbe-custom-stay-gallery">
                         <?php foreach ($page_gallery_ids as $gallery_image_id) :
@@ -259,7 +327,7 @@ trait CBE_Core_Engine_Trait {
                                 $gallery_image_full_url = $gallery_image_thumb_url;
                             }
                         ?>
-                            <a class="cbe-custom-stay-gallery-thumb" href="<?php echo esc_url($gallery_image_full_url); ?>" target="_blank" rel="noopener noreferrer">
+                            <a class="cbe-custom-stay-gallery-thumb" href="<?php echo esc_url($gallery_image_full_url); ?>">
                                 <img src="<?php echo esc_url($gallery_image_thumb_url); ?>" alt="<?php echo esc_attr(get_the_title($page->ID)); ?>" loading="lazy" />
                             </a>
                         <?php endforeach; ?>

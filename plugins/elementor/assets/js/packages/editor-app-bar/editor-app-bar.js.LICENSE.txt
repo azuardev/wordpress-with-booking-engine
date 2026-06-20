@@ -18,6 +18,8 @@
 
 /*! ../components/angie-guide-card */
 
+/*! ../hooks/use-auto-show */
+
 /*! ../locations */
 
 /*! ../ui/popover-menu */
@@ -140,6 +142,8 @@
 
 /*! @elementor/editor */
 
+/*! @elementor/editor-current-user */
+
 /*! @elementor/editor-documents */
 
 /*! @elementor/editor-mcp */
@@ -221,6 +225,10 @@
 /*!***************************************************!*\
   !*** external ["elementorV2","editorV1Adapters"] ***!
   \***************************************************/
+
+/*!****************************************************!*\
+  !*** external ["elementorV2","editorCurrentUser"] ***!
+  \****************************************************/
 
 /*!***********************************************************!*\
   !*** ./packages/packages/core/editor-app-bar/src/init.ts ***!
@@ -365,6 +373,10 @@
 /*!******************************************************************************************!*\
   !*** ./packages/packages/core/editor-app-bar/src/extensions/keyboard-shortcuts/index.ts ***!
   \******************************************************************************************/
+
+/*!*******************************************************************************************!*\
+  !*** ./packages/packages/core/editor-app-bar/src/extensions/angie/hooks/use-auto-show.ts ***!
+  \*******************************************************************************************/
 
 /*!*********************************************************************************************!*\
   !*** ./packages/packages/core/editor-app-bar/src/extensions/help/hooks/use-action-props.ts ***!

@@ -156,14 +156,74 @@ trait CBE_Admin_Meta_Assets_Trait {
                 'permission_callback' => '__return_true',
             )
         );
+
+        register_rest_route(
+            'cbe/v1',
+            '/check-availability',
+            array(
+                'methods' => 'GET',
+                'callback' => array($this, 'handle_availability_check'),
+                'permission_callback' => '__return_true',
+                'args' => array(
+                    'cabin_id' => array(
+                        'type' => 'integer',
+                        'required' => false,
+                    ),
+                    'group' => array(
+                        'type' => 'string',
+                        'required' => false,
+                    ),
+                    'checkin_date' => array(
+                        'type' => 'string',
+                        'required' => true,
+                    ),
+                    'checkout_date' => array(
+                        'type' => 'string',
+                        'required' => true,
+                    ),
+                    'only_available' => array(
+                        'type' => 'boolean',
+                        'required' => false,
+                    ),
+                ),
+            )
+        );
+
+        register_rest_route(
+            'cbe/v1',
+            '/price-estimate',
+            array(
+                'methods' => 'GET',
+                'callback' => array($this, 'handle_price_estimate'),
+                'permission_callback' => '__return_true',
+                'args' => array(
+                    'cabin_id' => array(
+                        'type' => 'integer',
+                        'required' => true,
+                    ),
+                    'checkin_date' => array(
+                        'type' => 'string',
+                        'required' => true,
+                    ),
+                    'checkout_date' => array(
+                        'type' => 'string',
+                        'required' => true,
+                    ),
+                ),
+            )
+        );
     }
 
     public function enqueue_assets() {
         $css_file = CBE_PLUGIN_DIR . 'assets/css/cbe.css';
         $js_file = CBE_PLUGIN_DIR . 'assets/js/cbe.js';
+        $availability_css_file = CBE_PLUGIN_DIR . 'assets/css/cbe-availability.css';
+        $availability_js_file = CBE_PLUGIN_DIR . 'assets/js/cbe-availability.js';
 
         $css_version = file_exists($css_file) ? (string) filemtime($css_file) : self::VERSION;
         $js_version = file_exists($js_file) ? (string) filemtime($js_file) : self::VERSION;
+        $availability_css_version = file_exists($availability_css_file) ? (string) filemtime($availability_css_file) : self::VERSION;
+        $availability_js_version = file_exists($availability_js_file) ? (string) filemtime($availability_js_file) : self::VERSION;
 
         wp_register_style(
             'cbe-material-symbols',
@@ -193,11 +253,26 @@ trait CBE_Admin_Meta_Assets_Trait {
             $css_version
         );
 
+        wp_register_style(
+            'cbe-availability',
+            CBE_PLUGIN_URL . 'assets/css/cbe-availability.css',
+            array(),
+            $availability_css_version
+        );
+
         wp_register_script(
             'cbe-frontend',
             CBE_PLUGIN_URL . 'assets/js/cbe.js',
             array(),
             $js_version,
+            true
+        );
+
+        wp_register_script(
+            'cbe-availability',
+            CBE_PLUGIN_URL . 'assets/js/cbe-availability.js',
+            array(),
+            $availability_js_version,
             true
         );
 

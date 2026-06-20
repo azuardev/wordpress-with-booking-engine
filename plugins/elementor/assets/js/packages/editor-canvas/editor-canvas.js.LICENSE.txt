@@ -7,6 +7,8 @@
 
 /*! ../../../composition-builder/composition-builder */
 
+/*! ../../composition-builder/utils/required-default-child-tags */
+
 /*! ../../renderers/multi-props */
 
 /*! ../../resources/available-widgets-resource */
@@ -145,6 +147,8 @@
 
 /*! ./replacements/manager */
 
+/*! ./required-default-child-tags */
+
 /*! ./reset-style */
 
 /*! ./resources/available-widgets-resource */
@@ -276,6 +280,12 @@
 /*! ./utils/after-render */
 
 /*! ./utils/command-utils */
+
+/*! ./utils/required-children-enforcer */
+
+/*! ./utils/required-default-child-tags */
+
+/*! ./widgets-schema-resource */
 
 /*! @elementor/editor */
 
@@ -902,8 +912,16 @@
   \*********************************************************************************************************/
 
 /*!**********************************************************************************************************!*\
+  !*** ./packages/packages/core/editor-canvas/src/composition-builder/utils/required-children-enforcer.ts ***!
+  \**********************************************************************************************************/
+
+/*!**********************************************************************************************************!*\
   !*** ./packages/packages/core/editor-canvas/src/transformers/styles/create-combine-array-transformer.ts ***!
   \**********************************************************************************************************/
+
+/*!***********************************************************************************************************!*\
+  !*** ./packages/packages/core/editor-canvas/src/composition-builder/utils/required-default-child-tags.ts ***!
+  \***********************************************************************************************************/
 
 /*!*************************************************************************************************************!*\
   !*** ./packages/packages/core/editor-canvas/src/legacy/replacements/inline-editing/inline-editing-utils.ts ***!

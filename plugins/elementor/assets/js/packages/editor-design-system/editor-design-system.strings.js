@@ -7,6 +7,7 @@ __( 'Import Design System', 'elementor' );
 __( 'Design system file dropzone', 'elementor' );
 // translators: %d is the maximum file size in megabytes.
 __( 'zip (max. %dMB)', 'elementor' );
+__( 'Learn how design system imports work', 'elementor' );
 __( 'Cancel', 'elementor' );
 __( 'Import', 'elementor' );
 __( 'Export in progress. Your file will download when it’s ready.', 'elementor' );
