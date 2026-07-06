@@ -133,7 +133,7 @@ trait CBE_Bookings_Trait {
             'guest_email' => $guest_email,
             'guest_phone' => $guest_phone,
             'total_guests' => $total_guests,
-            'notes' => trim($notes . "\n" . 'Rooms: ' . implode(', ', $selected_room_lines)),
+            'notes' => trim($notes . "\n" . 'Cabins: ' . implode(', ', $selected_room_lines)),
             'status' => $payment_method === 'doku' ? 'pending_payment' : 'pending',
             'redirect_url' => $redirect_url,
         );
@@ -784,7 +784,7 @@ trait CBE_Bookings_Trait {
         $output .= '<p>' . esc_html($this->get_status_description($booking, $status_query)) . '</p>';
         $output .= '<div class="cbe-status-grid">';
         $output .= '<div><span>' . esc_html__('Booking ID', 'cabin-booking-engine') . '</span><strong>' . esc_html($booking['id']) . '</strong></div>';
-        $output .= '<div><span>' . esc_html__('Room', 'cabin-booking-engine') . '</span><strong>' . esc_html(get_the_title((int) $booking['cabin_id'])) . '</strong></div>';
+        $output .= '<div><span>' . esc_html__('Cabin', 'cabin-booking-engine') . '</span><strong>' . esc_html(get_the_title((int) $booking['cabin_id'])) . '</strong></div>';
         $output .= '<div><span>' . esc_html__('Check-in', 'cabin-booking-engine') . '</span><strong>' . esc_html($booking['checkin_date']) . '</strong></div>';
         $output .= '<div><span>' . esc_html__('Check-out', 'cabin-booking-engine') . '</span><strong>' . esc_html($booking['checkout_date']) . '</strong></div>';
         $output .= '<div><span>' . esc_html__('Total Price', 'cabin-booking-engine') . '</span><strong>' . esc_html(number_format_i18n((float) $booking['total_price'], 2)) . '</strong></div>';

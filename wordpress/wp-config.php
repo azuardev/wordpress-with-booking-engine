@@ -83,26 +83,26 @@ $table_prefix = getenv_docker('WORDPRESS_TABLE_PREFIX', 'wp_');
  */
 define( 'WP_DEBUG', !!getenv_docker('WORDPRESS_DEBUG', '') );
 
-/* Add any custom values between this line and the "stop editing" line. */
+// /* Add any custom values between this line and the "stop editing" line. */
 
-// If we're behind a proxy server and using HTTPS, we need to alert WordPress of that fact
-if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && strpos($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false) {
-	$_SERVER['HTTPS'] = 'on';
-}
+// // If we're behind a proxy server and using HTTPS, we need to alert WordPress of that fact
+// if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && strpos($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false) {
+// 	$_SERVER['HTTPS'] = 'on';
+// }
 
-// Docker extra config
-if ($configExtra = getenv_docker('WORDPRESS_CONFIG_EXTRA', '')) {
-	eval($configExtra);
-}
+// // Docker extra config
+// if ($configExtra = getenv_docker('WORDPRESS_CONFIG_EXTRA', '')) {
+// 	eval($configExtra);
+// }
 
-define('WP_HOME','https://doulosphos.azuardev.com');
-define('WP_SITEURL','https://doulosphos.azuardev.com');
+// define('WP_HOME','https://doulosphos.azuardev.com');
+// define('WP_SITEURL','https://doulosphos.azuardev.com');
 
-if(isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https'){
-    $_SERVER['HTTPS'] = 'on';
-}
+// if(isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https'){
+//     $_SERVER['HTTPS'] = 'on';
+// }
 
-define('FORCE_SSL_ADMIN', true);
+// define('FORCE_SSL_ADMIN', true);
 
 /* That's all, stop editing! Happy publishing. */
 

@@ -892,7 +892,7 @@
       var overviewText = detailData.content || detailData.excerpt || "";
       var availableText =
         detailData.totalUnits > 0
-          ? detailData.totalUnits + " rooms available"
+          ? detailData.totalUnits + " cabins available"
           : "Availability on request";
       var facilities =
         detailData.facilities && Array.isArray(detailData.facilities)
@@ -967,7 +967,7 @@
           '<span class="cbe-spec-icon">🏠</span>' +
           '<span class="cbe-spec-label">' +
           detailData.totalUnits +
-          " rooms available</span></div>";
+          " cabins available</span></div>";
       }
       html += "</div>";
       html += "</div>";

@@ -125,7 +125,7 @@ trait CBE_Admin_Pages_Trait {
         echo '</div>';
         echo '<button type="button" class="button button-primary" id="cbe-add-facility-catalog-item">+ ' . esc_html__('Add Facility', 'cabin-booking-engine') . '</button>';
         echo '</div>';
-        echo '<div id="cbe-facility-catalog-builder" class="cbe-facility-catalog-builder" data-icon-pool="' . esc_attr(wp_json_encode($icon_pool)) . '">';
+        echo '<div id="cbe-facility-catalog-builder" class="cbe-facility-catalog-builder" data-icon-pool="' . esc_attr(wp_json_encode($icon_pool)) . '" data-local-icons-base="' . esc_attr(CBE_PLUGIN_URL . 'assets/icons/facilities/') . '">';
         echo '<div class="cbe-facility-toolbar">';
         echo '<input type="search" id="cbe-facility-table-search" class="cbe-facility-table-search" placeholder="' . esc_attr__('Search facility...', 'cabin-booking-engine') . '" />';
         echo '</div>';

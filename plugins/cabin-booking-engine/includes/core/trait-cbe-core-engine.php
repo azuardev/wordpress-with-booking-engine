@@ -67,16 +67,16 @@ trait CBE_Core_Engine_Trait {
 
     public function register_cpt() {
         $labels = array(
-            'name' => __('Rooms', 'cabin-booking-engine'),
-            'singular_name' => __('Room', 'cabin-booking-engine'),
-            'add_new' => __('Add New Room', 'cabin-booking-engine'),
-            'add_new_item' => __('Add New Room', 'cabin-booking-engine'),
-            'edit_item' => __('Edit Room', 'cabin-booking-engine'),
-            'new_item' => __('New Room', 'cabin-booking-engine'),
-            'view_item' => __('View Room', 'cabin-booking-engine'),
-            'search_items' => __('Search Rooms', 'cabin-booking-engine'),
-            'not_found' => __('No rooms found', 'cabin-booking-engine'),
-            'menu_name' => __('Rooms', 'cabin-booking-engine'),
+            'name' => __('Cabins', 'cabin-booking-engine'),
+            'singular_name' => __('Cabin', 'cabin-booking-engine'),
+            'add_new' => __('Add New Cabin', 'cabin-booking-engine'),
+            'add_new_item' => __('Add New Cabin', 'cabin-booking-engine'),
+            'edit_item' => __('Edit Cabin', 'cabin-booking-engine'),
+            'new_item' => __('New Cabin', 'cabin-booking-engine'),
+            'view_item' => __('View Cabin', 'cabin-booking-engine'),
+            'search_items' => __('Search Cabins', 'cabin-booking-engine'),
+            'not_found' => __('No cabins found', 'cabin-booking-engine'),
+            'menu_name' => __('Cabins', 'cabin-booking-engine'),
         );
 
         $args = array(
@@ -335,11 +335,11 @@ trait CBE_Core_Engine_Trait {
                 <?php endif; ?>
 
                 <?php if (empty($selected_cabin_ids)) : ?>
-                    <div class="cbe-message cbe-error"><?php esc_html_e('No rooms are assigned to this stay page yet.', 'cabin-booking-engine'); ?></div>
+                    <div class="cbe-message cbe-error"><?php esc_html_e('No cabins are assigned to this stay page yet.', 'cabin-booking-engine'); ?></div>
                 <?php else : ?>
                     <div class="cbe-custom-stay-section-head">
                         <h4><?php esc_html_e('Cabins Type Available', 'cabin-booking-engine'); ?></h4>
-                        <p><?php echo esc_html(sprintf(_n('%d curated room type for this stay.', '%d curated cabin types for this stay.', $room_count, 'cabin-booking-engine'), $room_count)); ?></p>
+                        <p><?php echo esc_html(sprintf(_n('%d curated cabin type for this stay.', '%d curated cabin types for this stay.', $room_count, 'cabin-booking-engine'), $room_count)); ?></p>
                     </div>
                     <div class="cbe-custom-stay-cabin-list">
                         <hr class="cbe-section-divider" />
@@ -437,6 +437,42 @@ trait CBE_Core_Engine_Trait {
 
             $pool[] = $item;
             $added_values[$value] = true;
+        }
+
+        // Auto-register local icons from assets/icons/facilities.
+        $local_icons_dir = CBE_PLUGIN_DIR . 'assets/icons/facilities/';
+        if (is_dir($local_icons_dir) && is_readable($local_icons_dir)) {
+            $local_files = scandir($local_icons_dir);
+            if (is_array($local_files)) {
+                foreach ($local_files as $local_file) {
+                    if (!is_string($local_file) || $local_file === '.' || $local_file === '..') {
+                        continue;
+                    }
+
+                    // Allow common image types for local facilities icons.
+                    if (!preg_match('/\.(svg|png|jpe?g|webp)$/i', $local_file)) {
+                        continue;
+                    }
+
+                    $value = 'local:' . $local_file;
+                    if (isset($added_values[$value])) {
+                        continue;
+                    }
+
+                    $display_name = preg_replace('/\.[^.]+$/', '', $local_file);
+                    $display_name = str_replace(array('-', '_'), ' ', (string) $display_name);
+                    $display_name = ucwords(trim($display_name));
+                    if ($display_name === '') {
+                        $display_name = $local_file;
+                    }
+
+                    $pool[] = array(
+                        'value' => $value,
+                        'label' => sprintf(__('Local: %s', 'cabin-booking-engine'), $display_name),
+                    );
+                    $added_values[$value] = true;
+                }
+            }
         }
 
         return $pool;
@@ -827,7 +863,7 @@ trait CBE_Core_Engine_Trait {
                     <?php if ($total_units > 0) : ?>
                         <span class="cbe-stay-card-meta-pill">
                             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                            <?php echo esc_html(sprintf(__('%d units available', 'cabin-booking-engine'), $total_units)); ?>
+                            <?php echo esc_html(sprintf(__('%d cabins available', 'cabin-booking-engine'), $total_units)); ?>
                         </span>
                     <?php endif; ?>
                 </div>

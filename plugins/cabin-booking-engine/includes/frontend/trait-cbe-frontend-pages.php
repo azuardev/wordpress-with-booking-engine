@@ -145,7 +145,7 @@ trait CBE_Frontend_Pages_Trait {
                                     <li><?php echo esc_html(sprintf(__('Max %d guests', 'cabin-booking-engine'), $max_guests)); ?></li>
                                 <?php endif; ?>
                                 <?php if ($total_units > 0) : ?>
-                                    <li><?php echo esc_html(sprintf(__('%d units available', 'cabin-booking-engine'), $total_units)); ?></li>
+                                    <li><?php echo esc_html(sprintf(__('%d cabins available', 'cabin-booking-engine'), $total_units)); ?></li>
                                 <?php endif; ?>
                             </ul>
 
@@ -194,7 +194,7 @@ trait CBE_Frontend_Pages_Trait {
                                             <?php endif; ?>
                                             <?php if ($total_units > 0) : ?>
                                                 <div class="cbe-cabin-detail-spec-item">
-                                                    <span class="cbe-cabin-detail-spec-label"><?php esc_html_e('Available units', 'cabin-booking-engine'); ?></span>
+                                                    <span class="cbe-cabin-detail-spec-label"><?php esc_html_e('Available cabins', 'cabin-booking-engine'); ?></span>
                                                     <strong class="cbe-cabin-detail-spec-value"><?php echo esc_html((string) $total_units); ?></strong>
                                                 </div>
                                             <?php endif; ?>
@@ -662,10 +662,10 @@ trait CBE_Frontend_Pages_Trait {
                 <input type="hidden" name="group" value="<?php echo esc_attr($prefill_group !== '' ? $prefill_group : $query_group); ?>" data-cbe-group />
                 <input type="hidden" name="show_price" value="<?php echo esc_attr($show_price ? '1' : '0'); ?>" />
 
-                <div class="cbe-search-card-top">
+                <div class="cbe-search-card-top" style="margin-bottom:30px;">
                     <div>
-                        <h3 class="cbe-search-card-title"><?php esc_html_e('Check Availability & Book', 'cabin-booking-engine'); ?></h3>
-                        <p class="cbe-search-card-subtitle"><?php esc_html_e('Best rate guaranteed - Free cancellation on select cabins', 'cabin-booking-engine'); ?></p>
+                        <h3 class="cbe-search-card-title" ><?php esc_html_e('Check Availability & Book', 'cabin-booking-engine'); ?></h3>
+                        <!--<p class="cbe-search-card-subtitle"><?php esc_html_e('Best rate guaranteed - Free cancellation on select cabins', 'cabin-booking-engine'); ?></p>-->
                     </div>
                     <span class="cbe-search-card-pill"><?php esc_html_e('Cabins Available', 'cabin-booking-engine'); ?></span>
                 </div>
@@ -722,9 +722,10 @@ trait CBE_Frontend_Pages_Trait {
                 </div>
 
                 <div class="cbe-search-trusts" aria-hidden="true">
-                    <span><?php esc_html_e('Secure Booking', 'cabin-booking-engine'); ?></span>
-                    <span><?php esc_html_e('No Booking Fees', 'cabin-booking-engine'); ?></span>
-                    <span><?php esc_html_e('Instant Confirmation', 'cabin-booking-engine'); ?></span>
+                    <!--<span><?php esc_html_e('Secure Booking', 'cabin-booking-engine'); ?></span>-->
+                    <!--<span><?php esc_html_e('No Booking Fees', 'cabin-booking-engine'); ?></span>-->
+                    <!--<span><?php esc_html_e('Instant Confirmation', 'cabin-booking-engine'); ?></span>-->
+                    Enjoy 10% Off for any F&B transactions throughout your stay for direct booking with us
                 </div>
 
                 <?php if ($show_availability) : ?>

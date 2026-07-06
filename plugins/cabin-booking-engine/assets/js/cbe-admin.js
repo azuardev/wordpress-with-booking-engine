@@ -214,6 +214,7 @@
     var list = $("#cbe-facility-catalog-list");
     var addButton = $("#cbe-add-facility-catalog-item");
     var tableSearchInput = $("#cbe-facility-table-search");
+    var localIconsBase = String(builder.attr("data-local-icons-base") || "");
     var iconPool = [];
     var iconifyQueryCache = {};
     var iconOptionLabelMap = {};
@@ -232,6 +233,20 @@
         .replace(/"/g, "&quot;")
         .replace(/</g, "&lt;")
         .replace(/>/g, "&gt;");
+    }
+
+    function isLocalIcon(iconValue) {
+      return String(iconValue || "").indexOf("local:") === 0;
+    }
+
+    function getLocalIconUrl(iconValue) {
+      var filename = String(iconValue || "").slice(6);
+      filename = filename.replace(/[^a-zA-Z0-9_\-\.]/g, "");
+      if (!filename || !localIconsBase) {
+        return "";
+      }
+
+      return localIconsBase + filename;
     }
 
     function isMaterialSymbolIcon(iconValue) {
@@ -294,6 +309,19 @@
 
     function renderIconPreview(iconValue, className) {
       var classes = className || "";
+
+      if (isLocalIcon(iconValue)) {
+        var localUrl = getLocalIconUrl(iconValue);
+        if (localUrl) {
+          return (
+            '<img class="' +
+            escapeAttribute((classes + " cbe-local-icon").trim()) +
+            '" src="' +
+            escapeAttribute(localUrl) +
+            '" alt="" loading="lazy" decoding="async" />'
+          );
+        }
+      }
 
       if (isMaterialSymbolIcon(iconValue)) {
         return (
@@ -635,6 +663,10 @@
       }
 
       if (/^(ms:|fa:|bi:)/i.test(text)) {
+        return text;
+      }
+
+      if (/^local:[a-z0-9_.-]+$/i.test(text)) {
         return text;
       }
 
