@@ -667,7 +667,7 @@ trait CBE_Frontend_Pages_Trait {
                         <h3 class="cbe-search-card-title" ><?php esc_html_e('Check Availability & Book', 'cabin-booking-engine'); ?></h3>
                         <!--<p class="cbe-search-card-subtitle"><?php esc_html_e('Best rate guaranteed - Free cancellation on select cabins', 'cabin-booking-engine'); ?></p>-->
                     </div>
-                    <span class="cbe-search-card-pill"><?php esc_html_e('Cabins Available', 'cabin-booking-engine'); ?></span>
+                    <!--<span class="cbe-search-card-pill"><?php esc_html_e('Cabins Available', 'cabin-booking-engine'); ?></span>-->
                 </div>
 
                 <div class="cbe-search-card-grid">
@@ -699,20 +699,27 @@ trait CBE_Frontend_Pages_Trait {
                         <input type="text" id="<?php echo esc_attr($form_id); ?>_promo" name="promo_code" placeholder="<?php esc_attr_e('Input your promo code', 'cabin-booking-engine'); ?>" />
                     </div>
 
-                    <div class="cbe-search-field cbe-search-field--plain cbe-search-field--guests">
-                        <label for="<?php echo esc_attr($form_id); ?>_guests"><?php esc_html_e('Guests', 'cabin-booking-engine'); ?></label>
-                        <div class="cbe-search-plain-select cbe-search-plain-select--guests">
-                            <span class="cbe-search-guest-icon" aria-hidden="true"></span>
-                            <select id="<?php echo esc_attr($form_id); ?>_guests" name="total_guests">
-                                <option value="2" <?php selected($prefill_guests, '2'); ?>><?php esc_html_e('1 Cabin - 2 Adults', 'cabin-booking-engine'); ?></option>
-                                <option value="1" <?php selected($prefill_guests, '1'); ?>><?php esc_html_e('1 Cabin - 1 Adult', 'cabin-booking-engine'); ?></option>
-                                <option value="3" <?php selected($prefill_guests, '3'); ?>><?php esc_html_e('1 Cabin - 3 Adults', 'cabin-booking-engine'); ?></option>
-                                <option value="4" <?php selected($prefill_guests, '4'); ?>><?php esc_html_e('1 Cabin - 4 Adults', 'cabin-booking-engine'); ?></option>
-                            </select>
-                            <span class="cbe-search-chevron" aria-hidden="true"></span>
-                        </div>
+                    <!--<div class="cbe-search-field cbe-search-field--plain cbe-search-field--guests">-->
+                    <!--    <label for="<?php echo esc_attr($form_id); ?>_guests"><?php esc_html_e('Guests', 'cabin-booking-engine'); ?></label>-->
+                    <!--    <div class="cbe-search-plain-select cbe-search-plain-select--guests">-->
+                    <!--        <span class="cbe-search-guest-icon" aria-hidden="true"></span>-->
+                    <!--        <select id="<?php echo esc_attr($form_id); ?>_guests" name="total_guests">-->
+                    <!--            <option value="2" <?php selected($prefill_guests, '2'); ?>><?php esc_html_e('1 Cabin - 2 Adults', 'cabin-booking-engine'); ?></option>-->
+                    <!--            <option value="1" <?php selected($prefill_guests, '1'); ?>><?php esc_html_e('1 Cabin - 1 Adult', 'cabin-booking-engine'); ?></option>-->
+                    <!--            <option value="3" <?php selected($prefill_guests, '3'); ?>><?php esc_html_e('1 Cabin - 3 Adults', 'cabin-booking-engine'); ?></option>-->
+                    <!--            <option value="4" <?php selected($prefill_guests, '4'); ?>><?php esc_html_e('1 Cabin - 4 Adults', 'cabin-booking-engine'); ?></option>-->
+                    <!--        </select>-->
+                    <!--        <span class="cbe-search-chevron" aria-hidden="true"></span>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+                </div>
+                <div class="cbe-action-grid">
+                    <div class="cbe-search-trusts" aria-hidden="true">
+                        <!--<span><?php esc_html_e('Secure Booking', 'cabin-booking-engine'); ?></span>-->
+                        <!--<span><?php esc_html_e('No Booking Fees', 'cabin-booking-engine'); ?></span>-->
+                        <!--<span><?php esc_html_e('Instant Confirmation', 'cabin-booking-engine'); ?></span>-->
+                        Enjoy 10% Off for any F&B transactions throughout your stay for direct booking with us
                     </div>
-
                     <div class="cbe-search-action">
                         <button type="submit" class="cbe-search-button">
                             <span><?php esc_html_e('Search', 'cabin-booking-engine'); ?></span>
@@ -721,24 +728,10 @@ trait CBE_Frontend_Pages_Trait {
                     </div>
                 </div>
 
-                <div class="cbe-search-trusts" aria-hidden="true">
-                    <!--<span><?php esc_html_e('Secure Booking', 'cabin-booking-engine'); ?></span>-->
-                    <!--<span><?php esc_html_e('No Booking Fees', 'cabin-booking-engine'); ?></span>-->
-                    <!--<span><?php esc_html_e('Instant Confirmation', 'cabin-booking-engine'); ?></span>-->
-                    Enjoy 10% Off for any F&B transactions throughout your stay for direct booking with us
-                </div>
-
                 <?php if ($show_availability) : ?>
                     <div class="cbe-search-results-page" data-cbe-search-results <?php echo $prefill_search ? '' : 'hidden'; ?>>
                         <div class="cbe-search-results-head">
                             <h4 class="cbe-search-results-title"><?php esc_html_e('Available Cabins', 'cabin-booking-engine'); ?></h4>
-                            <p class="cbe-search-results-count" data-cbe-results-count></p>
-                        </div>
-                        <div class="cbe-search-results-controls">
-                            <label class="cbe-search-results-filter">
-                                <input type="checkbox" data-cbe-results-available checked />
-                                <span><?php esc_html_e('Only available', 'cabin-booking-engine'); ?></span>
-                            </label>
                             <label class="cbe-search-results-sort-wrap">
                                 <span><?php esc_html_e('Sort', 'cabin-booking-engine'); ?></span>
                                 <select data-cbe-results-sort>
@@ -749,11 +742,12 @@ trait CBE_Frontend_Pages_Trait {
                                 </select>
                             </label>
                         </div>
+                        
                         <div class="cbe-search-results-layout">
                             <div class="cbe-availability-list" data-cbe-results-list></div>
                             <aside class="cbe-search-selection-panel" data-cbe-selection-panel hidden>
                                 <div class="cbe-search-selection-header">
-                                    <h5><?php esc_html_e('Pilihan Kamar Anda', 'cabin-booking-engine'); ?></h5>
+                                    <h5><?php esc_html_e('Your Selected Cabin', 'cabin-booking-engine'); ?></h5>
                                     <p data-cbe-selection-count></p>
                                 </div>
                                 <div class="cbe-search-selection-list" data-cbe-selection-list></div>

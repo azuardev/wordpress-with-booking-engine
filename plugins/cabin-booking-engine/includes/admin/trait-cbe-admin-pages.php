@@ -302,6 +302,20 @@ trait CBE_Admin_Pages_Trait {
         $slug = $is_edit ? $post->post_name : '';
         $overview = $is_edit ? $post->post_content : '';
         $page_gallery = $is_edit ? (string) get_post_meta($page_id, '_cbe_page_gallery_ids', true) : '';
+        $legacy_header_image_id = $is_edit ? (int) get_post_meta($page_id, '_cbe_page_header_image_id', true) : 0;
+        $page_header_desktop_image_id = $is_edit ? (int) get_post_meta($page_id, '_cbe_page_header_image_desktop_id', true) : 0;
+        $page_header_mobile_image_id = $is_edit ? (int) get_post_meta($page_id, '_cbe_page_header_image_mobile_id', true) : 0;
+
+        if ($page_header_desktop_image_id <= 0) {
+            $page_header_desktop_image_id = $legacy_header_image_id;
+        }
+
+        if ($page_header_mobile_image_id <= 0) {
+            $page_header_mobile_image_id = $legacy_header_image_id;
+        }
+
+        $page_header_desktop_image_url = $page_header_desktop_image_id > 0 ? (string) wp_get_attachment_image_url($page_header_desktop_image_id, 'medium') : '';
+        $page_header_mobile_image_url = $page_header_mobile_image_id > 0 ? (string) wp_get_attachment_image_url($page_header_mobile_image_id, 'medium') : '';
         $selected_cabin_ids = $is_edit ? $this->get_stay_page_cabin_ids($page_id) : array();
 
         $cabins = get_posts(array(
@@ -312,6 +326,22 @@ trait CBE_Admin_Pages_Trait {
         ));
         $total_rooms = count($cabins);
         $selected_rooms = count($selected_cabin_ids);
+        $cabins_by_id = array();
+        foreach ($cabins as $cabin_post) {
+            $cabins_by_id[(int) $cabin_post->ID] = $cabin_post;
+        }
+
+        $ordered_cabins = array();
+        foreach ($selected_cabin_ids as $selected_cabin_id) {
+            if (isset($cabins_by_id[$selected_cabin_id])) {
+                $ordered_cabins[] = $cabins_by_id[$selected_cabin_id];
+                unset($cabins_by_id[$selected_cabin_id]);
+            }
+        }
+
+        foreach ($cabins_by_id as $remaining_cabin) {
+            $ordered_cabins[] = $remaining_cabin;
+        }
 
         echo '<div class="wrap cbe-cabin-manager cbe-stay-page-manager">';
         echo '<h1>' . esc_html($is_edit ? __('Edit Stay Page', 'cabin-booking-engine') : __('Add New Stay Page', 'cabin-booking-engine')) . '</h1>';
@@ -353,6 +383,15 @@ trait CBE_Admin_Pages_Trait {
         echo '.cbe-stay-page-manager .cbe-room-picker-content{display:grid;gap:4px;color:#223751;}';
         echo '.cbe-stay-page-manager .cbe-room-picker-content strong{font-size:13px;font-weight:700;line-height:1.4;letter-spacing:.2px;}';
         echo '.cbe-stay-page-manager .cbe-room-picker-price{display:inline-flex;width:fit-content;padding:3px 9px;border-radius:999px;background:#e8f0fc;color:#2e547f;font-size:10.5px;font-weight:700;letter-spacing:.28px;text-transform:uppercase;}';
+        echo '.cbe-stay-page-manager .cbe-selected-room-order{display:grid;gap:8px;margin:0 0 14px;}';
+        echo '.cbe-stay-page-manager .cbe-selected-room-order-empty{padding:10px 12px;border:1px dashed #cbd8ea;border-radius:10px;background:#f8fbff;color:#5b6f88;font-size:12px;}';
+        echo '.cbe-stay-page-manager .cbe-selected-room-order-item{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;padding:9px 10px;border:1px solid #d5e1f1;border-radius:10px;background:#fff;cursor:grab;}';
+        echo '.cbe-stay-page-manager .cbe-selected-room-order-item.is-dragging{opacity:.55;}';
+        echo '.cbe-stay-page-manager .cbe-selected-room-order-item strong{font-size:12px;color:#17385f;line-height:1.35;}';
+        echo '.cbe-stay-page-manager .cbe-room-order-handle{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:6px;background:#eef3fb;color:#58759d;font-weight:700;font-size:13px;}';
+        echo '.cbe-stay-page-manager .cbe-room-order-actions{display:inline-flex;gap:6px;}';
+        echo '.cbe-stay-page-manager .cbe-room-order-btn{width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;border:1px solid #ccd9eb;border-radius:8px;background:#fff;color:#2d4e79;font-size:14px;line-height:1;padding:0;cursor:pointer;}';
+        echo '.cbe-stay-page-manager .cbe-room-order-btn:hover{background:#f2f7ff;border-color:#9fbbe1;}';
         echo '.cbe-stay-page-manager .cbe-stay-page-actions{margin-top:18px;padding:12px;border:1px solid #dfe8f3;border-radius:13px;background:#fff;display:flex;justify-content:flex-end;}';
         echo '.cbe-stay-page-manager .cbe-stay-page-actions .button.button-primary{min-height:42px;border-radius:10px;padding:0 20px;font-weight:700;letter-spacing:.2px;background:linear-gradient(180deg,#2f7de0 0%,#1d63c6 100%);border-color:#1a5dbb;box-shadow:0 8px 18px rgba(30,98,191,.3);}';
         echo '.cbe-stay-page-manager .cbe-stay-page-actions .button.button-primary:hover{background:linear-gradient(180deg,#2775d6 0%,#1958b4 100%);}';
@@ -387,6 +426,24 @@ trait CBE_Admin_Pages_Trait {
         }
         echo '</div>';
 
+        echo '<p><strong>' . esc_html__('Header Photo (Desktop 1920 x 300)', 'cabin-booking-engine') . '</strong></p>';
+        echo '<input type="hidden" name="cbe_page_header_desktop_image_id" id="cbe_page_header_desktop_image_id" value="' . esc_attr((string) $page_header_desktop_image_id) . '" />';
+        echo '<div id="cbe-page-header-desktop-preview" class="cbe-image-preview">';
+        if ($page_header_desktop_image_url !== '') {
+            echo '<img src="' . esc_url($page_header_desktop_image_url) . '" alt="" />';
+        }
+        echo '</div>';
+        echo '<p><button type="button" class="button" id="cbe-select-page-header-desktop-image">' . esc_html__('Select Desktop Header Photo', 'cabin-booking-engine') . '</button> <button type="button" class="button" id="cbe-remove-page-header-desktop-image">' . esc_html__('Remove Desktop Header Photo', 'cabin-booking-engine') . '</button></p>';
+
+        echo '<p><strong>' . esc_html__('Header Photo (Mobile 1280 x 1280)', 'cabin-booking-engine') . '</strong></p>';
+        echo '<input type="hidden" name="cbe_page_header_mobile_image_id" id="cbe_page_header_mobile_image_id" value="' . esc_attr((string) $page_header_mobile_image_id) . '" />';
+        echo '<div id="cbe-page-header-mobile-preview" class="cbe-image-preview">';
+        if ($page_header_mobile_image_url !== '') {
+            echo '<img src="' . esc_url($page_header_mobile_image_url) . '" alt="" />';
+        }
+        echo '</div>';
+        echo '<p><button type="button" class="button" id="cbe-select-page-header-mobile-image">' . esc_html__('Select Mobile Header Photo', 'cabin-booking-engine') . '</button> <button type="button" class="button" id="cbe-remove-page-header-mobile-image">' . esc_html__('Remove Mobile Header Photo', 'cabin-booking-engine') . '</button></p>';
+
         echo '<p><strong>' . esc_html__('Page Gallery', 'cabin-booking-engine') . '</strong></p>';
         echo '<input type="hidden" name="cbe_page_gallery_ids" id="cbe_page_gallery_ids" value="' . esc_attr($page_gallery) . '" />';
         echo '<div id="cbe-page-gallery-preview" class="cbe-gallery-preview" data-gallery-ids="' . esc_attr($page_gallery) . '"></div>';
@@ -396,15 +453,18 @@ trait CBE_Admin_Pages_Trait {
         echo '<div class="cbe-cabin-panel">';
         echo '<h2>' . esc_html__('Select Rooms', 'cabin-booking-engine') . '</h2>';
         echo '<p class="cbe-room-picker-meta"><span class="cbe-meta-pill">' . esc_html__('Selected', 'cabin-booking-engine') . ': <strong id="cbe-selected-room-count">' . esc_html((string) $selected_rooms) . '</strong></span><span class="cbe-meta-pill">' . esc_html__('Total Rooms', 'cabin-booking-engine') . ': <strong>' . esc_html((string) $total_rooms) . '</strong></span></p>';
+        echo '<p class="description">' . esc_html__('Reorder selected rooms by dragging the list below or using arrow buttons. This order will be used on the stay page.', 'cabin-booking-engine') . '</p>';
+        echo '<input type="hidden" id="cbe_ordered_cabin_ids" name="cbe_ordered_cabin_ids" value="' . esc_attr(implode(',', $selected_cabin_ids)) . '" />';
+        echo '<div id="cbe-selected-room-order" class="cbe-selected-room-order"></div>';
 
         if (empty($cabins)) {
             echo '<p>' . esc_html__('Create at least one room first.', 'cabin-booking-engine') . '</p>';
         } else {
             echo '<div class="cbe-room-picker-list">';
-            foreach ($cabins as $cabin) {
+            foreach ($ordered_cabins as $cabin) {
                 $price = (float) get_post_meta($cabin->ID, '_cbe_price_per_night', true);
                 $checked = in_array((int) $cabin->ID, $selected_cabin_ids, true);
-                echo '<label class="cbe-room-picker-item' . ($checked ? ' is-selected' : '') . '">';
+                echo '<label class="cbe-room-picker-item' . ($checked ? ' is-selected' : '') . '" data-cabin-id="' . esc_attr((string) $cabin->ID) . '" data-cabin-title="' . esc_attr(get_the_title($cabin->ID)) . '">';
                 echo '<input class="cbe-room-checkbox" type="checkbox" name="cabin_ids[]" value="' . esc_attr((string) $cabin->ID) . '" ' . checked($checked, true, false) . ' />';
                 echo '<span class="cbe-room-picker-content"><strong>' . esc_html(get_the_title($cabin->ID)) . '</strong>';
                 echo '<span class="cbe-room-picker-price">' . esc_html(number_format_i18n($price, 0)) . ' / night</span></span>';
@@ -726,8 +786,44 @@ trait CBE_Admin_Pages_Trait {
             wp_die(esc_html__('Failed to save stay page.', 'cabin-booking-engine'));
         }
 
+        $ordered_cabin_ids_raw = isset($_POST['cbe_ordered_cabin_ids']) ? (string) wp_unslash($_POST['cbe_ordered_cabin_ids']) : '';
+        $ordered_cabin_ids = array_values(array_filter(array_map('intval', explode(',', $ordered_cabin_ids_raw))));
+        if (!empty($ordered_cabin_ids)) {
+            $ordered_selected_ids = array();
+            foreach ($ordered_cabin_ids as $ordered_cabin_id) {
+                if (in_array($ordered_cabin_id, $cabin_ids, true) && !in_array($ordered_cabin_id, $ordered_selected_ids, true)) {
+                    $ordered_selected_ids[] = $ordered_cabin_id;
+                }
+            }
+
+            foreach ($cabin_ids as $cabin_id) {
+                if (!in_array($cabin_id, $ordered_selected_ids, true)) {
+                    $ordered_selected_ids[] = $cabin_id;
+                }
+            }
+
+            $cabin_ids = $ordered_selected_ids;
+        }
+
         $saved_id = (int) $saved_id;
         update_post_meta($saved_id, '_cbe_page_cabin_ids', implode(',', $cabin_ids));
+
+        $page_header_desktop_image_id = isset($_POST['cbe_page_header_desktop_image_id']) ? (int) wp_unslash($_POST['cbe_page_header_desktop_image_id']) : 0;
+        if ($page_header_desktop_image_id > 0) {
+            update_post_meta($saved_id, '_cbe_page_header_image_desktop_id', $page_header_desktop_image_id);
+        } else {
+            delete_post_meta($saved_id, '_cbe_page_header_image_desktop_id');
+        }
+
+        $page_header_mobile_image_id = isset($_POST['cbe_page_header_mobile_image_id']) ? (int) wp_unslash($_POST['cbe_page_header_mobile_image_id']) : 0;
+        if ($page_header_mobile_image_id > 0) {
+            update_post_meta($saved_id, '_cbe_page_header_image_mobile_id', $page_header_mobile_image_id);
+        } else {
+            delete_post_meta($saved_id, '_cbe_page_header_image_mobile_id');
+        }
+
+        // Cleanup legacy single-header meta after migration to separate desktop/mobile images.
+        delete_post_meta($saved_id, '_cbe_page_header_image_id');
 
         $page_gallery_ids_raw = isset($_POST['cbe_page_gallery_ids']) ? (string) wp_unslash($_POST['cbe_page_gallery_ids']) : '';
         $page_gallery_ids = array_filter(array_map('intval', explode(',', $page_gallery_ids_raw)));

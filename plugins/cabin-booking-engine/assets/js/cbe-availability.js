@@ -898,17 +898,17 @@
               <div class="cbe-multi-booking-stephead">
                 <span class="cbe-multi-booking-stepnum">1</span>
                 <div>
-                  <h3>Rincian Anda</h3>
+                  <h3>Your details</h3>
                   <p>Complete the primary guest details to finish your multi-cabin booking.</p>
                 </div>
               </div>
               <div class="cbe-multi-booking-row cbe-multi-booking-row-split">
                 <div>
-                  <label>Nama depan</label>
+                  <label>First name</label>
                   <input type="text" name="cbe_first_name" autocomplete="given-name" required />
                 </div>
                 <div>
-                  <label>Nama belakang</label>
+                  <label>Last name</label>
                   <input type="text" name="cbe_last_name" autocomplete="family-name" required />
                 </div>
               </div>
@@ -918,13 +918,13 @@
                   <input type="email" name="cbe_email_display" autocomplete="email" required />
                 </div>
                 <div>
-                  <label>Konfirmasi email</label>
+                  <label>Confirm email</label>
                   <input type="email" name="cbe_email_confirm" autocomplete="email" required />
                 </div>
               </div>
               <div class="cbe-multi-booking-row cbe-multi-booking-row-split">
                 <div>
-                  <label>Ponsel</label>
+                  <label>Phone</label>
                   <input type="text" name="guest_phone" autocomplete="tel" />
                 </div>
                 <div>
@@ -977,14 +977,27 @@
                 </div>
               </div>
               <div class="cbe-multi-booking-row">
+                <label>My arrival from</label>
+                <select name="cbe_arrival_from">
+                  <option value="">Select arrival source</option>
+                  <option value="Singapore via BBT FT">Singapore via BBT FT</option>
+                  <option value="Malaysia via BBT FT">Malaysia via BBT FT</option>
+                  <option value="Others">Others (please specify)</option>
+                </select>
+              </div>
+              <div class="cbe-multi-booking-row" data-cbe-arrival-from-other-row hidden>
+                <label>Please specify your arrival source</label>
+                <input type="text" name="cbe_arrival_from_other" placeholder="Type your arrival source" />
+              </div>
+              <div class="cbe-multi-booking-row">
                 <label>Help us prepare a smooth check-in when you arrive.</label>
                 <select name="cbe_arrival_plan">
                   <option value="">Select arrival time</option>
-                  <option value="Before 15:00">Before 15:00</option>
-                  <option value="15:00 - 18:00">15:00 - 18:00</option>
-                  <option value="18:00 - 21:00">18:00 - 21:00</option>
-                  <option value="After 21:00">After 21:00</option>
                 </select>
+              </div>
+              <div class="cbe-multi-booking-row" data-cbe-arrival-time-other-row hidden>
+                <label>Please specify your arrival time</label>
+                <input type="text" name="cbe_arrival_plan_other" placeholder="Type your arrival time" />
               </div>
               <div class="cbe-multi-booking-row">
                 <label>Special requests</label>
@@ -1048,6 +1061,8 @@
 
       form.dataset.cbeMultiBound = "1";
 
+      this.bindArrivalFields(form);
+
       form.addEventListener("submit", (event) => {
         const firstName = form.querySelector('[name="cbe_first_name"]');
         const lastName = form.querySelector('[name="cbe_last_name"]');
@@ -1067,7 +1082,7 @@
 
         if (email !== confirm) {
           event.preventDefault();
-          emailConfirm.setCustomValidity("Konfirmasi email harus sama.");
+          emailConfirm.setCustomValidity("Email confirmation must match.");
           emailConfirm.reportValidity();
           return;
         }
@@ -1091,6 +1106,101 @@
           );
         }
       });
+    },
+
+    bindArrivalFields: function (form) {
+      if (!form) {
+        return;
+      }
+
+      const arrivalFrom = form.querySelector('[name="cbe_arrival_from"]');
+      const arrivalFromOtherRow = form.querySelector(
+        "[data-cbe-arrival-from-other-row]",
+      );
+      const arrivalFromOtherInput = form.querySelector(
+        '[name="cbe_arrival_from_other"]',
+      );
+      const arrivalPlan = form.querySelector('[name="cbe_arrival_plan"]');
+      const arrivalPlanOtherRow = form.querySelector(
+        "[data-cbe-arrival-time-other-row]",
+      );
+      const arrivalPlanOtherInput = form.querySelector(
+        '[name="cbe_arrival_plan_other"]',
+      );
+
+      if (!arrivalFrom || !arrivalPlan) {
+        return;
+      }
+
+      const toggleArrivalFromOther = () => {
+        const isOther = arrivalFrom.value === "Others";
+        if (arrivalFromOtherRow) {
+          arrivalFromOtherRow.hidden = !isOther;
+        }
+        if (arrivalFromOtherInput) {
+          arrivalFromOtherInput.required = isOther;
+          if (!isOther) {
+            arrivalFromOtherInput.value = "";
+          }
+        }
+      };
+
+      const toggleArrivalTimeOther = () => {
+        const isOther = arrivalPlan.value === "Others";
+        if (arrivalPlanOtherRow) {
+          arrivalPlanOtherRow.hidden = !isOther;
+        }
+        if (arrivalPlanOtherInput) {
+          arrivalPlanOtherInput.required = isOther;
+          if (!isOther) {
+            arrivalPlanOtherInput.value = "";
+          }
+        }
+      };
+
+      const optionsByArrivalSource = {
+        "Singapore via BBT FT": [
+          "08.10",
+          "09.10",
+          "11.10",
+          "14.00",
+          "17.00",
+          "Others",
+        ],
+        "Malaysia via BBT FT": ["10.45", "Others"],
+        Others: ["Others"],
+      };
+
+      const syncArrivalOptions = () => {
+        const selectedSource = arrivalFrom.value;
+        const previousValue = arrivalPlan.value;
+        const options = optionsByArrivalSource[selectedSource] || [];
+
+        const optionHtml = [
+          '<option value="">Select arrival time</option>',
+          ...options.map((value) => {
+            const label =
+              value === "Others" ? "Others (please specify)" : value;
+            return `<option value="${this.escapeHtml(value)}">${this.escapeHtml(label)}</option>`;
+          }),
+        ].join("");
+
+        arrivalPlan.innerHTML = optionHtml;
+        if (options.includes(previousValue)) {
+          arrivalPlan.value = previousValue;
+        }
+
+        toggleArrivalTimeOther();
+      };
+
+      arrivalFrom.addEventListener("change", () => {
+        toggleArrivalFromOther();
+        syncArrivalOptions();
+      });
+      arrivalPlan.addEventListener("change", toggleArrivalTimeOther);
+
+      toggleArrivalFromOther();
+      syncArrivalOptions();
     },
 
     buildMultiBookingNotes: function (form, state, items, specialRequests) {
@@ -1118,9 +1228,24 @@
         lines.push(`Referral source: ${referralSource}`);
       }
 
+      const arrivalFrom = getValue("cbe_arrival_from");
+      const arrivalFromOther = getValue("cbe_arrival_from_other");
+      if (arrivalFrom) {
+        if (arrivalFrom === "Others" && arrivalFromOther) {
+          lines.push(`Arrival from: ${arrivalFromOther}`);
+        } else {
+          lines.push(`Arrival from: ${arrivalFrom}`);
+        }
+      }
+
       const arrivalPlan = getValue("cbe_arrival_plan");
+      const arrivalPlanOther = getValue("cbe_arrival_plan_other");
       if (arrivalPlan) {
-        lines.push(`Arrival plan: ${arrivalPlan}`);
+        if (arrivalPlan === "Others" && arrivalPlanOther) {
+          lines.push(`Arrival plan: ${arrivalPlanOther}`);
+        } else {
+          lines.push(`Arrival plan: ${arrivalPlan}`);
+        }
       }
 
       if (String(specialRequests || "").trim() !== "") {
@@ -1276,9 +1401,9 @@
           const guestCount = Number(avail.max_guests || 0);
           const guestText =
             guestCount > 0 ? `${guestCount} guests` : "2 guests";
-          const groupText = avail.stay_group
-            ? this.escapeHtml(String(avail.stay_group).replace(/[-_]+/g, " "))
-            : "Hotel Collection";
+          //   const groupText = avail.stay_group
+          //     ? this.escapeHtml(String(avail.stay_group).replace(/[-_]+/g, " "))
+          //     : "Hotel Collection";
           const detailUrl = avail.detail_url
             ? this.escapeHtml(avail.detail_url)
             : "";
@@ -1301,7 +1426,7 @@
             selectedQty >= Number(avail.available_units || 0) ? "disabled" : "";
 
           const actionHtml = avail.is_available
-            ? `<div class="cbe-search-room-picker-wrap"><span class="cbe-search-room-picker-label">Cabins</span><div class="cbe-search-room-picker"><button type="button" class="cbe-search-room-step" data-cbe-room-id="${this.escapeHtml(avail.cabin_id)}" data-cbe-room-step="-1" ${minusDisabled}>-</button><span>${selectedQty}</span><button type="button" class="cbe-search-room-step" data-cbe-room-id="${this.escapeHtml(avail.cabin_id)}" data-cbe-room-step="1" ${plusDisabled}>+</button></div></div><button type="button" class="cbe-search-popup-book-btn cbe-search-select-btn" data-cbe-select-room="${this.escapeHtml(avail.cabin_id)}">${selectedQty > 0 ? "Selected" : "Select"}</button>`
+            ? `<div class="cbe-search-room-picker-wrap"><span class="cbe-search-room-picker-label">Cabins</span><div class="cbe-search-room-picker"><button type="button" class="cbe-search-room-step" data-cbe-room-id="${this.escapeHtml(avail.cabin_id)}" data-cbe-room-step="-1" ${minusDisabled}>-</button><span>${selectedQty}</span><button type="button" class="cbe-search-room-step" data-cbe-room-id="${this.escapeHtml(avail.cabin_id)}" data-cbe-room-step="1" ${plusDisabled}>+</button></div></div><button type="button" class="cbe-search-popup-book-btn cbe-search-select-btn" data-cbe-select-room="${this.escapeHtml(avail.cabin_id)}">${selectedQty > 0 ? "Unselect" : "Select"}</button>`
             : `<button type="button" class="cbe-search-popup-book-btn is-disabled" disabled>Not Available</button>`;
 
           const detailAction = detailUrl
@@ -1317,7 +1442,6 @@
                 <div class="cbe-cabin-header">
                   <div>
                     <h4 class="cbe-cabin-name">${this.escapeHtml(avail.cabin_name)}</h4>
-                    <p class="cbe-search-card-location">${groupText}</p>
                   </div>
                   <span class="cbe-status-badge">${statusText}</span>
                 </div>

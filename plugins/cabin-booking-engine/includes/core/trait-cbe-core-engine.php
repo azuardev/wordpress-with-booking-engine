@@ -270,7 +270,21 @@ trait CBE_Core_Engine_Trait {
         $page_overview_html = $page_overview !== '' ? apply_filters('the_content', $page_overview) : '';
         $room_count = count($selected_cabin_ids);
         $starting_price = 0.0;
-        $hero_image_url = '';
+        $legacy_header_image_id = (int) get_post_meta((int) $page->ID, '_cbe_page_header_image_id', true);
+        $desktop_header_image_id = (int) get_post_meta((int) $page->ID, '_cbe_page_header_image_desktop_id', true);
+        $mobile_header_image_id = (int) get_post_meta((int) $page->ID, '_cbe_page_header_image_mobile_id', true);
+
+        if ($desktop_header_image_id <= 0) {
+            $desktop_header_image_id = $legacy_header_image_id;
+        }
+
+        if ($mobile_header_image_id <= 0) {
+            $mobile_header_image_id = $legacy_header_image_id;
+        }
+
+        $desktop_hero_image_url = $desktop_header_image_id > 0 ? (string) wp_get_attachment_image_url($desktop_header_image_id, 'full') : '';
+        $mobile_hero_image_url = $mobile_header_image_id > 0 ? (string) wp_get_attachment_image_url($mobile_header_image_id, 'full') : '';
+        $hero_image_url = $desktop_hero_image_url;
         $page_gallery_ids_raw = (string) get_post_meta($page->ID, '_cbe_page_gallery_ids', true);
         $page_gallery_ids = array_filter(array_map('intval', explode(',', $page_gallery_ids_raw)));
 
@@ -289,13 +303,34 @@ trait CBE_Core_Engine_Trait {
             }
         }
 
+        if ($desktop_hero_image_url === '') {
+            $desktop_hero_image_url = $hero_image_url;
+        }
+
+        if ($mobile_hero_image_url === '') {
+            $mobile_hero_image_url = $desktop_hero_image_url;
+        }
+
+        $hero_style_parts = array();
+        if ($desktop_hero_image_url !== '') {
+            $hero_style_parts[] = '--cbe-hero-image:url(' . esc_url($desktop_hero_image_url) . ')';
+            $hero_style_parts[] = '--cbe-hero-image-desktop:url(' . esc_url($desktop_hero_image_url) . ')';
+        }
+
+        if ($mobile_hero_image_url !== '') {
+            $hero_style_parts[] = '--cbe-hero-image-mobile:url(' . esc_url($mobile_hero_image_url) . ')';
+        }
+
+        $hero_has_image = !empty($hero_style_parts);
+        $hero_style_attr = $hero_has_image ? ' style="' . esc_attr(implode(';', $hero_style_parts)) . ';"' : '';
+
         ob_start();
         ?>
         <main class="cbe-virtual-stay-page cbe-custom-stay-page">
-            <section class="cbe-virtual-stay-hero<?php echo $hero_image_url !== '' ? ' cbe-virtual-stay-hero-has-image' : ''; ?>"<?php echo $hero_image_url !== '' ? ' style="--cbe-hero-image:url(' . esc_url($hero_image_url) . ');"' : ''; ?>>
-                <div class="cbe-virtual-stay-hero-inner">
+            <section class="cbe-virtual-stay-hero<?php echo $hero_has_image ? ' cbe-virtual-stay-hero-has-image' : ''; ?>"<?php echo $hero_style_attr; ?>>
+                <!-- <div class="cbe-virtual-stay-hero-inner">
                     <h1 class="white-title">Indulge in our <?php echo esc_html(get_the_title($page->ID)); ?> Cabins</h1>
-                </div>
+                </div> -->
             </section>
 
             <section class="cbe-virtual-stay-content">

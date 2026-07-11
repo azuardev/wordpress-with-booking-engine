@@ -30,6 +30,21 @@
     preview.html('<img src="' + url + '" alt="" />');
   }
 
+  function renderSingleImagePreview(previewSelector, attachment) {
+    var preview = $(previewSelector);
+    if (!preview.length) {
+      return;
+    }
+
+    var url = attachmentThumbUrl(attachment);
+    if (!url) {
+      preview.empty();
+      return;
+    }
+
+    preview.html('<img src="' + url + '" alt="" />');
+  }
+
   function renderGalleryByIds(ids) {
     var preview = $("#cbe-gallery-preview, #cbe-page-gallery-preview").first();
     if (!preview.length) {
@@ -55,18 +70,35 @@
 
   $(function () {
     var featuredInput = $("#cbe_featured_image_id");
+    var pageHeaderDesktopInput = $("#cbe_page_header_desktop_image_id");
+    var pageHeaderMobileInput = $("#cbe_page_header_mobile_image_id");
     var galleryInput = $("#cbe_gallery_ids, #cbe_page_gallery_ids").first();
     var galleryPreview = $(
       "#cbe-gallery-preview, #cbe-page-gallery-preview",
     ).first();
 
-    if (featuredInput.length || galleryInput.length) {
+    if (
+      featuredInput.length ||
+      pageHeaderDesktopInput.length ||
+      pageHeaderMobileInput.length ||
+      galleryInput.length
+    ) {
       var selectFeaturedBtn = $("#cbe-select-featured");
       var removeFeaturedBtn = $("#cbe-remove-featured");
+      var selectPageHeaderDesktopBtn = $(
+        "#cbe-select-page-header-desktop-image",
+      );
+      var removePageHeaderDesktopBtn = $(
+        "#cbe-remove-page-header-desktop-image",
+      );
+      var selectPageHeaderMobileBtn = $("#cbe-select-page-header-mobile-image");
+      var removePageHeaderMobileBtn = $("#cbe-remove-page-header-mobile-image");
       var selectGalleryBtn = $("#cbe-select-gallery, #cbe-select-page-gallery");
       var clearGalleryBtn = $("#cbe-clear-gallery, #cbe-clear-page-gallery");
 
       var featuredFrame = null;
+      var pageHeaderDesktopFrame = null;
+      var pageHeaderMobileFrame = null;
       var galleryFrame = null;
 
       selectFeaturedBtn.on("click", function (e) {
@@ -101,6 +133,80 @@
         e.preventDefault();
         featuredInput.val("");
         renderFeaturedPreview(null);
+      });
+
+      selectPageHeaderDesktopBtn.on("click", function (e) {
+        e.preventDefault();
+
+        if (pageHeaderDesktopFrame) {
+          pageHeaderDesktopFrame.open();
+          return;
+        }
+
+        pageHeaderDesktopFrame = wp.media({
+          title: "Select desktop header photo (1920 x 300)",
+          button: { text: "Use this photo" },
+          library: { type: "image" },
+          multiple: false,
+        });
+
+        pageHeaderDesktopFrame.on("select", function () {
+          var attachment = pageHeaderDesktopFrame
+            .state()
+            .get("selection")
+            .first()
+            .toJSON();
+          pageHeaderDesktopInput.val(attachment.id);
+          renderSingleImagePreview(
+            "#cbe-page-header-desktop-preview",
+            attachment,
+          );
+        });
+
+        pageHeaderDesktopFrame.open();
+      });
+
+      removePageHeaderDesktopBtn.on("click", function (e) {
+        e.preventDefault();
+        pageHeaderDesktopInput.val("");
+        renderSingleImagePreview("#cbe-page-header-desktop-preview", null);
+      });
+
+      selectPageHeaderMobileBtn.on("click", function (e) {
+        e.preventDefault();
+
+        if (pageHeaderMobileFrame) {
+          pageHeaderMobileFrame.open();
+          return;
+        }
+
+        pageHeaderMobileFrame = wp.media({
+          title: "Select mobile header photo (1280 x 1280)",
+          button: { text: "Use this photo" },
+          library: { type: "image" },
+          multiple: false,
+        });
+
+        pageHeaderMobileFrame.on("select", function () {
+          var attachment = pageHeaderMobileFrame
+            .state()
+            .get("selection")
+            .first()
+            .toJSON();
+          pageHeaderMobileInput.val(attachment.id);
+          renderSingleImagePreview(
+            "#cbe-page-header-mobile-preview",
+            attachment,
+          );
+        });
+
+        pageHeaderMobileFrame.open();
+      });
+
+      removePageHeaderMobileBtn.on("click", function (e) {
+        e.preventDefault();
+        pageHeaderMobileInput.val("");
+        renderSingleImagePreview("#cbe-page-header-mobile-preview", null);
       });
 
       selectGalleryBtn.on("click", function (e) {
@@ -153,9 +259,212 @@
       }
     }
 
+    initStayPageRoomOrdering();
     initFacilitiesBuilder();
     initFacilityCatalogBuilder();
   });
+
+  function initStayPageRoomOrdering() {
+    var root = $(".cbe-stay-page-manager");
+    if (!root.length) {
+      return;
+    }
+
+    var orderList = root.find("#cbe-selected-room-order");
+    var orderedInput = root.find("#cbe_ordered_cabin_ids");
+    var roomItems = root.find(".cbe-room-picker-item");
+    var counter = root.find("#cbe-selected-room-count");
+
+    if (!orderList.length || !orderedInput.length || !roomItems.length) {
+      return;
+    }
+
+    var selectedOrder = String(orderedInput.val() || "")
+      .split(",")
+      .map(function (item) {
+        return parseInt(item, 10);
+      })
+      .filter(function (id) {
+        return id > 0;
+      });
+
+    var draggedId = 0;
+
+    function getItemById(id) {
+      return root.find('.cbe-room-picker-item[data-cabin-id="' + id + '"]');
+    }
+
+    function getSelectedIdsInListOrder() {
+      var ids = [];
+      roomItems.each(function () {
+        var item = $(this);
+        var checkbox = item.find(".cbe-room-checkbox").first();
+        var id = parseInt(String(item.attr("data-cabin-id") || "0"), 10);
+        if (checkbox.prop("checked") && id > 0) {
+          ids.push(id);
+        }
+      });
+      return ids;
+    }
+
+    function normalizeSelectedOrder() {
+      var selectedIds = getSelectedIdsInListOrder();
+      var selectedMap = {};
+      selectedIds.forEach(function (id) {
+        selectedMap[id] = true;
+      });
+
+      selectedOrder = selectedOrder.filter(function (id) {
+        return !!selectedMap[id];
+      });
+
+      selectedIds.forEach(function (id) {
+        if (selectedOrder.indexOf(id) === -1) {
+          selectedOrder.push(id);
+        }
+      });
+
+      orderedInput.val(selectedOrder.join(","));
+    }
+
+    function moveInOrder(id, direction) {
+      var index = selectedOrder.indexOf(id);
+      if (index === -1) {
+        return;
+      }
+
+      var targetIndex = direction === "up" ? index - 1 : index + 1;
+      if (targetIndex < 0 || targetIndex >= selectedOrder.length) {
+        return;
+      }
+
+      var current = selectedOrder[index];
+      selectedOrder[index] = selectedOrder[targetIndex];
+      selectedOrder[targetIndex] = current;
+
+      orderedInput.val(selectedOrder.join(","));
+      renderOrderList();
+    }
+
+    function moveBefore(dragId, targetId) {
+      if (dragId <= 0 || targetId <= 0 || dragId === targetId) {
+        return;
+      }
+
+      var dragIndex = selectedOrder.indexOf(dragId);
+      var targetIndex = selectedOrder.indexOf(targetId);
+      if (dragIndex === -1 || targetIndex === -1) {
+        return;
+      }
+
+      selectedOrder.splice(dragIndex, 1);
+      targetIndex = selectedOrder.indexOf(targetId);
+      selectedOrder.splice(targetIndex, 0, dragId);
+
+      orderedInput.val(selectedOrder.join(","));
+      renderOrderList();
+    }
+
+    function renderOrderList() {
+      orderList.empty();
+
+      if (!selectedOrder.length) {
+        orderList.append(
+          '<div class="cbe-selected-room-order-empty">Select at least one room to set custom order.</div>',
+        );
+        return;
+      }
+
+      selectedOrder.forEach(function (id) {
+        var item = getItemById(id);
+        var title = String(item.attr("data-cabin-title") || "Room #" + id);
+
+        orderList.append(
+          '<div class="cbe-selected-room-order-item" draggable="true" data-cabin-id="' +
+            id +
+            '">' +
+            '<span class="cbe-room-order-handle" aria-hidden="true">↕</span>' +
+            "<strong>" +
+            title +
+            "</strong>" +
+            '<span class="cbe-room-order-actions">' +
+            '<button type="button" class="cbe-room-order-btn" data-room-order-action="up" aria-label="Move up">↑</button>' +
+            '<button type="button" class="cbe-room-order-btn" data-room-order-action="down" aria-label="Move down">↓</button>' +
+            "</span>" +
+            "</div>",
+        );
+      });
+    }
+
+    function syncSelectionState() {
+      var selectedCount = 0;
+
+      roomItems.each(function () {
+        var item = $(this);
+        var checked = item.find(".cbe-room-checkbox").first().prop("checked");
+        item.toggleClass("is-selected", checked);
+        if (checked) {
+          selectedCount += 1;
+        }
+      });
+
+      counter.text(String(selectedCount));
+      normalizeSelectedOrder();
+      renderOrderList();
+    }
+
+    root.on("change", ".cbe-room-checkbox", function () {
+      syncSelectionState();
+    });
+
+    orderList.on("click", ".cbe-room-order-btn", function (event) {
+      event.preventDefault();
+
+      var button = $(this);
+      var action = String(button.attr("data-room-order-action") || "");
+      var row = button.closest(".cbe-selected-room-order-item");
+      var id = parseInt(String(row.attr("data-cabin-id") || "0"), 10);
+      if (id <= 0) {
+        return;
+      }
+
+      moveInOrder(id, action === "up" ? "up" : "down");
+    });
+
+    orderList.on(
+      "dragstart",
+      ".cbe-selected-room-order-item",
+      function (event) {
+        var row = $(this);
+        draggedId = parseInt(String(row.attr("data-cabin-id") || "0"), 10);
+        row.addClass("is-dragging");
+
+        if (event.originalEvent && event.originalEvent.dataTransfer) {
+          event.originalEvent.dataTransfer.effectAllowed = "move";
+        }
+      },
+    );
+
+    orderList.on("dragend", ".cbe-selected-room-order-item", function () {
+      $(this).removeClass("is-dragging");
+    });
+
+    orderList.on("dragover", ".cbe-selected-room-order-item", function (event) {
+      event.preventDefault();
+      if (event.originalEvent && event.originalEvent.dataTransfer) {
+        event.originalEvent.dataTransfer.dropEffect = "move";
+      }
+    });
+
+    orderList.on("drop", ".cbe-selected-room-order-item", function (event) {
+      event.preventDefault();
+      var target = $(this);
+      var targetId = parseInt(String(target.attr("data-cabin-id") || "0"), 10);
+      moveBefore(draggedId, targetId);
+    });
+
+    syncSelectionState();
+  }
 
   function initFacilitiesBuilder() {
     var builder = $("#cbe-facilities-builder");
